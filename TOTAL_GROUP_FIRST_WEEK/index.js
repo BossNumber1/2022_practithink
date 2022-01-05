@@ -45,10 +45,6 @@ function addMiniIcon(elem, status) {
     // создаём мини-иконку
     let objDiv = document.createElement("div");
 
-    if (elem.parentElement.className === "row") {
-        objDiv.classList.add("miniIcon");
-    }
-
     // получаем ширину элемента, чтобы выровнять по горизонтали
     let widthAdjacentElement = elem.getBoundingClientRect().width;
 
@@ -65,13 +61,7 @@ function addMiniIcon(elem, status) {
     objDiv.style.width = widthAdjacentElement;
     objDiv.style.marginLeft = leftIndent;
     objDiv.style.marginRight = rightIndent;
-
-    if (elem.parentElement.parentElement.className === "btns3") {
-        objDiv.style.paddingBottom = "0px";
-    } else {
-        objDiv.style.paddingBottom = "10px";
-    }
-
+    objDiv.style.paddingBottom = "10px";
     objDiv.style.display = "flex";
     objDiv.style.justifyContent = "center";
     objDiv.style.alignItems = "center";
@@ -85,28 +75,9 @@ function addMiniIcon(elem, status) {
     }
 
     objDiv.appendChild(obj);
+    objDiv.style.marginTop = "-23px";
 
-    if (
-        elem.parentElement.className === "buttonContent" ||
-        elem.parentElement.parentElement.className === "btns" ||
-        elem.parentElement.parentElement.className === "btns3"
-    ) {
-        objDiv.style.backgroundColor = "white";
-        objDiv.style.border = "none";
-    } else {
-        objDiv.style.marginTop = "-23px";
-    }
-
-    if (elem.parentElement.className === "buttonContent") {
-        objDiv.style.marginTop = "-30px";
-    } else if (elem.parentElement.parentElement.className === "btns") {
-        objDiv.style.marginTop = "-45px";
-    } else if (elem.parentElement.parentElement.className === "btns3") {
-        objDiv.style.marginTop = "-45px";
-        document.getElementsByClassName("question2")[0].style.zIndex = "2";
-    }
-
-    // устаанавливаем её в нужное место
+    // устанавливаем её в нужное место
     let elementParent = elem.parentElement;
     elementParent.insertBefore(objDiv, elem);
 }
