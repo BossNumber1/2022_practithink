@@ -24,16 +24,16 @@ function addImage(status, ancestor, appClass, position) {
         object.src = "./pictures/successIcon.svg";
         document.getElementsByClassName(appClass)[0].style.border =
             "1px solid #9DD765";
-        document.getElementsByClassName("lineUnderHeading")[
-            position - 1
-        ].style.borderBottom = "1px solid #9DD765";
+        document.getElementsByClassName(
+            "lineUnderHeading" + position
+        )[0].style.borderBottom = "1px solid #9DD765";
     } else {
         object.src = "./pictures/failureIcon.svg";
         document.getElementsByClassName(appClass)[0].style.border =
             "1px solid #FFB47D";
-        document.getElementsByClassName("lineUnderHeading")[
-            position - 1
-        ].style.borderBottom = "1px solid #FFB47D";
+        document.getElementsByClassName(
+            "lineUnderHeading" + position
+        )[0].style.borderBottom = "1px solid #FFB47D";
     }
 
     ancestor[0].children[0].appendChild(object);
@@ -125,9 +125,9 @@ function createMiniIcon(property, element) {
 // 1 QUESTION
 
 let numbers1 = {
-    leftNumber: "wrong",
-    centerNumber: "wrong",
-    rightNumber: "wrong",
+    leftNumber: "",
+    centerNumber: "",
+    rightNumber: "",
 };
 
 document.getElementById("leftNumber").onchange = function (e) {
@@ -221,6 +221,83 @@ function question1() {
     }
 }
 
+// 2 QUESTION
+
+let numbers2 = {
+    leftNumber: "",
+    rightNumber: "",
+};
+
+document.getElementById("leftNumber2").onchange = function (e) {
+    if (e.target.value == 16) {
+        numbers2.leftNumber = "right";
+    } else {
+        numbers2.leftNumber = "wrong";
+    }
+};
+
+document.getElementById("rightNumber2").onchange = function (e) {
+    if (e.target.value == 2) {
+        numbers2.rightNumber = "right";
+    } else {
+        numbers2.rightNumber = "wrong";
+    }
+};
+
+function question2() {
+    if (numbers2.leftNumber != "" && numbers2.rightNumber != "") {
+        succerror(
+            document.getElementById("leftNumber2"),
+            numbers2.leftNumber === "wrong"
+        );
+
+        succerror(
+            document.getElementById("rightNumber2"),
+            numbers2.rightNumber === "wrong"
+        );
+
+        // расставляем мини-иконки
+
+        createMiniIcon(
+            numbers1.leftNumber,
+            document.getElementById("leftNumber2")
+        );
+
+        createMiniIcon(
+            numbers1.rightNumber,
+            document.getElementById("rightNumber2")
+        );
+
+        // выносим общий статус к номеру вопроса
+
+        if (
+            numbers2.leftNumber === "right" &&
+            numbers2.rightNumber === "right"
+        ) {
+            addImage(
+                "success",
+                document.getElementsByClassName("question2"),
+                "app2",
+                2
+            );
+        } else {
+            addImage(
+                "failure",
+                document.getElementsByClassName("question2"),
+                "app2",
+                2
+            );
+        }
+    } else {
+        document.getElementById("leftNumber2").style.border =
+            "2px solid #FFB47D";
+
+        document.getElementById("rightNumber2").style.border =
+            "2px solid #FFB47D";
+    }
+}
+
 document.getElementById("submit").onclick = function () {
-    question1(); // запуск
+    question1();
+    question2();
 };
