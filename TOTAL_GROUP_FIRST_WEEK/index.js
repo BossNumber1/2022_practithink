@@ -1016,7 +1016,7 @@ function question10() {
     }
 }
 
-// 10 QUESTION
+// 13 QUESTION
 
 let numbers13 = {
     firstNumber: "",
@@ -1067,6 +1067,102 @@ function question13() {
     }
 }
 
+// 20 QUESTION
+
+let selectedButton20 = "",
+    selectedNameButton20;
+
+document.getElementById("firstBtn20").onclick = function () {
+    let clickedElement = document.getElementById("firstBtn20");
+
+    clickedElement.style.backgroundColor = "#bbedf4";
+    clickedElement.style.color = "#0e80a4";
+    clickedElement.style.border = "1px solid #BBEDF4";
+
+    selectedButton20 = "wrong";
+    selectedNameButton20 = "firstBtn20";
+
+    document.getElementById("secondBtn20").style.backgroundColor = "white";
+    document.getElementById("secondBtn20").style.color = "black";
+    document.getElementById("secondBtn20").style.border = "1px solid black";
+
+    document.getElementById("thirdBtn20").style.backgroundColor = "white";
+    document.getElementById("thirdBtn20").style.color = "black";
+    document.getElementById("thirdBtn20").style.border = "1px solid black";
+};
+
+document.getElementById("secondBtn20").onclick = function () {
+    let clickedElement = document.getElementById("secondBtn20");
+
+    clickedElement.style.backgroundColor = "#bbedf4";
+    clickedElement.style.color = "#0e80a4";
+    clickedElement.style.border = "1px solid #BBEDF4";
+
+    selectedButton20 = "right";
+    selectedNameButton20 = "secondBtn20";
+
+    document.getElementById("thirdBtn20").style.backgroundColor = "white";
+    document.getElementById("thirdBtn20").style.color = "black";
+    document.getElementById("thirdBtn20").style.border = "1px solid black";
+
+    document.getElementById("firstBtn20").style.backgroundColor = "white";
+    document.getElementById("firstBtn20").style.color = "black";
+    document.getElementById("firstBtn20").style.border = "1px solid black";
+};
+
+document.getElementById("thirdBtn20").onclick = function () {
+    let clickedElement = document.getElementById("thirdBtn20");
+
+    clickedElement.style.backgroundColor = "#bbedf4";
+    clickedElement.style.color = "#0e80a4";
+    clickedElement.style.border = "1px solid #BBEDF4";
+
+    selectedButton20 = "wrong";
+    selectedNameButton20 = "thirdBtn20";
+
+    document.getElementById("secondBtn20").style.backgroundColor = "white";
+    document.getElementById("secondBtn20").style.color = "black";
+    document.getElementById("secondBtn20").style.border = "1px solid black";
+
+    document.getElementById("firstBtn20").style.backgroundColor = "white";
+    document.getElementById("firstBtn20").style.color = "black";
+    document.getElementById("firstBtn20").style.border = "1px solid black";
+};
+
+function question20() {
+    if (selectedButton20 != "") {
+        succerror(
+            document.getElementById(selectedNameButton20),
+            selectedButton20 === "wrong"
+        );
+
+        // выносим общий статус к номеру вопроса
+
+        if (selectedButton20 === "right") {
+            addImage(
+                "success",
+                document.getElementsByClassName("question20"),
+                "app20",
+                20
+            );
+        } else {
+            addImage(
+                "failure",
+                document.getElementsByClassName("question20"),
+                "app20",
+                20
+            );
+        }
+    } else {
+        document.getElementById("firstBtn20").style.border =
+            "2px solid #FFB47D";
+        document.getElementById("secondBtn20").style.border =
+            "2px solid #FFB47D";
+        document.getElementById("thirdBtn20").style.border =
+            "2px solid #FFB47D";
+    }
+}
+
 // RESULT
 
 document.getElementById("submit").onclick = function () {
@@ -1079,4 +1175,5 @@ document.getElementById("submit").onclick = function () {
     question8();
     question10();
     question13();
+    question20();
 };
