@@ -1082,9 +1082,10 @@ let selectedFigures19 = {
 document.getElementById("firstFigure19").onclick = function () {
     let clickedElement = document.getElementById("firstFigure19");
 
-    clickedElement.style.backgroundColor = "#bbedf4";
-    clickedElement.style.color = "#0e80a4";
-    clickedElement.style.border = "1px solid #BBEDF4";
+    clickedElement.style.boxShadow =
+        "2px 2px 20px 1px rgba(54, 156, 183, 0.29)";
+    clickedElement.style.border = "2px solid #369CB7";
+    clickedElement.style.borderRadius = "10px";
 
     selectedFigures19.firstFigure19 = "right";
 };
@@ -1092,9 +1093,10 @@ document.getElementById("firstFigure19").onclick = function () {
 document.getElementById("secondFigure19").onclick = function () {
     let clickedElement = document.getElementById("secondFigure19");
 
-    clickedElement.style.backgroundColor = "#bbedf4";
-    clickedElement.style.color = "#0e80a4";
-    clickedElement.style.border = "1px solid #BBEDF4";
+    clickedElement.style.boxShadow =
+        "2px 2px 20px 1px rgba(54, 156, 183, 0.29)";
+    clickedElement.style.border = "2px solid #369CB7";
+    clickedElement.style.borderRadius = "10px";
 
     selectedFigures19.secondFigure19 = "right";
 };
@@ -1102,9 +1104,10 @@ document.getElementById("secondFigure19").onclick = function () {
 document.getElementById("thirdFigure19").onclick = function () {
     let clickedElement = document.getElementById("thirdFigure19");
 
-    clickedElement.style.backgroundColor = "#bbedf4";
-    clickedElement.style.color = "#0e80a4";
-    clickedElement.style.border = "1px solid #BBEDF4";
+    clickedElement.style.boxShadow =
+        "2px 2px 20px 1px rgba(54, 156, 183, 0.29)";
+    clickedElement.style.border = "2px solid #369CB7";
+    clickedElement.style.borderRadius = "10px";
 
     selectedFigures19.thirdFigure19 = "right";
 };
@@ -1112,9 +1115,10 @@ document.getElementById("thirdFigure19").onclick = function () {
 document.getElementById("fourthFigure19").onclick = function () {
     let clickedElement = document.getElementById("fourthFigure19");
 
-    clickedElement.style.backgroundColor = "#bbedf4";
-    clickedElement.style.color = "#0e80a4";
-    clickedElement.style.border = "1px solid #BBEDF4";
+    clickedElement.style.boxShadow =
+        "2px 2px 20px 1px rgba(54, 156, 183, 0.29)";
+    clickedElement.style.border = "2px solid #369CB7";
+    clickedElement.style.borderRadius = "10px";
 
     selectedFigures19.fourthFigure19 = "right";
 };
