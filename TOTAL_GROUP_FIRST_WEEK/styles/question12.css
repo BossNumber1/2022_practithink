@@ -1,0 +1,76 @@
+.app12 {
+    width: 1170px;
+    height: 299px;
+    left: calc(50% - 1170px / 2);
+    top: 10px;
+    box-shadow: 4px 4px 50px rgba(0, 0, 0, 0.05);
+    border: 0.5px solid #a8a8a8;
+    border-radius: 7px;
+    margin-bottom: 51px;
+}
+
+.titlePage12 {
+    top: 26px;
+    width: 1170px;
+    height: 22px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #2f2f2f;
+}
+
+.lineUnderHeading12 {
+    position: absolute;
+    width: 1169px;
+    height: 0px;
+    top: 100px;
+    border-bottom: 1px solid #a8a8a8;
+}
+
+/* content styles */
+
+.content12 {
+    top: 132px;
+    left: calc(50% - 569px / 2);
+    width: 569px;
+    height: 47.2px;
+
+    /* border: 1px solid gray; */
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+#leftNumber12,
+#rightNumber12 {
+    position: absolute;
+    /* position: static; */
+    width: 50px;
+    height: 30px;
+    /* left: 63px;
+    top: 0px; */
+    /* flex: none;
+    order: 1;
+    flex-grow: 0; */
+    /* margin: 0 5px; */
+    border-radius: 5px;
+    border: 1px solid #2f2f2f;
+    text-align: center;
+
+    top: 30px;
+}
+
+#leftNumber12 {
+    left: 97px;
+}
+
+#rightNumber12 {
+    left: 340px;
+}
