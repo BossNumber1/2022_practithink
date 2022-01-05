@@ -699,22 +699,6 @@ document.getElementById("firstBtn6").onclick = function () {
     clickedElement.style.border = "1px solid #BBEDF4";
 
     selectedButton6.firstBtn6 = "right";
-
-    // document.getElementById("secondBtn6").style.backgroundColor = "white";
-    // document.getElementById("secondBtn6").style.color = "black";
-    // document.getElementById("secondBtn6").style.border = "1px solid black";
-
-    // document.getElementById("thirdBtn6").style.backgroundColor = "white";
-    // document.getElementById("thirdBtn6").style.color = "black";
-    // document.getElementById("thirdBtn6").style.border = "1px solid black";
-
-    // document.getElementById("fourthBtn6").style.backgroundColor = "white";
-    // document.getElementById("fourthBtn6").style.color = "black";
-    // document.getElementById("fourthBtn6").style.border = "1px solid black";
-
-    // document.getElementById("fifthBtn6").style.backgroundColor = "white";
-    // document.getElementById("fifthBtn6").style.color = "black";
-    // document.getElementById("fifthBtn6").style.border = "1px solid black";
 };
 
 document.getElementById("secondBtn6").onclick = function () {
@@ -725,22 +709,6 @@ document.getElementById("secondBtn6").onclick = function () {
     clickedElement.style.border = "1px solid #BBEDF4";
 
     selectedButton6.secondBtn6 = "right";
-
-    // document.getElementById("thirdBtn6").style.backgroundColor = "white";
-    // document.getElementById("thirdBtn6").style.color = "black";
-    // document.getElementById("thirdBtn6").style.border = "1px solid black";
-
-    // document.getElementById("fourthBtn6").style.backgroundColor = "white";
-    // document.getElementById("fourthBtn6").style.color = "black";
-    // document.getElementById("fourthBtn6").style.border = "1px solid black";
-
-    // document.getElementById("fifthBtn6").style.backgroundColor = "white";
-    // document.getElementById("fifthBtn6").style.color = "black";
-    // document.getElementById("fifthBtn6").style.border = "1px solid black";
-
-    // document.getElementById("firstBtn6").style.backgroundColor = "white";
-    // document.getElementById("firstBtn6").style.color = "black";
-    // document.getElementById("firstBtn6").style.border = "1px solid black";
 };
 
 document.getElementById("thirdBtn6").onclick = function () {
@@ -751,22 +719,6 @@ document.getElementById("thirdBtn6").onclick = function () {
     clickedElement.style.border = "1px solid #BBEDF4";
 
     selectedButton6.thirdBtn6 = "right";
-
-    // document.getElementById("fourthBtn6").style.backgroundColor = "white";
-    // document.getElementById("fourthBtn6").style.color = "black";
-    // document.getElementById("fourthBtn6").style.border = "1px solid black";
-
-    // document.getElementById("fifthBtn6").style.backgroundColor = "white";
-    // document.getElementById("fifthBtn6").style.color = "black";
-    // document.getElementById("fifthBtn6").style.border = "1px solid black";
-
-    // document.getElementById("secondBtn6").style.backgroundColor = "white";
-    // document.getElementById("secondBtn6").style.color = "black";
-    // document.getElementById("secondBtn6").style.border = "1px solid black";
-
-    // document.getElementById("firstBtn6").style.backgroundColor = "white";
-    // document.getElementById("firstBtn6").style.color = "black";
-    // document.getElementById("firstBtn6").style.border = "1px solid black";
 };
 
 document.getElementById("fourthBtn6").onclick = function () {
@@ -777,22 +729,6 @@ document.getElementById("fourthBtn6").onclick = function () {
     clickedElement.style.border = "1px solid #BBEDF4";
 
     selectedButton6.fourthBtn6 = "right";
-
-    // document.getElementById("firstBtn6").style.backgroundColor = "white";
-    // document.getElementById("firstBtn6").style.color = "black";
-    // document.getElementById("firstBtn6").style.border = "1px solid black";
-
-    // document.getElementById("secondBtn6").style.backgroundColor = "white";
-    // document.getElementById("secondBtn6").style.color = "black";
-    // document.getElementById("secondBtn6").style.border = "1px solid black";
-
-    // document.getElementById("thirdBtn6").style.backgroundColor = "white";
-    // document.getElementById("thirdBtn6").style.color = "black";
-    // document.getElementById("thirdBtn6").style.border = "1px solid black";
-
-    // document.getElementById("fifthBtn6").style.backgroundColor = "white";
-    // document.getElementById("fifthBtn6").style.color = "black";
-    // document.getElementById("fifthBtn6").style.border = "1px solid black";
 };
 
 document.getElementById("fifthBtn6").onclick = function () {
@@ -803,22 +739,6 @@ document.getElementById("fifthBtn6").onclick = function () {
     clickedElement.style.border = "1px solid #BBEDF4";
 
     selectedButton6.fifthBtn6 = "right";
-
-    // document.getElementById("firstBtn6").style.backgroundColor = "white";
-    // document.getElementById("firstBtn6").style.color = "black";
-    // document.getElementById("firstBtn6").style.border = "1px solid black";
-
-    // document.getElementById("secondBtn6").style.backgroundColor = "white";
-    // document.getElementById("secondBtn6").style.color = "black";
-    // document.getElementById("secondBtn6").style.border = "1px solid black";
-
-    // document.getElementById("thirdBtn6").style.backgroundColor = "white";
-    // document.getElementById("thirdBtn6").style.color = "black";
-    // document.getElementById("thirdBtn6").style.border = "1px solid black";
-
-    // document.getElementById("fourthBtn6").style.backgroundColor = "white";
-    // document.getElementById("fourthBtn6").style.color = "black";
-    // document.getElementById("fourthBtn6").style.border = "1px solid black";
 };
 
 function question6() {
