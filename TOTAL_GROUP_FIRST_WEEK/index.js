@@ -291,7 +291,135 @@ function question2() {
     }
 }
 
+// 3 QUESTION
+
+let numbers3 = {
+    firstNumber: "",
+    secondNumber: "",
+    thirdNumber: "",
+    fourthNumber: "",
+};
+
+document.getElementById("firstNumber3").onchange = function (e) {
+    if (e.target.value == 2) {
+        numbers3.firstNumber = "right";
+    } else {
+        numbers3.firstNumber = "wrong";
+    }
+};
+
+document.getElementById("secondNumber3").onchange = function (e) {
+    if (e.target.value == 4) {
+        numbers3.secondNumber = "right";
+    } else {
+        numbers3.secondNumber = "wrong";
+    }
+};
+
+document.getElementById("thirdNumber3").onchange = function (e) {
+    if (e.target.value == 5) {
+        numbers3.thirdNumber = "right";
+    } else {
+        numbers3.thirdNumber = "wrong";
+    }
+};
+
+document.getElementById("fourthNumber3").onchange = function (e) {
+    if (e.target.value == 11) {
+        numbers3.fourthNumber = "right";
+    } else {
+        numbers3.fourthNumber = "wrong";
+    }
+};
+
+function question3() {
+    if (
+        numbers3.firstNumber != "" &&
+        numbers3.secondNumber != "" &&
+        numbers3.thirdNumber != "" &&
+        numbers3.fourthNumber != ""
+    ) {
+        succerror(
+            document.getElementById("firstNumber3"),
+            numbers2.leftNumber === "wrong"
+        );
+
+        succerror(
+            document.getElementById("secondNumber3"),
+            numbers2.rightNumber === "wrong"
+        );
+
+        succerror(
+            document.getElementById("thirdNumber3"),
+            numbers2.leftNumber === "wrong"
+        );
+
+        succerror(
+            document.getElementById("fourthNumber3"),
+            numbers2.rightNumber === "wrong"
+        );
+
+        // расставляем мини-иконки
+
+        createMiniIcon(
+            numbers3.firstNumber,
+            document.getElementById("firstNumber3")
+        );
+
+        createMiniIcon(
+            numbers3.secondNumber,
+            document.getElementById("secondNumber3")
+        );
+
+        createMiniIcon(
+            numbers3.thirdNumber,
+            document.getElementById("thirdNumber3")
+        );
+
+        createMiniIcon(
+            numbers3.fourthNumber,
+            document.getElementById("fourthNumber3")
+        );
+
+        // выносим общий статус к номеру вопроса
+
+        if (
+            numbers3.firstNumber === "right" &&
+            numbers3.secondNumber === "right" &&
+            numbers3.thirdNumber === "right" &&
+            numbers3.fourthNumber === "right"
+        ) {
+            addImage(
+                "success",
+                document.getElementsByClassName("question3"),
+                "app3",
+                3
+            );
+        } else {
+            addImage(
+                "failure",
+                document.getElementsByClassName("question3"),
+                "app3",
+                3
+            );
+        }
+    } else {
+        document.getElementById("firstNumber3").style.border =
+            "2px solid #FFB47D";
+
+        document.getElementById("secondNumber3").style.border =
+            "2px solid #FFB47D";
+
+        document.getElementById("thirdNumber3").style.border =
+            "2px solid #FFB47D";
+
+        document.getElementById("fourthNumber3").style.border =
+            "2px solid #FFB47D";
+    }
+}
+
 document.getElementById("submit").onclick = function () {
     question1();
     question2();
+    question3();
 };
