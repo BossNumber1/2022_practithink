@@ -1019,6 +1019,70 @@ function question10() {
     }
 }
 
+// 12 QUESTION
+
+let numbers12 = {
+    firstNumber: "",
+    secondNumber: "",
+};
+
+document.getElementById("leftNumber12").onchange = function (e) {
+    if (e.target.value == 45) {
+        numbers12.firstNumber = "right";
+    } else {
+        numbers12.firstNumber = "wrong";
+    }
+};
+
+document.getElementById("rightNumber12").onchange = function (e) {
+    if (e.target.value == 75) {
+        numbers12.secondNumber = "right";
+    } else {
+        numbers12.secondNumber = "wrong";
+    }
+};
+
+function question12() {
+    if (numbers12.firstNumber != "" && numbers12.secondNumber != "") {
+        succerror(
+            document.getElementById("leftNumber12"),
+            numbers12.firstNumber === "wrong"
+        );
+
+        succerror(
+            document.getElementById("rightNumber12"),
+            numbers12.secondNumber === "wrong"
+        );
+
+        // выносим общий статус к номеру вопроса
+
+        if (
+            numbers12.firstNumber === "right" &&
+            numbers12.secondNumber === "right"
+        ) {
+            addImage(
+                "success",
+                document.getElementsByClassName("question12"),
+                "app12",
+                12
+            );
+        } else {
+            addImage(
+                "failure",
+                document.getElementsByClassName("question12"),
+                "app12",
+                12
+            );
+        }
+    } else {
+        document.getElementById("leftNumber12").style.border =
+            "2px solid #FFB47D";
+
+        document.getElementById("rightNumber12").style.border =
+            "2px solid #FFB47D";
+    }
+}
+
 // 13 QUESTION
 
 let numbers13 = {
@@ -1288,6 +1352,7 @@ document.getElementById("submit").onclick = function () {
     question6();
     question8();
     question10();
+    question12();
     question13();
     question19();
     question20();
