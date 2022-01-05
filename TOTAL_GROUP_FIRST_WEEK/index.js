@@ -59,7 +59,25 @@ function addMiniIcon(elem, status) {
 
     // устанавливаем её нашему блоку
     objDiv.style.width = widthAdjacentElement;
-    objDiv.style.marginLeft = leftIndent;
+
+    if (elem.parentElement.parentElement.className === "content2") {
+        objDiv.style.marginLeft = "85px";
+        objDiv.style.position = "absolute";
+
+        let parent = elem.parentElement;
+
+        parent.style.width = "150px";
+        parent.style.display = "flex";
+        parent.style.alignItems = "center";
+        parent.style.justifyContent = "space-between";
+
+        parent.style.marginRight = "15px";
+
+        document.getElementsByClassName("content2")[0].style.width = "268px";
+    } else {
+        objDiv.style.marginLeft = leftIndent;
+    }
+
     objDiv.style.marginRight = rightIndent;
     objDiv.style.paddingBottom = "10px";
     objDiv.style.display = "flex";
@@ -75,7 +93,7 @@ function addMiniIcon(elem, status) {
     }
 
     objDiv.appendChild(obj);
-    objDiv.style.marginTop = "-23px";
+    objDiv.style.marginTop = "-45px";
 
     // устанавливаем её в нужное место
     let elementParent = elem.parentElement;
