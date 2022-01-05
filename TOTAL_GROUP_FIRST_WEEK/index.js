@@ -74,6 +74,24 @@ function addMiniIcon(elem, status) {
         parent.style.marginRight = "15px";
 
         document.getElementsByClassName("content2")[0].style.width = "268px";
+    } else if (elem.parentElement.parentElement.className === "content8") {
+        if (elem.parentElement.className === "rightExpression8") {
+            objDiv.style.marginLeft = "80px";
+        } else {
+            objDiv.style.marginLeft = "55px";
+        }
+
+        objDiv.style.position = "absolute";
+
+        let parent = elem.parentElement;
+
+        parent.style.width = "150px";
+        parent.style.alignItems = "center";
+        parent.style.justifyContent = "space-between";
+
+        parent.style.marginRight = "15px";
+
+        document.getElementsByClassName("content8")[0].style.width = "458px";
     } else {
         objDiv.style.marginLeft = leftIndent;
     }
@@ -96,6 +114,8 @@ function addMiniIcon(elem, status) {
 
     if (elem.parentElement.parentElement.className === "content2") {
         objDiv.style.marginTop = "-45px";
+    } else if (elem.parentElement.parentElement.className === "content8") {
+        objDiv.style.marginTop = "-55px";
     } else {
         objDiv.style.marginTop = "-23px";
     }
@@ -520,6 +540,111 @@ function question4() {
             "2px solid #FFB47D";
     }
 }
+
+// 8 QUESTION
+
+let numbers8 = {
+    firstNumber: "",
+    secondNumber: "",
+    thirdNumber: "",
+};
+
+document.getElementById("firstNumber8").onchange = function (e) {
+    if (e.target.value == 3) {
+        numbers8.firstNumber = "right";
+    } else {
+        numbers8.firstNumber = "wrong";
+    }
+};
+
+document.getElementById("secondNumber8").onchange = function (e) {
+    if (e.target.value == 8) {
+        numbers8.secondNumber = "right";
+    } else {
+        numbers8.secondNumber = "wrong";
+    }
+};
+
+document.getElementById("thirdNumber8").onchange = function (e) {
+    if (e.target.value == 12) {
+        numbers8.thirdNumber = "right";
+    } else {
+        numbers8.thirdNumber = "wrong";
+    }
+};
+
+function question4() {
+    if (
+        numbers8.firstNumber != "" &&
+        numbers8.secondNumber != "" &&
+        numbers8.thirdNumber != ""
+    ) {
+        succerror(
+            document.getElementById("firstNumber8"),
+            numbers8.firstNumber === "wrong"
+        );
+
+        succerror(
+            document.getElementById("secondNumber8"),
+            numbers8.secondNumber === "wrong"
+        );
+
+        succerror(
+            document.getElementById("thirdNumber8"),
+            numbers8.thirdNumber === "wrong"
+        );
+
+        // расставляем мини-иконки
+
+        createMiniIcon(
+            numbers8.firstNumber,
+            document.getElementById("firstNumber8")
+        );
+
+        createMiniIcon(
+            numbers8.secondNumber,
+            document.getElementById("secondNumber8")
+        );
+
+        createMiniIcon(
+            numbers8.thirdNumber,
+            document.getElementById("thirdNumber8")
+        );
+
+        // выносим общий статус к номеру вопроса
+
+        if (
+            numbers8.firstNumber === "right" &&
+            numbers8.secondNumber === "right" &&
+            numbers8.thirdNumber === "right"
+        ) {
+            addImage(
+                "success",
+                document.getElementsByClassName("question8"),
+                "app8",
+                8
+            );
+        } else {
+            addImage(
+                "failure",
+                document.getElementsByClassName("question8"),
+                "app8",
+                8
+            );
+        }
+    } else {
+        document.getElementById("firstNumber8").style.border =
+            "2px solid #FFB47D";
+
+        document.getElementById("secondNumber8").style.border =
+            "2px solid #FFB47D";
+
+        document.getElementById("thirdNumber8").style.border =
+            "2px solid #FFB47D";
+    }
+}
+
+// RESULT
 
 document.getElementById("submit").onclick = function () {
     question1();
