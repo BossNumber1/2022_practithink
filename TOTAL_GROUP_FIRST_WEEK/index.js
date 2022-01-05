@@ -248,12 +248,12 @@ function question2() {
         // расставляем мини-иконки
 
         createMiniIcon(
-            numbers1.leftNumber,
+            numbers2.leftNumber,
             document.getElementById("leftNumber2")
         );
 
         createMiniIcon(
-            numbers1.rightNumber,
+            numbers2.rightNumber,
             document.getElementById("rightNumber2")
         );
 
