@@ -573,7 +573,7 @@ document.getElementById("thirdNumber8").onchange = function (e) {
     }
 };
 
-function question4() {
+function question8() {
     if (
         numbers8.firstNumber != "" &&
         numbers8.secondNumber != "" &&
@@ -644,6 +644,133 @@ function question4() {
     }
 }
 
+// 10 QUESTION
+
+let numbers10 = {
+    firstNumber: "",
+    secondNumber: "",
+    thirdNumber: "",
+    fourthNumber: "",
+};
+
+document.getElementById("firstNumber10").onchange = function (e) {
+    if (e.target.value == 1) {
+        numbers10.firstNumber = "right";
+    } else {
+        numbers10.firstNumber = "wrong";
+    }
+};
+
+document.getElementById("secondNumber10").onchange = function (e) {
+    if (e.target.value == 9) {
+        numbers10.secondNumber = "right";
+    } else {
+        numbers10.secondNumber = "wrong";
+    }
+};
+
+document.getElementById("thirdNumber10").onchange = function (e) {
+    if (e.target.value == 8) {
+        numbers10.thirdNumber = "right";
+    } else {
+        numbers10.thirdNumber = "wrong";
+    }
+};
+
+document.getElementById("fourthNumber10").onchange = function (e) {
+    if (e.target.value == 0) {
+        numbers10.fourthNumber = "right";
+    } else {
+        numbers10.fourthNumber = "wrong";
+    }
+};
+
+function question10() {
+    if (
+        numbers10.firstNumber != "" &&
+        numbers10.secondNumber != "" &&
+        numbers10.thirdNumber != "" &&
+        numbers10.fourthNumber != ""
+    ) {
+        succerror(
+            document.getElementById("firstNumber10"),
+            numbers10.firstNumber === "wrong"
+        );
+
+        succerror(
+            document.getElementById("secondNumber10"),
+            numbers10.secondNumber === "wrong"
+        );
+
+        succerror(
+            document.getElementById("thirdNumber10"),
+            numbers10.thirdNumber === "wrong"
+        );
+
+        succerror(
+            document.getElementById("fourthNumber10"),
+            numbers10.fourthNumber === "wrong"
+        );
+
+        // расставляем мини-иконки
+
+        createMiniIcon(
+            numbers10.firstNumber,
+            document.getElementById("firstNumber10")
+        );
+
+        createMiniIcon(
+            numbers10.secondNumber,
+            document.getElementById("secondNumber10")
+        );
+
+        createMiniIcon(
+            numbers10.thirdNumber,
+            document.getElementById("thirdNumber10")
+        );
+
+        createMiniIcon(
+            numbers10.fourthNumber,
+            document.getElementById("fourthNumber10")
+        );
+
+        // выносим общий статус к номеру вопроса
+
+        if (
+            numbers10.firstNumber === "right" &&
+            numbers10.secondNumber === "right" &&
+            numbers10.thirdNumber === "right" &&
+            numbers10.fourthNumber === "right"
+        ) {
+            addImage(
+                "success",
+                document.getElementsByClassName("question10"),
+                "app10",
+                10
+            );
+        } else {
+            addImage(
+                "failure",
+                document.getElementsByClassName("question10"),
+                "app10",
+                10
+            );
+        }
+    } else {
+        document.getElementById("firstNumber10").style.border =
+            "2px solid #FFB47D";
+
+        document.getElementById("secondNumber10").style.border =
+            "2px solid #FFB47D";
+
+        document.getElementById("thirdNumber10").style.border =
+            "2px solid #FFB47D";
+
+        document.getElementById("fourthNumber10").style.border =
+            "2px solid #FFB47D";
+    }
+}
+
 // RESULT
 
 document.getElementById("submit").onclick = function () {
@@ -651,4 +778,6 @@ document.getElementById("submit").onclick = function () {
     question2();
     question3();
     question4();
+    question8();
+    question10();
 };
