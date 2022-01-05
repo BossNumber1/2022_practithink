@@ -1,0 +1,77 @@
+.app6 {
+    width: 1170px;
+    height: 331px;
+    left: calc(50% - 1170px / 2);
+    top: 10px;
+    box-shadow: 4px 4px 50px rgba(0, 0, 0, 0.05);
+    border: 0.5px solid #a8a8a8;
+    border-radius: 7px;
+    margin-bottom: 51px;
+}
+
+.titlePage6 {
+    top: 25px;
+    left: calc(50% - 770px / 2);
+    width: 770px;
+    height: 44px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #2f2f2f;
+}
+
+.subtitle6 {
+    top: 10px;
+    left: calc(50% - 338px / 2);
+    width: 338px;
+    height: 24px;
+    font-size: 16px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    color: #065b5b;
+    font-weight: lighter;
+}
+
+.lineUnderHeading6 {
+    position: absolute;
+    width: 1169px;
+    height: 0px;
+    top: 100px;
+    border-bottom: 1px solid #a8a8a8;
+}
+
+/* content styles */
+
+.content6 {
+    top: 136px;
+    left: calc(50% - 520px / 2);
+    width: 520px;
+    height: 45px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.content6 div {
+    position: static;
+    width: 80px;
+    height: 45px;
+    left: 440px;
+    top: 0px;
+    flex: none;
+    order: 4;
+    flex-grow: 0;
+    border: 1px solid #2f2f2f;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.content6 div:not(:last-child) {
+    margin-right: 30px;
+}
