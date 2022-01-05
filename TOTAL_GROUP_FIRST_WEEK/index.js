@@ -97,7 +97,15 @@ function addMiniIcon(elem, status) {
     }
 
     objDiv.style.marginRight = rightIndent;
-    objDiv.style.paddingBottom = "10px";
+
+    if (
+        elem.parentElement.parentElement.parentElement.className === "content10"
+    ) {
+        objDiv.style.paddingBottom = "5px";
+    } else {
+        objDiv.style.paddingBottom = "10px";
+    }
+
     objDiv.style.display = "flex";
     objDiv.style.justifyContent = "center";
     objDiv.style.alignItems = "center";
