@@ -1098,7 +1098,7 @@ document.getElementById("secondFigure19").onclick = function () {
     clickedElement.style.border = "2px solid #369CB7";
     clickedElement.style.borderRadius = "10px";
 
-    selectedFigures19.secondFigure19 = "right";
+    selectedFigures19.secondFigure19 = "wrong";
 };
 
 document.getElementById("thirdFigure19").onclick = function () {
@@ -1120,7 +1120,7 @@ document.getElementById("fourthFigure19").onclick = function () {
     clickedElement.style.border = "2px solid #369CB7";
     clickedElement.style.borderRadius = "10px";
 
-    selectedFigures19.fourthFigure19 = "right";
+    selectedFigures19.fourthFigure19 = "wrong";
 };
 
 function question19() {
@@ -1128,9 +1128,9 @@ function question19() {
         selButsName = [],
         isTheArrayEmpty = 0;
 
-    for (let key in selectedButton6) {
-        if (selectedButton6[key] !== "") {
-            selectedFigures.push(selectedButton6[key]);
+    for (let key in selectedFigures19) {
+        if (selectedFigures19[key] !== "") {
+            selectedFigures.push(selectedFigures19[key]);
             selButsName.push(key);
             isTheArrayEmpty++;
         }
@@ -1138,10 +1138,11 @@ function question19() {
 
     if (isTheArrayEmpty > 0) {
         selButsName.map((el, index) => {
-            succerror(
-                document.getElementById(el),
-                selectedFigures[index] === "wrong"
-            );
+            if (selectedFigures[index] === "wrong") {
+                document.getElementById(el).style.border = "2px solid #ED7777";
+            } else {
+                document.getElementById(el).style.border = "2px solid #48B736";
+            }
         });
 
         // выносим общий статус к номеру вопроса
@@ -1164,12 +1165,19 @@ function question19() {
     } else {
         document.getElementById("firstFigure19").style.border =
             "2px solid #FFB47D";
+        document.getElementById("firstFigure19").style.borderRadius = "5px";
+
         document.getElementById("secondFigure19").style.border =
             "2px solid #FFB47D";
+        document.getElementById("secondFigure19").style.borderRadius = "5px";
+
         document.getElementById("thirdFigure19").style.border =
             "2px solid #FFB47D";
+        document.getElementById("thirdFigure19").style.borderRadius = "5px";
+
         document.getElementById("fourthFigure19").style.border =
             "2px solid #FFB47D";
+        document.getElementById("fourthFigure19").style.borderRadius = "5px";
     }
 }
 
