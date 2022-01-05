@@ -418,8 +418,112 @@ function question3() {
     }
 }
 
+// 4 QUESTION
+
+let numbers4 = {
+    firstNumber: "",
+    secondNumber: "",
+    thirdNumber: "",
+};
+
+document.getElementById("firstNumber4").onchange = function (e) {
+    if (e.target.value == 5) {
+        numbers4.firstNumber = "right";
+    } else {
+        numbers4.firstNumber = "wrong";
+    }
+};
+
+document.getElementById("secondNumber4").onchange = function (e) {
+    if (e.target.value == 4) {
+        numbers4.secondNumber = "right";
+    } else {
+        numbers4.secondNumber = "wrong";
+    }
+};
+
+document.getElementById("thirdNumber4").onchange = function (e) {
+    if (e.target.value == 9) {
+        numbers4.thirdNumber = "right";
+    } else {
+        numbers4.thirdNumber = "wrong";
+    }
+};
+
+function question4() {
+    if (
+        numbers4.firstNumber != "" &&
+        numbers4.secondNumber != "" &&
+        numbers4.thirdNumber != ""
+    ) {
+        succerror(
+            document.getElementById("firstNumber4"),
+            numbers4.firstNumber === "wrong"
+        );
+
+        succerror(
+            document.getElementById("secondNumber4"),
+            numbers4.secondNumber === "wrong"
+        );
+
+        succerror(
+            document.getElementById("thirdNumber4"),
+            numbers4.thirdNumber === "wrong"
+        );
+
+        // расставляем мини-иконки
+
+        createMiniIcon(
+            numbers4.firstNumber,
+            document.getElementById("firstNumber4")
+        );
+
+        createMiniIcon(
+            numbers4.secondNumber,
+            document.getElementById("secondNumber4")
+        );
+
+        createMiniIcon(
+            numbers4.thirdNumber,
+            document.getElementById("thirdNumber4")
+        );
+
+        // выносим общий статус к номеру вопроса
+
+        if (
+            numbers4.firstNumber === "right" &&
+            numbers4.secondNumber === "right" &&
+            numbers4.thirdNumber === "right"
+        ) {
+            addImage(
+                "success",
+                document.getElementsByClassName("question4"),
+                "app4",
+                4
+            );
+        } else {
+            addImage(
+                "failure",
+                document.getElementsByClassName("question4"),
+                "app4",
+                4
+            );
+        }
+    } else {
+        document.getElementById("firstNumber4").style.border =
+            "2px solid #FFB47D";
+
+        document.getElementById("secondNumber4").style.border =
+            "2px solid #FFB47D";
+
+        document.getElementById("thirdNumber4").style.border =
+            "2px solid #FFB47D";
+    }
+}
+
 document.getElementById("submit").onclick = function () {
     question1();
     question2();
     question3();
+    question4();
 };
