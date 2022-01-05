@@ -93,7 +93,12 @@ function addMiniIcon(elem, status) {
     }
 
     objDiv.appendChild(obj);
-    objDiv.style.marginTop = "-45px";
+
+    if (elem.parentElement.parentElement.className === "content2") {
+        objDiv.style.marginTop = "-45px";
+    } else {
+        objDiv.style.marginTop = "-23px";
+    }
 
     // устанавливаем её в нужное место
     let elementParent = elem.parentElement;
