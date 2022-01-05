@@ -779,6 +779,57 @@ function question10() {
     }
 }
 
+// 10 QUESTION
+
+let numbers13 = {
+    firstNumber: "",
+};
+
+document.getElementById("firstNumber13").onchange = function (e) {
+    if (e.target.value == 18) {
+        numbers13.firstNumber = "right";
+    } else {
+        numbers13.firstNumber = "wrong";
+    }
+};
+
+function question13() {
+    if (numbers13.firstNumber != "") {
+        succerror(
+            document.getElementById("firstNumber13"),
+            numbers13.firstNumber === "wrong"
+        );
+
+        // расставляем мини-иконки
+
+        createMiniIcon(
+            numbers13.firstNumber,
+            document.getElementById("firstNumber13")
+        );
+
+        // выносим общий статус к номеру вопроса
+
+        if (numbers13.firstNumber === "right") {
+            addImage(
+                "success",
+                document.getElementsByClassName("question13"),
+                "app13",
+                13
+            );
+        } else {
+            addImage(
+                "failure",
+                document.getElementsByClassName("question13"),
+                "app13",
+                13
+            );
+        }
+    } else {
+        document.getElementById("firstNumber13").style.border =
+            "2px solid #FFB47D";
+    }
+}
+
 // RESULT
 
 document.getElementById("submit").onclick = function () {
@@ -788,4 +839,5 @@ document.getElementById("submit").onclick = function () {
     question4();
     question8();
     question10();
+    question13();
 };
