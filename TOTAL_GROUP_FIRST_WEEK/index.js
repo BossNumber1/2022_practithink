@@ -682,8 +682,21 @@ function question5() {
 
 // 6 QUESTION
 
-let selectedButton6 = "",
-    selectedNameButton6;
+let selectedButton6 = {
+        firstBtn6: "",
+        secondBtn6: "",
+        thirdBtn6: "",
+        fourthBtn6: "",
+        fifthBtn6: "",
+    },
+    selectedNameButton6 = {
+        firstBtn6: "",
+        secondBtn6: "",
+        thirdBtn6: "",
+        fourthBtn6: "",
+        fifthBtn6: "",
+    },
+    isTheArrayEmpty = 0;
 
 document.getElementById("firstBtn6").onclick = function () {
     let clickedElement = document.getElementById("firstBtn6");
@@ -692,8 +705,8 @@ document.getElementById("firstBtn6").onclick = function () {
     clickedElement.style.color = "#0e80a4";
     clickedElement.style.border = "1px solid #BBEDF4";
 
-    selectedButton6 = "right";
-    selectedNameButton6 = "firstBtn6";
+    selectedButton6.firstBtn6 = "right";
+    selectedNameButton6.firstBtn6 = "firstBtn6";
 
     // document.getElementById("secondBtn6").style.backgroundColor = "white";
     // document.getElementById("secondBtn6").style.color = "black";
@@ -719,8 +732,8 @@ document.getElementById("secondBtn6").onclick = function () {
     clickedElement.style.color = "#0e80a4";
     clickedElement.style.border = "1px solid #BBEDF4";
 
-    selectedButton6 = "right";
-    selectedNameButton6 = "secondBtn6";
+    selectedButton6.secondBtn6 = "right";
+    selectedNameButton6.secondBtn6 = "secondBtn6";
 
     // document.getElementById("thirdBtn6").style.backgroundColor = "white";
     // document.getElementById("thirdBtn6").style.color = "black";
@@ -746,8 +759,8 @@ document.getElementById("thirdBtn6").onclick = function () {
     clickedElement.style.color = "#0e80a4";
     clickedElement.style.border = "1px solid #BBEDF4";
 
-    selectedButton6 = "right";
-    selectedNameButton6 = "thirdBtn6";
+    selectedButton6.thirdBtn6 = "right";
+    selectedNameButton6.thirdBtn6 = "thirdBtn6";
 
     // document.getElementById("fourthBtn6").style.backgroundColor = "white";
     // document.getElementById("fourthBtn6").style.color = "black";
@@ -773,8 +786,8 @@ document.getElementById("fourthBtn6").onclick = function () {
     clickedElement.style.color = "#0e80a4";
     clickedElement.style.border = "1px solid #BBEDF4";
 
-    selectedButton6 = "right";
-    selectedNameButton6 = "fourthBtn6";
+    selectedButton6.fourthBtn6 = "right";
+    selectedNameButton6.fourthBtn6 = "fourthBtn6";
 
     // document.getElementById("firstBtn6").style.backgroundColor = "white";
     // document.getElementById("firstBtn6").style.color = "black";
@@ -800,8 +813,8 @@ document.getElementById("fifthBtn6").onclick = function () {
     clickedElement.style.color = "#0e80a4";
     clickedElement.style.border = "1px solid #BBEDF4";
 
-    selectedButton6 = "right";
-    selectedNameButton6 = "fifthBtn6";
+    selectedButton6.fifthBtn6 = "right";
+    selectedNameButton6.fifthBtn6 = "fifthBtn6";
 
     // document.getElementById("firstBtn6").style.backgroundColor = "white";
     // document.getElementById("firstBtn6").style.color = "black";
@@ -821,15 +834,25 @@ document.getElementById("fifthBtn6").onclick = function () {
 };
 
 function question6() {
-    if (selectedButton6 != "") {
-        succerror(
-            document.getElementById(selectedNameButton6),
-            selectedButton6 === "wrong"
-        );
+    let selButs = [],
+        selButsName = [];
+
+    for (let key in selectedButton6) {
+        if (selectedButton6[key] !== "") {
+            selButs.push(selectedButton6[key]);
+            selButsName.push(key);
+            isTheArrayEmpty++;
+        }
+    }
+
+    if (isTheArrayEmpty > 0) {
+        selButsName.map((el, index) => {
+            succerror(document.getElementById(el), selButs[index] === "wrong");
+        });
 
         // выносим общий статус к номеру вопроса
 
-        if (selectedButton6 === "right") {
+        if (selButs.includes("right") === true) {
             addImage(
                 "success",
                 document.getElementsByClassName("question6"),
