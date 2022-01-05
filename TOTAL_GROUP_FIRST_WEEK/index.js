@@ -341,22 +341,22 @@ function question3() {
     ) {
         succerror(
             document.getElementById("firstNumber3"),
-            numbers2.leftNumber === "wrong"
+            numbers3.firstNumber === "wrong"
         );
 
         succerror(
             document.getElementById("secondNumber3"),
-            numbers2.rightNumber === "wrong"
+            numbers3.secondNumber === "wrong"
         );
 
         succerror(
             document.getElementById("thirdNumber3"),
-            numbers2.leftNumber === "wrong"
+            numbers3.thirdNumber === "wrong"
         );
 
         succerror(
             document.getElementById("fourthNumber3"),
-            numbers2.rightNumber === "wrong"
+            numbers3.fourthNumber === "wrong"
         );
 
         // расставляем мини-иконки
