@@ -1230,6 +1230,68 @@ function question14() {
     }
 }
 
+// 15 QUESTION
+
+function question15() {
+    let wrongOrder = "yes";
+    let correctOrder = ["centerTree", "rightTree", "leftTree"];
+    let currentOrder = [];
+    let howManyAreSelected = 0;
+    let childs = document.getElementsByClassName("topRow15")[0].children;
+
+    for (let i = 0; i < childs.length; i++) {
+        if (childs[i].children[0].id.slice(0, -1) !== "emptyPlace") {
+            currentOrder.push(childs[i].children[0].id.slice(0, -1));
+            howManyAreSelected++;
+        }
+    }
+
+    if (howManyAreSelected > 0) {
+        // теперь нужно проверить на соответствие данных
+        currentOrder.map((el, index) => {
+            if (el === correctOrder[index]) {
+                // alert("true");
+                document.getElementById(el + "0").style.border =
+                    "2px solid green";
+            } else {
+                document.getElementById(el + "0").style.border =
+                    "2px solid red";
+                wrongOrder = "no";
+            }
+
+            document.getElementById(el + "0").style.borderRadius = "5px";
+        });
+
+        if (wrongOrder === "yes") {
+            addImage(
+                "success",
+                document.getElementsByClassName("question15"),
+                "app15",
+                15
+            );
+        } else {
+            addImage(
+                "failure",
+                document.getElementsByClassName("question15"),
+                "app15",
+                15
+            );
+        }
+    } else {
+        document.getElementById("emptyPlace0").style.border =
+            "2px solid #FFB47D";
+        document.getElementById("emptyPlace0").style.borderRadius = "5px";
+
+        document.getElementById("emptyPlace1").style.border =
+            "2px solid #FFB47D";
+        document.getElementById("emptyPlace1").style.borderRadius = "5px";
+
+        document.getElementById("emptyPlace2").style.border =
+            "2px solid #FFB47D";
+        document.getElementById("emptyPlace2").style.borderRadius = "5px";
+    }
+}
+
 // 16 QUESTION
 
 let selectedFigures16 = {
@@ -1562,6 +1624,7 @@ document.getElementById("submit").onclick = function () {
     question12();
     question13();
     question14();
+    question15();
     question16();
     question19();
     question20();
