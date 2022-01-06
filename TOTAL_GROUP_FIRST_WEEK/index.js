@@ -1655,14 +1655,23 @@ function drop15(e) {
     let nameObjectCurrent = currentId.slice(0, -1);
 
     // получаем объекты
-    let orig = document.getElementById(idOrig);
+    let orignalElement = document.getElementById(idOrig);
     let currentElement = document.getElementById(currentId);
 
     // меняем картинки местами
     currentElement.src = "./pictures/15que/" + nameObjectOrig + ".svg";
-    orig.src = "./pictures/15que/" + nameObjectCurrent + ".svg";
+    orignalElement.src = "./pictures/15que/" + nameObjectCurrent + ".svg";
 
     // меняем id местами
     currentElement.id = idOrig;
-    orig.id = currentId;
+    orignalElement.id = currentId;
+
+    // меняем фон при определённом условии
+    if (nameObjectCurrent === "emptyPlace") {
+        currentElement.parentElement.style.backgroundColor = "white";
+    }
+
+    // меняем вид курсора
+    currentElement.style.cursor = "grab";
+    orignalElement.style.cursor = "default";
 }
