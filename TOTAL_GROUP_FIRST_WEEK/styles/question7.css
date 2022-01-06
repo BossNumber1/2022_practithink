@@ -139,3 +139,11 @@
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
+
+.placeOfDroppingFigures7 {
+    width: 270px;
+    height: 183px;
+    /* border: 1px solid; */
+    left: -1px;
+    top: -1px;
+}
