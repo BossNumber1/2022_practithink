@@ -48,13 +48,13 @@
     height: 62.74px;
 }
 
-.ruler14 {
+/* .ruler14 {
     top: 29px;
     width: 270px;
     height: 57px;
     left: 226px;
     cursor: grab;
-}
+} */
 
 .btns14 {
     display: flex;
@@ -62,7 +62,7 @@
     align-items: flex-start;
     width: 570px;
     height: 45px;
-    top: 80px;
+    top: 120px;
 }
 
 .btns14 div {
@@ -82,4 +82,40 @@
     flex-grow: 0;
     margin-right: 30px;
     cursor: pointer;
+}
+
+/* ruler styles */
+
+.ruler14 {
+    position: absolute;
+    display: flex;
+    top: 89px;
+    width: 270px;
+    height: 57px;
+    left: 226px;
+    cursor: grab;
+}
+
+/* .ruler {
+    position: absolute;
+    top: 121px;
+    display: flex;
+} */
+
+.leftEdge,
+.rightEdge {
+    display: flex;
+    width: 50px;
+    height: 57px;
+    position: absolute;
+    border: 1px solid;
+    cursor: pointer;
+}
+
+.leftEdge {
+    z-index: 1;
+}
+
+.rightEdge {
+    left: 79%;
 }
