@@ -1630,3 +1630,39 @@ ruler14question.addEventListener("mousedown", (e) => {
         rotationFunction.onRotated(e);
     }
 });
+
+// ------------------------------------------------------------ ALL DRAG AND DROP -------------------------------------------------------------
+
+// common commands
+
+function allowDrop(e) {
+    e.preventDefault();
+}
+
+// 15 QUESTION
+
+function drag15(e) {
+    localStorage.setItem("idOrigin15question15class", e.target.id);
+}
+
+function drop15(e) {
+    // получаем имя и id взятого элемента
+    let idOrig = localStorage.getItem("idOrigin15question15class");
+    let nameObjectOrig = idOrig.slice(0, -1);
+
+    // получаем имя и id, на который кладём элемент
+    let currentId = e.target.id;
+    let nameObjectCurrent = currentId.slice(0, -1);
+
+    // получаем объекты
+    let orig = document.getElementById(idOrig);
+    let currentElement = document.getElementById(currentId);
+
+    // меняем картинки местами
+    currentElement.src = "./pictures/15que/" + nameObjectOrig + ".svg";
+    orig.src = "./pictures/15que/" + nameObjectCurrent + ".svg";
+
+    // меняем id местами
+    currentElement.id = idOrig;
+    orig.id = currentId;
+}
