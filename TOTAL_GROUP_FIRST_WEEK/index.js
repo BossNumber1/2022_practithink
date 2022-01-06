@@ -1146,7 +1146,7 @@ document.getElementById("firstBtn14").onclick = function () {
     clickedElement.style.color = "#0e80a4";
     clickedElement.style.border = "1px solid #BBEDF4";
 
-    selectedButton14 = "wrong";
+    selectedButton14 = "right";
     selectedNameButton14 = "firstBtn14";
 
     document.getElementById("secondBtn14").style.backgroundColor = "white";
@@ -1165,8 +1165,8 @@ document.getElementById("secondBtn14").onclick = function () {
     clickedElement.style.color = "#0e80a4";
     clickedElement.style.border = "1px solid #BBEDF4";
 
-    selectedButton20 = "right";
-    selectedNameButton20 = "secondBtn14";
+    selectedButton14 = "wrong";
+    selectedNameButton14 = "secondBtn14";
 
     document.getElementById("thirdBtn14").style.backgroundColor = "white";
     document.getElementById("thirdBtn14").style.color = "black";
@@ -1184,8 +1184,8 @@ document.getElementById("thirdBtn14").onclick = function () {
     clickedElement.style.color = "#0e80a4";
     clickedElement.style.border = "1px solid #BBEDF4";
 
-    selectedButton20 = "wrong";
-    selectedNameButton20 = "thirdBtn14";
+    selectedButton14 = "wrong";
+    selectedNameButton14 = "thirdBtn14";
 
     document.getElementById("secondBtn14").style.backgroundColor = "white";
     document.getElementById("secondBtn14").style.color = "black";
@@ -1561,6 +1561,7 @@ document.getElementById("submit").onclick = function () {
     question10();
     question12();
     question13();
+    question14();
     question16();
     question19();
     question20();
