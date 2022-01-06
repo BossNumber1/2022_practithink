@@ -1134,6 +1134,117 @@ function question13() {
     }
 }
 
+// 16 QUESTION
+
+let selectedFigures16 = {
+    firstFigure16: "",
+    secondFigure16: "",
+    thirdFigure16: "",
+    fourthFigure16: "",
+};
+
+document.getElementById("firstFigure16").onclick = function () {
+    let clickedElement = document.getElementById("firstFigure16");
+
+    clickedElement.style.boxShadow =
+        "2px 2px 20px 1px rgba(54, 156, 183, 0.29)";
+    clickedElement.style.border = "2px solid #369CB7";
+    clickedElement.style.borderRadius = "10px";
+
+    selectedFigures16.firstFigure16 = "right";
+};
+
+document.getElementById("secondFigure16").onclick = function () {
+    let clickedElement = document.getElementById("secondFigure16");
+
+    clickedElement.style.boxShadow =
+        "2px 2px 20px 1px rgba(54, 156, 183, 0.29)";
+    clickedElement.style.border = "2px solid #369CB7";
+    clickedElement.style.borderRadius = "10px";
+
+    selectedFigures16.secondFigure16 = "wrong";
+};
+
+document.getElementById("thirdFigure16").onclick = function () {
+    let clickedElement = document.getElementById("thirdFigure16");
+
+    clickedElement.style.boxShadow =
+        "2px 2px 20px 1px rgba(54, 156, 183, 0.29)";
+    clickedElement.style.border = "2px solid #369CB7";
+    clickedElement.style.borderRadius = "10px";
+
+    selectedFigures16.thirdFigure16 = "right";
+};
+
+document.getElementById("fourthFigure16").onclick = function () {
+    let clickedElement = document.getElementById("fourthFigure16");
+
+    clickedElement.style.boxShadow =
+        "2px 2px 20px 1px rgba(54, 156, 183, 0.29)";
+    clickedElement.style.border = "2px solid #369CB7";
+    clickedElement.style.borderRadius = "10px";
+
+    selectedFigures16.fourthFigure16 = "wrong";
+};
+
+function question16() {
+    let selectedFigures = [],
+        selButsName = [],
+        isTheArrayEmpty = 0;
+
+    for (let key in selectedFigures16) {
+        if (selectedFigures16[key] !== "") {
+            selectedFigures.push(selectedFigures16[key]);
+            selButsName.push(key);
+            isTheArrayEmpty++;
+        }
+    }
+
+    if (isTheArrayEmpty > 0) {
+        selButsName.map((el, index) => {
+            if (selectedFigures[index] === "wrong") {
+                document.getElementById(el).style.border = "2px solid #ED7777";
+            } else {
+                document.getElementById(el).style.border = "2px solid #48B736";
+            }
+        });
+
+        // выносим общий статус к номеру вопроса
+
+        if (selectedFigures.includes("right") === true) {
+            addImage(
+                "success",
+                document.getElementsByClassName("question16"),
+                "app16",
+                16
+            );
+        } else {
+            addImage(
+                "failure",
+                document.getElementsByClassName("question16"),
+                "app16",
+                16
+            );
+        }
+    } else {
+        document.getElementById("firstFigure16").style.border =
+            "2px solid #FFB47D";
+        document.getElementById("firstFigure16").style.borderRadius = "5px";
+
+        document.getElementById("secondFigure16").style.border =
+            "2px solid #FFB47D";
+        document.getElementById("secondFigure16").style.borderRadius = "5px";
+
+        document.getElementById("thirdFigure16").style.border =
+            "2px solid #FFB47D";
+        document.getElementById("thirdFigure16").style.borderRadius = "5px";
+
+        document.getElementById("fourthFigure16").style.border =
+            "2px solid #FFB47D";
+        document.getElementById("fourthFigure16").style.borderRadius = "5px";
+    }
+}
+
 // 19 QUESTION
 
 let selectedFigures19 = {
@@ -1354,6 +1465,7 @@ document.getElementById("submit").onclick = function () {
     question10();
     question12();
     question13();
+    question16();
     question19();
     question20();
 };
