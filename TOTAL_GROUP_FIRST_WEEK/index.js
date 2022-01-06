@@ -1702,10 +1702,6 @@ function allowDrop(e) {
     e.preventDefault();
 }
 
-function allowDrop7(e) {
-    e.preventDefault();
-}
-
 // 7 QUESTION
 
 function drag7(e) {
@@ -1720,7 +1716,16 @@ function drag7(e) {
 function drop7(e) {
     // получаем id несомого элемента и класс прародителя
     let idTakenElement = localStorage.getItem("idOrigin7question3class");
+    let objectName = idTakenElement.slice(0, -1);
     let positionElem = localStorage.getItem("positionElem7");
+
+    if (
+        idTakenElement !== "placeOfDroppingFigures7true" ||
+        idTakenElement !== "placeOfDroppingFigures7false"
+    ) {
+        objectName = "temp" + positionElem;
+    }
+
     let classElemGrandparent = localStorage.getItem("classElemGrandparent7");
 
     // берем id того элемента, на который положим несомый
@@ -1735,7 +1740,7 @@ function drop7(e) {
     objectBeingCreated.src = "./pictures/7que/" + idTakenElement + ".svg";
     objectBeingCreated.style.marginLeft = "10px";
     objectBeingCreated.style.marginTop = "10px";
-    objectBeingCreated.id = idTakenElement;
+    objectBeingCreated.id = objectName;
     objectBeingCreated.setAttribute("data-position", positionElem);
     objectBeingCreated.alt = idTakenElement;
     objectBeingCreated.style.cursor = "grab";
@@ -1751,10 +1756,10 @@ function drop7(e) {
     }
 
     if (classElemGrandparent == "true" || classElemGrandparent == "false") {
-        let toRemove = document.getElementById("candy");
+        let toRemove = document.getElementById(objectName);
         toRemove.remove();
 
-        document.getElementById("candy").remove();
+        document.getElementById(objectName).remove();
     }
 }
 
