@@ -1134,6 +1134,102 @@ function question13() {
     }
 }
 
+// 14 QUESTION
+
+let selectedButton14 = "",
+    selectedNameButton14;
+
+document.getElementById("firstBtn14").onclick = function () {
+    let clickedElement = document.getElementById("firstBtn14");
+
+    clickedElement.style.backgroundColor = "#bbedf4";
+    clickedElement.style.color = "#0e80a4";
+    clickedElement.style.border = "1px solid #BBEDF4";
+
+    selectedButton14 = "wrong";
+    selectedNameButton14 = "firstBtn14";
+
+    document.getElementById("secondBtn14").style.backgroundColor = "white";
+    document.getElementById("secondBtn14").style.color = "black";
+    document.getElementById("secondBtn14").style.border = "1px solid black";
+
+    document.getElementById("thirdBtn14").style.backgroundColor = "white";
+    document.getElementById("thirdBtn14").style.color = "black";
+    document.getElementById("thirdBtn14").style.border = "1px solid black";
+};
+
+document.getElementById("secondBtn14").onclick = function () {
+    let clickedElement = document.getElementById("secondBtn14");
+
+    clickedElement.style.backgroundColor = "#bbedf4";
+    clickedElement.style.color = "#0e80a4";
+    clickedElement.style.border = "1px solid #BBEDF4";
+
+    selectedButton20 = "right";
+    selectedNameButton20 = "secondBtn14";
+
+    document.getElementById("thirdBtn14").style.backgroundColor = "white";
+    document.getElementById("thirdBtn14").style.color = "black";
+    document.getElementById("thirdBtn14").style.border = "1px solid black";
+
+    document.getElementById("firstBtn14").style.backgroundColor = "white";
+    document.getElementById("firstBtn14").style.color = "black";
+    document.getElementById("firstBtn14").style.border = "1px solid black";
+};
+
+document.getElementById("thirdBtn14").onclick = function () {
+    let clickedElement = document.getElementById("thirdBtn14");
+
+    clickedElement.style.backgroundColor = "#bbedf4";
+    clickedElement.style.color = "#0e80a4";
+    clickedElement.style.border = "1px solid #BBEDF4";
+
+    selectedButton20 = "wrong";
+    selectedNameButton20 = "thirdBtn14";
+
+    document.getElementById("secondBtn14").style.backgroundColor = "white";
+    document.getElementById("secondBtn14").style.color = "black";
+    document.getElementById("secondBtn14").style.border = "1px solid black";
+
+    document.getElementById("firstBtn14").style.backgroundColor = "white";
+    document.getElementById("firstBtn14").style.color = "black";
+    document.getElementById("firstBtn14").style.border = "1px solid black";
+};
+
+function question14() {
+    if (selectedButton14 != "") {
+        succerror(
+            document.getElementById(selectedNameButton14),
+            selectedButton14 === "wrong"
+        );
+
+        // выносим общий статус к номеру вопроса
+
+        if (selectedButton14 === "right") {
+            addImage(
+                "success",
+                document.getElementsByClassName("question14"),
+                "app14",
+                14
+            );
+        } else {
+            addImage(
+                "failure",
+                document.getElementsByClassName("question14"),
+                "app14",
+                14
+            );
+        }
+    } else {
+        document.getElementById("firstBtn14").style.border =
+            "2px solid #FFB47D";
+        document.getElementById("secondBtn14").style.border =
+            "2px solid #FFB47D";
+        document.getElementById("thirdBtn14").style.border =
+            "2px solid #FFB47D";
+    }
+}
+
 // 16 QUESTION
 
 let selectedFigures16 = {
