@@ -92,7 +92,7 @@
     top: 89px;
     width: 270px;
     height: 57px;
-    left: 226px;
+    left: 232px;
     cursor: grab;
 }
 
@@ -108,7 +108,7 @@
     width: 50px;
     height: 57px;
     position: absolute;
-    border: 1px solid;
+    /* border: 1px solid; */
     cursor: pointer;
 }
 

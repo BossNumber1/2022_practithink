@@ -1569,7 +1569,7 @@ document.getElementById("submit").onclick = function () {
 
 // -------------------------------------------------------------- ROTATE RULER FOR 14 QUESTION -----------------------------------------------
 
-let ruler14question = document.getElementById("ruler14");
+let ruler14question = document.getElementsByClassName("ruler14")[0];
 
 dragElement(ruler14question);
 
