@@ -109,12 +109,16 @@
     width: 270px;
     height: 210px;
 
-    border: 1px solid;
+    border: 1px solid #d0d0d0;
+    border-radius: 5px;
 }
 
 .headerBasketTrue,
 .headerBasketFalse {
-    width: 270px;
+    width: 272px;
+    left: -1px;
+    top: -1px;
+
     height: 28px;
 
     background: #205b64;
@@ -131,4 +135,7 @@
     justify-content: center;
 
     letter-spacing: 0em;
+
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
