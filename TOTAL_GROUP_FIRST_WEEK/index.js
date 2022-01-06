@@ -1702,15 +1702,71 @@ function allowDrop(e) {
     e.preventDefault();
 }
 
+function allowDrop7(e) {
+    e.preventDefault();
+}
+
+// 7 QUESTION
+
+function drag7(e) {
+    localStorage.setItem("idOrigin7question3class", e.target.id);
+    localStorage.setItem(
+        "classElemGrandparent7",
+        e.target.parentElement.parentElement.className
+    );
+    localStorage.setItem("positionElem7", e.target.dataset.position);
+}
+
+function drop7(e) {
+    // получаем id несомого элемента и класс прародителя
+    let idTakenElement = localStorage.getItem("idOrigin7question3class");
+    let positionElem = localStorage.getItem("positionElem7");
+    let classElemGrandparent = localStorage.getItem("classElemGrandparent7");
+
+    // берем id того элемента, на который положим несомый
+    let currentId = e.target.id;
+
+    // получаем объекты
+    let orig = document.getElementById(idTakenElement);
+    let currentElem = document.getElementById(currentId);
+
+    // создаём новый объект
+    let objectBeingCreated = document.createElement("img");
+    objectBeingCreated.src = "./pictures/7que/" + idTakenElement + ".svg";
+    objectBeingCreated.style.marginLeft = "10px";
+    objectBeingCreated.style.marginTop = "10px";
+    objectBeingCreated.id = idTakenElement;
+    objectBeingCreated.setAttribute("data-position", positionElem);
+    objectBeingCreated.alt = idTakenElement;
+    objectBeingCreated.style.cursor = "grab";
+
+    // меняем поля местами
+    orig.style.opacity = "0.5";
+    orig.style.cursor = "default";
+
+    currentElem.appendChild(objectBeingCreated);
+
+    if (classElemGrandparent != "true" || classElemGrandparent != "false") {
+        e.target.style.opacity = "1";
+    }
+
+    if (classElemGrandparent == "true" || classElemGrandparent == "false") {
+        let toRemove = document.getElementById("candy");
+        toRemove.remove();
+
+        document.getElementById("candy").remove();
+    }
+}
+
 // 15 QUESTION
 
 function drag15(e) {
-    localStorage.setItem("idOrigin15question15class", e.target.id);
+    localStorage.setItem("idOrigin15question3class", e.target.id);
 }
 
 function drop15(e) {
     // получаем имя и id взятого элемента
-    let idOrig = localStorage.getItem("idOrigin15question15class");
+    let idOrig = localStorage.getItem("idOrigin15question3class");
     let nameObjectOrig = idOrig.slice(0, -1);
 
     // получаем имя и id, на который кладём элемент
