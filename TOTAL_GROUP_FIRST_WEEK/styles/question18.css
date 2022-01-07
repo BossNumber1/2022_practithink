@@ -1,0 +1,138 @@
+.app18 {
+    width: 1170px;
+    height: 680px;
+    left: calc(50% - 1170px / 2);
+    top: 10px;
+    box-shadow: 4px 4px 50px rgba(0, 0, 0, 0.05);
+    border: 0.5px solid #a8a8a8;
+    border-radius: 7px;
+    margin-bottom: 51px;
+}
+
+.titlePage18 {
+    top: 25px;
+    left: calc(50% - 770px / 2);
+    width: 770px;
+    height: 22px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: #2f2f2f;
+    text-align: center;
+}
+
+.lineUnderHeading18 {
+    position: absolute;
+    width: 1169px;
+    height: 0px;
+    top: 70px;
+    border-bottom: 1px solid #a8a8a8;
+}
+
+/* content styles */
+
+.content18 {
+    top: 132px;
+    left: calc(50% - 610px / 2);
+    width: 610px;
+    height: 428px;
+}
+
+.row18 {
+    left: calc(50% - 610px / 2);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 610px;
+    height: 50px;
+}
+
+.row18 img {
+    position: static;
+    width: 50px;
+    height: 50px;
+    flex: none;
+    order: 7;
+    flex-grow: 0;
+    margin-right: 30px;
+    cursor: grab;
+}
+
+.row18 img:hover {
+    transform: scale(1.2);
+}
+
+/* circles styles */
+
+.circles {
+    top: 75px;
+    left: calc(50% - 466px / 2);
+    display: flex;
+    flex: 1;
+    width: 466px;
+    height: 301px;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.circle-container {
+    width: 301px;
+    height: 301px;
+    border: 1px solid #a1a6d9;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.background-circle {
+    width: 301px;
+    height: 301px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 170px;
+    cursor: pointer;
+}
+
+.right-circle-container {
+    transform: rotate(180deg);
+    border: 1px solid #a1a6d9;
+    position: absolute;
+    left: 165px;
+}
+
+/* circles headers styles */
+
+.circlesHeaders {
+    width: 260px;
+    height: 20px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    left: 195px;
+    position: absolute;
+    top: 100px;
+}
+
+.fourSidedHeader,
+.blueShapesHeader {
+    height: 20px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #2f2f2f;
+    z-index: 10;
+}
+
+.fourSidedHeader {
+    width: 152px;
+    left: -45px;
+}
+
+.blueShapesHeader {
+    width: 101px;
+}
