@@ -1937,6 +1937,51 @@ function drop7(e) {
     }
 }
 
+// 11 QUESTION
+
+function drag11p2(e) {
+    localStorage.setItem("idSign11", e.target.id);
+    localStorage.setItem(
+        "classGrandparentElement11",
+        e.target.parentElement.className
+    );
+}
+
+function drop11p2(e) {
+    // получаем id взятого элемента и класс прародителя
+    let idSign = localStorage.getItem("idSign11");
+    let classGrandparentElement = localStorage.getItem(
+        "classGrandparentElement11"
+    );
+
+    let currentClassGrandparent = e.target.parentElement.className;
+
+    // берем id того элемента, на который положим несомый
+    let currentId = e.target.id;
+
+    // получаем объекты
+    let orig = document.getElementById(idSign);
+    let currentElem = document.getElementById(currentId);
+
+    // меняем поля местами
+    currentElem.parentElement.className = classGrandparentElement;
+    currentElem.id = idSign;
+    currentElem.textContent = orig.textContent;
+    currentElem.setAttribute("draggable", true);
+
+    orig.textContent = "";
+    orig.id = currentId;
+    // orig.parentElement.className = currentClassGrandparent;
+
+    if (orig.parentElement.parentElement.className !== "inputs11") {
+        orig.style.background = "#c2e1e9";
+        orig.style.border = "1px solid #c2e1e9";
+    }
+    // else {
+    //     orig.style.opacity = "1";
+    // }
+}
+
 // 15 QUESTION
 
 function drag15(e) {
