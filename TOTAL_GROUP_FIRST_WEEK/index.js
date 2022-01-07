@@ -1119,7 +1119,6 @@ function question10() {
 
 let numbers11 = {
     firstNumber: "",
-    sign: "",
     secondNumber: "",
 };
 
@@ -1143,17 +1142,19 @@ function question11() {
     // проверяем на присутствие знака
     let requiredElement =
         document.getElementsByClassName("inputs11")[0].children[1].children[0];
-    let requiredText = requiredElement.textContent.trim();
+    let selectedSign = requiredElement.textContent.trim();
 
     if (
         numbers11.firstNumber != "" &&
-        requiredText != "" &&
+        selectedSign != "" &&
         numbers11.secondNumber != ""
     ) {
         succerror(
             document.getElementById("firstNumber11"),
             numbers11.firstNumber === "wrong"
         );
+
+        succerror(requiredElement, selectedSign !== ">");
 
         succerror(
             document.getElementById("secondNumber11"),
@@ -1176,6 +1177,7 @@ function question11() {
 
         if (
             numbers11.firstNumber === "right" &&
+            selectedSign === ">" &&
             numbers11.secondNumber === "right"
         ) {
             addImage(
@@ -1196,9 +1198,7 @@ function question11() {
         document.getElementById("firstNumber11").style.border =
             "2px solid #FFB47D";
 
-        document.getElementsByClassName(
-            "inputs11"
-        )[0].children[1].children[0].style.border = "2px solid #FFB47D";
+        requiredElement.style.border = "2px solid #FFB47D";
 
         document.getElementById("secondNumber11").style.border =
             "2px solid #FFB47D";
