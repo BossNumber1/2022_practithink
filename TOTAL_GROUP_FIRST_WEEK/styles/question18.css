@@ -126,6 +126,7 @@
     text-align: center;
     color: #2f2f2f;
     z-index: 10;
+    margin-bottom: 10px;
 }
 
 .fourSidedHeader {

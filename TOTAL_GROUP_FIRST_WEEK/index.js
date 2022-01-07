@@ -1589,6 +1589,128 @@ function question16() {
     }
 }
 
+// 18 QUESTION
+
+let result18 = {
+    areaFourSided: "",
+    areaBlueShapes: "",
+    intersection: "",
+};
+
+function checkFourSided() {
+    let areaFourSided = document.getElementsByClassName("circle-container")[0];
+
+    // таможня Левого круга
+    let contentFourSidedArea = areaFourSided.children;
+    let amountFourSidedArea = contentFourSidedArea.length;
+
+    if (amountFourSidedArea > 1) {
+        for (let i = 1; i < amountFourSidedArea; i++) {
+            let selectedChildId = contentFourSidedArea[i].children[0].id;
+
+            if (
+                selectedChildId === "greenSquare" ||
+                selectedChildId === "greenRectangle" ||
+                selectedChildId === "darkPinkRectangle" ||
+                selectedChildId === "yellowQuadrangle"
+            ) {
+                result18.areaFourSided = "right";
+            } else {
+                document.getElementById(selectedChildId).style.border =
+                    "1px solid #FFB47D";
+                document.getElementById(selectedChildId).style.borderRadius =
+                    "5px";
+                result18.areaFourSided = "wrong";
+            }
+        }
+    }
+}
+
+function checkBlueShapes() {
+    let areaBlueShapes = document.getElementsByClassName("circle-container")[1];
+
+    // таможня Правого круга
+    let contentBlueShapesArea = areaBlueShapes.children;
+    let amountBlueShapesArea = contentBlueShapesArea.length;
+
+    if (amountBlueShapesArea > 1) {
+        for (let i = 1; i < amountBlueShapesArea; i++) {
+            let selectedChildId = contentBlueShapesArea[i].children[0].id;
+
+            if (
+                selectedChildId === "blueCircle" ||
+                selectedChildId === "bluePentagon" ||
+                selectedChildId === "blueTriangle"
+            ) {
+                result18.areaBlueShapes = "right";
+            } else {
+                document.getElementById(selectedChildId).style.border =
+                    "1px solid #FFB47D";
+                document.getElementById(selectedChildId).style.borderRadius =
+                    "5px";
+                result18.areaBlueShapes = "wrong";
+            }
+        }
+    }
+}
+
+function checkIntersection() {
+    let element = document.getElementsByClassName("background-circle")[1];
+
+    if (element.children.length === 1) {
+        if (element.children[0].children[0].id === "blueSquare") {
+            result18.intersection = "right";
+        } else {
+            document.getElementById(
+                element.children[0].children[0].id
+            ).style.border = "1px solid #FFB47D";
+            document.getElementById(
+                element.children[0].children[0].id
+            ).style.borderRadius = "5px";
+
+            result18.intersection = "wrong";
+        }
+    }
+}
+
+function question18() {
+    checkFourSided();
+    checkBlueShapes();
+    checkIntersection();
+
+    if (
+        result18.areaFourSided !== "" &&
+        result18.areaBlueShapes !== "" &&
+        result18.intersection !== ""
+    ) {
+        if (
+            result18.areaFourSided === "right" &&
+            result18.areaBlueShapes === "right" &&
+            result18.intersection === "right"
+        ) {
+            addImage(
+                "success",
+                document.getElementsByClassName("question18"),
+                "app18",
+                18
+            );
+        } else {
+            addImage(
+                "failure",
+                document.getElementsByClassName("question18"),
+                "app18",
+                18
+            );
+        }
+    } else {
+        document.getElementsByClassName("circle-container")[0].style.border =
+            "2px solid #FFB47D";
+        document.getElementsByClassName(
+            "circle-container right-circle-container"
+        )[0].style.border = "2px solid #FFB47D";
+    }
+}
+
 // 19 QUESTION
 
 let selectedFigures19 = {
@@ -1814,6 +1936,7 @@ document.getElementById("submit").onclick = function () {
     question14();
     question15();
     question16();
+    question18();
     question19();
     question20();
 };
