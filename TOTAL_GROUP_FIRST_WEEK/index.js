@@ -1778,14 +1778,17 @@ function drag7(e) {
         e.target.parentElement.parentElement.className
     );
     localStorage.setItem("positionElem7", e.target.dataset.position);
+    localStorage.setItem("textElem7", e.target.dataset.text);
+    localStorage.setItem("classElem7", e.target.dataset.class);
 }
 
 function drop7(e) {
     // получаем id несомого элемента и класс прародителя
+    let classElemGrandparent = localStorage.getItem("classElemGrandparent7");
     let idTakenElement = localStorage.getItem("idOrigin7question3class");
     let positionElem = localStorage.getItem("positionElem7");
-    let classElemGrandparent = localStorage.getItem("classElemGrandparent7");
-
+    let classElem = localStorage.getItem("classElem7");
+    let textElem = localStorage.getItem("textElem7");
     let objectName = idTakenElement.slice(0, -1);
 
     // берем id того элемента, на который положим несомый
@@ -1796,8 +1799,11 @@ function drop7(e) {
     let currentElem = document.getElementById(currentId);
 
     // создаём новый объект
-    let objectBeingCreated = document.createElement("img");
-    objectBeingCreated.src = "./pictures/7que/" + idTakenElement + ".svg";
+    let objectBeingCreated = document.createElement("div");
+    objectBeingCreated.textContent = textElem;
+    objectBeingCreated.className = classElem;
+    objectBeingCreated.setAttribute("draggable", true);
+    objectBeingCreated.setAttribute("data-text", textElem);
     objectBeingCreated.style.marginLeft = "10px";
     objectBeingCreated.style.marginTop = "10px";
     objectBeingCreated.id = objectName;
@@ -1806,17 +1812,17 @@ function drop7(e) {
     objectBeingCreated.style.cursor = "grab";
 
     // меняем поля местами
-
     currentElem.appendChild(objectBeingCreated);
 
     if (classElemGrandparent != "true" || classElemGrandparent != "false") {
-        e.target.style.opacity = "1";
-        orignalElem.src = "./pictures/7que/emptyPlace.svg";
+        orignalElem.style.opacity = "0.5";
+        orignalElem.textContent = "";
         orignalElem.style.cursor = "default";
     }
 
     if (classElemGrandparent == "true" || classElemGrandparent == "false") {
-        e.target.src = "./pictures/7que/" + idTakenElement + "7" + ".svg";
+        e.target.style.opacity = "1";
+        e.target.textContent = textElem;
         e.target.id = idTakenElement + "7";
         e.target.style.cursor = "grab";
 
