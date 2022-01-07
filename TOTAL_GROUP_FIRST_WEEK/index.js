@@ -1954,8 +1954,6 @@ function drop11p2(e) {
         "classGrandparentElement11"
     );
 
-    let currentClassGrandparent = e.target.parentElement.className;
-
     // берем id того элемента, на который положим несомый
     let currentId = e.target.id;
 
@@ -1971,9 +1969,9 @@ function drop11p2(e) {
 
     orignalElem.textContent = "";
     orignalElem.id = currentId;
-    // orig.parentElement.className = currentClassGrandparent;
 
     if (orignalElem.parentElement.parentElement.className !== "inputs11") {
+        currentElem.style.backgroundColor = "#369cb7";
         orignalElem.style.backgroundColor = "#c2e1e9";
         orignalElem.style.border = "1px solid #c2e1e9";
     } else {
