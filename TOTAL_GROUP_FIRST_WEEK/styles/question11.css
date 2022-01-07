@@ -59,18 +59,52 @@
 
 .inputs11 {
     top: 40px;
-    /* display: flex;
-    flex-direction: row;
-    align-items: flex-start; */
-    /* left: calc(50% - 222.11px / 2); */
     width: 222.11px;
     height: 30.2px;
-
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+}
 
-    border: 1px solid red;
+.inputContent11 input {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 16px;
+    position: static;
+    width: 54px;
+    height: 30px;
+    left: 0px;
+    top: 0.2px;
+    border: 1px solid #2f2f2f;
+    box-sizing: border-box;
+    border-radius: 5px;
+    transform: rotate(-0.21deg);
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin-right: 30px;
+    text-align: center;
+}
+
+.disableDiv {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 6px 16px;
+    position: static;
+    width: 54px;
+    height: 30px;
+    left: 84.11px;
+    background: #f4f4f4;
+    border: 1px solid #d0d0d0;
+    box-sizing: border-box;
+    border-radius: 5px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin-right: 30px;
 }
 
 .btns11 {
