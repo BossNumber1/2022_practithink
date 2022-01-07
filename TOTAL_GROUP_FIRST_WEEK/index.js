@@ -818,6 +818,11 @@ function question7() {
         for (let i = 0; i < contentBasketTrue.length; i++) {
             let id = contentBasketTrue[i].id;
 
+            // succerror(
+            //     document.getElementById(id),
+            //     correctOrderBasketTrue.includes(id) === true
+            // );
+
             if (correctOrderBasketTrue.includes(id) === true) {
                 document.getElementById(id).style.border =
                     "2px solid darkgreen";
