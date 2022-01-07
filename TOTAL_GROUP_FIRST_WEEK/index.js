@@ -1119,6 +1119,7 @@ function question10() {
 
 let numbers11 = {
     firstNumber: "",
+    sign: "",
     secondNumber: "",
 };
 
@@ -1139,7 +1140,16 @@ document.getElementById("secondNumber11").onchange = function (e) {
 };
 
 function question11() {
-    if (numbers11.firstNumber != "" && numbers11.secondNumber != "") {
+    // проверяем на присутствие знака
+    let requiredElement =
+        document.getElementsByClassName("inputs11")[0].children[1].children[0];
+    let requiredText = requiredElement.textContent.trim();
+
+    if (
+        numbers11.firstNumber != "" &&
+        requiredText != "" &&
+        numbers11.secondNumber != ""
+    ) {
         succerror(
             document.getElementById("firstNumber11"),
             numbers11.firstNumber === "wrong"
@@ -1185,6 +1195,10 @@ function question11() {
     } else {
         document.getElementById("firstNumber11").style.border =
             "2px solid #FFB47D";
+
+        document.getElementsByClassName(
+            "inputs11"
+        )[0].children[1].children[0].style.border = "2px solid #FFB47D";
 
         document.getElementById("secondNumber11").style.border =
             "2px solid #FFB47D";
