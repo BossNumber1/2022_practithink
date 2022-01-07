@@ -1589,6 +1589,92 @@ function question16() {
     }
 }
 
+// 17 QUESTION
+
+let numbers17 = {
+    firstNumber: "",
+    secondNumber: "",
+    thirdNumber: "",
+};
+
+document.getElementById("firstInput17").onchange = function (e) {
+    if (e.target.value == 12) {
+        numbers17.firstNumber = "right";
+    } else {
+        numbers17.firstNumber = "wrong";
+    }
+};
+
+document.getElementById("secondInput17").onchange = function (e) {
+    if (e.target.value == 4) {
+        numbers17.secondNumber = "right";
+    } else {
+        numbers17.secondNumber = "wrong";
+    }
+};
+
+document.getElementById("thirdInput17").onchange = function (e) {
+    if (e.target.value == 4) {
+        numbers17.thirdNumber = "right";
+    } else {
+        numbers17.thirdNumber = "wrong";
+    }
+};
+
+function question17() {
+    if (
+        numbers17.firstNumber != "" &&
+        numbers17.secondNumber != "" &&
+        numbers17.thirdNumber != ""
+    ) {
+        succerror(
+            document.getElementById("firstInput17"),
+            numbers17.firstNumber === "wrong"
+        );
+
+        succerror(
+            document.getElementById("secondInput17"),
+            numbers17.secondNumber === "wrong"
+        );
+
+        succerror(
+            document.getElementById("thirdInput17"),
+            numbers17.thirdNumber === "wrong"
+        );
+
+        // выносим общий статус к номеру вопроса
+
+        if (
+            numbers17.firstNumber === "right" &&
+            numbers17.secondNumber === "right" &&
+            numbers17.thirdNumber === "right"
+        ) {
+            addImage(
+                "success",
+                document.getElementsByClassName("question17"),
+                "app17",
+                17
+            );
+        } else {
+            addImage(
+                "failure",
+                document.getElementsByClassName("question17"),
+                "app17",
+                17
+            );
+        }
+    } else {
+        document.getElementById("firstInput17").style.border =
+            "2px solid #FFB47D";
+
+        document.getElementById("secondInput17").style.border =
+            "2px solid #FFB47D";
+
+        document.getElementById("thirdInput17").style.border =
+            "2px solid #FFB47D";
+    }
+}
+
 // 18 QUESTION
 
 let result18 = {
@@ -1936,6 +2022,7 @@ document.getElementById("submit").onclick = function () {
     question14();
     question15();
     question16();
+    question17();
     question18();
     question19();
     question20();
