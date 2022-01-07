@@ -816,7 +816,16 @@ function question7() {
 
         // сравниваем с верным контентом
         for (let i = 0; i < contentBasketTrue.length; i++) {
-            console.log(contentBasketTrue[i].id);
+            let id = contentBasketTrue[i].id;
+
+            if (correctOrderBasketTrue.includes(id) === true) {
+                document.getElementById(id).style.border =
+                    "2px solid darkgreen";
+            } else {
+                document.getElementById(id).style.border = "2px solid orange";
+            }
+
+            document.getElementById(id).style.borderRadius = "5px";
         }
 
         // неподходящие элементы окрашиваем в алый, подходящие ...
