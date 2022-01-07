@@ -1960,26 +1960,27 @@ function drop11p2(e) {
     let currentId = e.target.id;
 
     // получаем объекты
-    let orig = document.getElementById(idSign);
+    let orignalElem = document.getElementById(idSign);
     let currentElem = document.getElementById(currentId);
 
     // меняем поля местами
     currentElem.parentElement.className = classGrandparentElement;
     currentElem.id = idSign;
-    currentElem.textContent = orig.textContent;
+    currentElem.textContent = orignalElem.textContent;
     currentElem.setAttribute("draggable", true);
 
-    orig.textContent = "";
-    orig.id = currentId;
+    orignalElem.textContent = "";
+    orignalElem.id = currentId;
     // orig.parentElement.className = currentClassGrandparent;
 
-    if (orig.parentElement.parentElement.className !== "inputs11") {
-        orig.style.background = "#c2e1e9";
-        orig.style.border = "1px solid #c2e1e9";
+    if (orignalElem.parentElement.parentElement.className !== "inputs11") {
+        orignalElem.style.backgroundColor = "#c2e1e9";
+        orignalElem.style.border = "1px solid #c2e1e9";
+    } else {
+        currentElem.style.backgroundColor = "#369cb7";
+        orignalElem.style.backgroundColor = "#f4f4f4";
+        orignalElem.style.border = "1px solid #d0d0d0";
     }
-    // else {
-    //     orig.style.opacity = "1";
-    // }
 }
 
 // 15 QUESTION
