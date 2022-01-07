@@ -807,14 +807,13 @@ function question7() {
     if (contentBasketTrue.length > 0 && contentBasketFalse.length > 0) {
         // верный контент
         let correctOrderBasketTrue = [
-            "firstBtn",
-            "secondBtn",
-            "thirdBtn",
-            "sixthBtn",
-            "seventhBtn",
-        ];
-
-        let correctOrderBasketFalse = ["fourthBtn", "fifthBtn"];
+                "firstBtn",
+                "secondBtn",
+                "thirdBtn",
+                "sixthBtn",
+                "seventhBtn",
+            ],
+            correctOrderBasketFalse = ["fourthBtn", "fifthBtn"];
 
         for (let i = 0; i < contentBasketTrue.length; i++) {
             let id = contentBasketTrue[i].id;
