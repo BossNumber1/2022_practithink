@@ -2067,3 +2067,69 @@ function drop15(e) {
     currentElement.style.cursor = "grab";
     orignalElement.style.cursor = "default";
 }
+
+// 18 QUESTION
+
+function drag18(e) {
+    localStorage.setItem("idOriginal18", e.target.id);
+}
+
+function drop18(e) {
+    e = e || window.event;
+
+    // забираем данные из хранилища
+    let idFigure = localStorage.getItem("idOriginal18");
+
+    // получаем позицию области для вставки
+    let positionCircleArea = e.target.dataset.position;
+
+    // получаем текущий id
+    let currentId = e.target.id;
+    let currentClass = e.target.className;
+
+    // получаем картинки
+    let orig = document.getElementById(idFigure);
+    let currentElement = currentId
+        ? document.getElementById(currentId)
+        : currentClass === "background-circle" && positionCircleArea === "2"
+        ? document.getElementsByClassName("background-circle")[1]
+        : document.getElementsByClassName("circle-container")[
+              positionCircleArea
+          ];
+
+    // начинаем уборку
+    if (
+        currentClass === "circle-container" ||
+        currentClass === "circle-container right-circle-container" ||
+        currentClass === "background-circle"
+    ) {
+        // добавляем объект в корзину
+        let tray = document.createElement("div");
+        tray.style.height = "50px";
+        tray.style.width = "50px";
+        tray.style.position = "absolute";
+        tray.style.marginTop = e.offsetY + "px";
+        tray.style.marginLeft = e.offsetX + "px";
+
+        let objectBeingCreated = document.createElement("img");
+        objectBeingCreated.src = "./pictures/18que/" + idFigure + ".svg";
+        objectBeingCreated.id = idFigure;
+
+        if (currentClass !== "circle-container") {
+            objectBeingCreated.style.transform = "rotate(180deg)";
+        }
+
+        currentElement.appendChild(tray).appendChild(objectBeingCreated);
+
+        // заменяем место объекта на квадрат
+        orig.src = "./pictures/18que/emptyPlace.svg";
+        orig.style.cursor = "default";
+        orig.id = "emptyPlace";
+    } else {
+        currentElement.src = "./pictures/18que/" + idFigure + ".svg";
+        currentElement.style.cursor = "grab";
+        currentElement.id = idFigure;
+
+        orig.remove();
+    }
+}
