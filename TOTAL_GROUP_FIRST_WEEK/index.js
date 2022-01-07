@@ -988,6 +988,116 @@ function question8() {
     }
 }
 
+// 9 QUESTION
+
+function question9() {
+    let train = document.getElementsByClassName("train")[0];
+
+    let four = train.children[4].children[0].id;
+    let elev = train.children[12].children[0].id;
+    let foti = train.children[14].children[0].id;
+    let eighty = train.children[18].children[0].id;
+
+    if (
+        four === "wagonEmpty0" &&
+        elev === "wagonEmpty1" &&
+        foti === "wagonEmpty2" &&
+        eighty === "wagonEmpty3"
+    ) {
+        document.getElementById("wagonEmpty0").style.border =
+            "2px solid #FFB47D";
+
+        document.getElementById("wagonEmpty1").style.border =
+            "2px solid #FFB47D";
+
+        document.getElementById("wagonEmpty2").style.border =
+            "2px solid #FFB47D";
+
+        document.getElementById("wagonEmpty3").style.border =
+            "2px solid #FFB47D";
+    } else {
+        if (
+            four === "secondWagon9" &&
+            elev === "firstWagon9" &&
+            foti === "thirdWagon9" &&
+            eighty === "fourthWagon9"
+        ) {
+            addImage(
+                "success",
+                document.getElementsByClassName("question9"),
+                "app9",
+                9
+            );
+        } else {
+            addImage(
+                "failure",
+                document.getElementsByClassName("question9"),
+                "app9",
+                9
+            );
+        }
+    }
+    // if (
+    //     numbers8.firstNumber != "" &&
+    //     numbers8.secondNumber != "" &&
+    //     numbers8.thirdNumber != ""
+    // ) {
+    //     succerror(
+    //         document.getElementById("firstNumber8"),
+    //         numbers8.firstNumber === "wrong"
+    //     );
+
+    //     succerror(
+    //         document.getElementById("secondNumber8"),
+    //         numbers8.secondNumber === "wrong"
+    //     );
+
+    //     succerror(
+    //         document.getElementById("thirdNumber8"),
+    //         numbers8.thirdNumber === "wrong"
+    //     );
+
+    //     // расставляем мини-иконки
+
+    //     createMiniIcon(
+    //         numbers8.firstNumber,
+    //         document.getElementById("firstNumber8")
+    //     );
+
+    //     createMiniIcon(
+    //         numbers8.secondNumber,
+    //         document.getElementById("secondNumber8")
+    //     );
+
+    //     createMiniIcon(
+    //         numbers8.thirdNumber,
+    //         document.getElementById("thirdNumber8")
+    //     );
+
+    //     // выносим общий статус к номеру вопроса
+
+    //     if (
+    //         numbers8.firstNumber === "right" &&
+    //         numbers8.secondNumber === "right" &&
+    //         numbers8.thirdNumber === "right"
+    //     ) {
+    //         addImage(
+    //             "success",
+    //             document.getElementsByClassName("question8"),
+    //             "app8",
+    //             8
+    //         );
+    //     } else {
+    //         addImage(
+    //             "failure",
+    //             document.getElementsByClassName("question8"),
+    //             "app8",
+    //             8
+    //         );
+    //     }
+    // }
+}
+
 // 10 QUESTION
 
 let numbers10 = {
@@ -2171,19 +2281,19 @@ function drag9(e) {
 function drop9(e) {
     // получаем имя и id взятого элемента
     let idOrig = localStorage.getItem("idOrigin9question");
-    // let nameObjectOrig = idOrig.slice(0, -1);
+    let nameObjectOrig = idOrig.slice(0, -1);
 
     // получаем имя и id, на который кладём элемент
     let currentId = e.target.id;
-    // let nameObjectCurrent = currentId.slice(0, -1);
+    let nameObjectCurrent = currentId.slice(0, -1);
 
     // получаем объекты
     let orignalElement = document.getElementById(idOrig);
     let currentElement = document.getElementById(currentId);
 
     // меняем картинки местами
-    currentElement.src = "./pictures/9que/" + idOrig + ".svg";
-    orignalElement.src = "./pictures/9que/" + currentId + ".svg";
+    currentElement.src = "./pictures/9que/" + nameObjectOrig + ".svg";
+    orignalElement.src = "./pictures/9que/" + nameObjectCurrent + ".svg";
 
     // меняем id местами
     currentElement.id = idOrig;
