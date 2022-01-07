@@ -793,7 +793,6 @@ function question6() {
 
 function question7() {
     // получаем содержимое корзин
-
     let contentBasketTrue = document.getElementById(
         "placeOfDroppingFigures7true"
     ).children;
@@ -803,9 +802,7 @@ function question7() {
     ).children;
 
     // проверяем на пустоту
-
     if (contentBasketTrue.length > 0 && contentBasketFalse.length > 0) {
-        // верный контент
         let correctOrderBasketTrue = [
                 "firstBtn",
                 "secondBtn",
@@ -813,8 +810,11 @@ function question7() {
                 "sixthBtn",
                 "seventhBtn",
             ],
-            correctOrderBasketFalse = ["fourthBtn", "fifthBtn"];
+            correctOrderBasketFalse = ["fourthBtn", "fifthBtn"],
+            theBasketTrueIsFilledCorrectly = "yes",
+            theBasketFalseIsFilledCorrectly = "yes";
 
+        // раскрашиваем блоки
         for (let i = 0; i < contentBasketTrue.length; i++) {
             let id = contentBasketTrue[i].id;
 
@@ -824,6 +824,10 @@ function question7() {
             );
 
             document.getElementById(id).style.borderRadius = "5px";
+
+            if (correctOrderBasketTrue.includes(id) === false) {
+                theBasketTrueIsFilledCorrectly = "no";
+            }
         }
 
         for (let i = 0; i < contentBasketFalse.length; i++) {
@@ -835,6 +839,30 @@ function question7() {
             );
 
             document.getElementById(id).style.borderRadius = "5px";
+
+            if (correctOrderBasketFalse.includes(id) === false) {
+                theBasketFalseIsFilledCorrectly = "no";
+            }
+        }
+
+        // проверяем на верность для создания статуса
+        if (
+            theBasketTrueIsFilledCorrectly === "yes" &&
+            theBasketFalseIsFilledCorrectly === "yes"
+        ) {
+            addImage(
+                "success",
+                document.getElementsByClassName("question7"),
+                "app7",
+                7
+            );
+        } else {
+            addImage(
+                "failure",
+                document.getElementsByClassName("question7"),
+                "app7",
+                7
+            );
         }
     } else if (
         contentBasketTrue.length === 0 &&
