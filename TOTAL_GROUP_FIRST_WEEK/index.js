@@ -818,17 +818,17 @@ function question7() {
         for (let i = 0; i < contentBasketTrue.length; i++) {
             let id = contentBasketTrue[i].id;
 
-            // succerror(
-            //     document.getElementById(id),
-            //     correctOrderBasketTrue.includes(id) === true
-            // );
+            succerror(
+                document.getElementById(id),
+                correctOrderBasketTrue.includes(id) === false
+            );
 
-            if (correctOrderBasketTrue.includes(id) === true) {
-                document.getElementById(id).style.border =
-                    "2px solid darkgreen";
-            } else {
-                document.getElementById(id).style.border = "2px solid orange";
-            }
+            // if (correctOrderBasketTrue.includes(id) === true) {
+            //     document.getElementById(id).style.border =
+            //         "2px solid darkgreen";
+            // } else {
+            //     document.getElementById(id).style.border = "2px solid orange";
+            // }
 
             document.getElementById(id).style.borderRadius = "5px";
         }
