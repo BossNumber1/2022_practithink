@@ -1953,6 +1953,42 @@ function drop7(e) {
 
 // 11 QUESTION
 
+// для кубиков
+
+function drag11(e) {
+    localStorage.setItem("idOrig11", e.target.id);
+}
+
+function drop11(e) {
+    // получаем имя и id взятого элемента
+    let idOrig = localStorage.getItem("idOrig11");
+    let nameObjectOrig = idOrig.slice(0, -2);
+
+    // получаем имя и id, на который кладём элемент
+    let currentId = e.target.id;
+    let nameObjectCurrent = currentId.slice(0, -2);
+
+    // получаем объекты
+    let orig = document.getElementById(idOrig);
+    let currentElement = document.getElementById(currentId);
+
+    // меняем картинки местами
+    currentElement.src = "./pictures/11que/" + nameObjectOrig + ".svg";
+    currentElement.style.opacity = "1";
+    currentElement.style.cursor = "grab";
+
+    orig.src = "./pictures/11que/" + nameObjectCurrent + ".svg";
+
+    // меняем id местами
+    currentElement.id = idOrig;
+    orig.id = currentId;
+
+    // меняем вид курсора
+    orig.style.cursor = "default";
+}
+
+// для полей ввода
+
 function drag11p2(e) {
     localStorage.setItem("idSign11", e.target.id);
     localStorage.setItem(
