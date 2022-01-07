@@ -46,7 +46,7 @@
     width: 370px;
     height: 298px;
     border-radius: 5px;
-    border: 1px solid orange;
+    /* border: 1px solid orange; */
 }
 
 .questions {
