@@ -75,14 +75,13 @@
 
 .btns11 {
     top: 74px;
-    /* left: calc(50% - 222px / 2); */
     width: 222px;
     height: 30px;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    /* flex-direction: row; */
-    /* align-items: flex-start; */
+    align-items: flex-start;
+    justify-content: space-between;
+}
 
-    border: 1px solid orange;
+.btns11 div {
+    cursor: grab;
 }
