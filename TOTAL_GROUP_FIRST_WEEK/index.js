@@ -789,6 +789,14 @@ function question6() {
     }
 }
 
+// 7 QUESTION
+
+function question7() {
+    // получаем содержимое корзин
+    // сравниваем с верным контентом
+    // неподходящие элементы окрашиваем в алый, подходящие ...
+}
+
 // 8 QUESTION
 
 let numbers8 = {
@@ -1619,6 +1627,7 @@ document.getElementById("submit").onclick = function () {
     question4();
     question5();
     question6();
+    question7();
     question8();
     question10();
     question12();
