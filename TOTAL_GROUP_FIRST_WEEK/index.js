@@ -814,7 +814,8 @@ function question7() {
             "seventhBtn",
         ];
 
-        // сравниваем с верным контентом
+        let correctOrderBasketFalse = ["fourthBtn", "fifthBtn"];
+
         for (let i = 0; i < contentBasketTrue.length; i++) {
             let id = contentBasketTrue[i].id;
 
@@ -823,17 +824,19 @@ function question7() {
                 correctOrderBasketTrue.includes(id) === false
             );
 
-            // if (correctOrderBasketTrue.includes(id) === true) {
-            //     document.getElementById(id).style.border =
-            //         "2px solid darkgreen";
-            // } else {
-            //     document.getElementById(id).style.border = "2px solid orange";
-            // }
-
             document.getElementById(id).style.borderRadius = "5px";
         }
 
-        // неподходящие элементы окрашиваем в алый, подходящие ...
+        for (let i = 0; i < contentBasketFalse.length; i++) {
+            let id = contentBasketFalse[i].id;
+
+            succerror(
+                document.getElementById(id),
+                correctOrderBasketFalse.includes(id) === false
+            );
+
+            document.getElementById(id).style.borderRadius = "5px";
+        }
     } else if (
         contentBasketTrue.length === 0 &&
         contentBasketFalse.length > 0
