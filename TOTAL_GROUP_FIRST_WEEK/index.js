@@ -1115,6 +1115,82 @@ function question10() {
     }
 }
 
+// 11 QUESTION
+
+let numbers11 = {
+    firstNumber: "",
+    secondNumber: "",
+};
+
+document.getElementById("firstNumber11").onchange = function (e) {
+    if (e.target.value == 27) {
+        numbers11.firstNumber = "right";
+    } else {
+        numbers11.firstNumber = "wrong";
+    }
+};
+
+document.getElementById("secondNumber11").onchange = function (e) {
+    if (e.target.value == 26) {
+        numbers11.secondNumber = "right";
+    } else {
+        numbers11.secondNumber = "wrong";
+    }
+};
+
+function question11() {
+    if (numbers11.firstNumber != "" && numbers11.secondNumber != "") {
+        succerror(
+            document.getElementById("firstNumber11"),
+            numbers11.firstNumber === "wrong"
+        );
+
+        succerror(
+            document.getElementById("secondNumber11"),
+            numbers11.secondNumber === "wrong"
+        );
+
+        // расставляем мини-иконки
+
+        createMiniIcon(
+            numbers11.firstNumber,
+            document.getElementById("firstNumber11")
+        );
+
+        createMiniIcon(
+            numbers11.secondNumber,
+            document.getElementById("secondNumber11")
+        );
+
+        // выносим общий статус к номеру вопроса
+
+        if (
+            numbers11.firstNumber === "right" &&
+            numbers11.secondNumber === "right"
+        ) {
+            addImage(
+                "success",
+                document.getElementsByClassName("question11"),
+                "app11",
+                11
+            );
+        } else {
+            addImage(
+                "failure",
+                document.getElementsByClassName("question11"),
+                "app11",
+                11
+            );
+        }
+    } else {
+        document.getElementById("firstNumber11").style.border =
+            "2px solid #FFB47D";
+
+        document.getElementById("secondNumber11").style.border =
+            "2px solid #FFB47D";
+    }
+}
+
 // 12 QUESTION
 
 let numbers12 = {
@@ -1718,6 +1794,7 @@ document.getElementById("submit").onclick = function () {
     question7();
     question8();
     question10();
+    question11();
     question12();
     question13();
     question14();
