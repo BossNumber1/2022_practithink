@@ -1716,23 +1716,16 @@ function drag7(e) {
 function drop7(e) {
     // получаем id несомого элемента и класс прародителя
     let idTakenElement = localStorage.getItem("idOrigin7question3class");
-    let objectName = idTakenElement.slice(0, -1);
     let positionElem = localStorage.getItem("positionElem7");
-
-    if (
-        idTakenElement !== "placeOfDroppingFigures7true" ||
-        idTakenElement !== "placeOfDroppingFigures7false"
-    ) {
-        objectName = "temp" + positionElem;
-    }
-
     let classElemGrandparent = localStorage.getItem("classElemGrandparent7");
+
+    let objectName = idTakenElement.slice(0, -1);
 
     // берем id того элемента, на который положим несомый
     let currentId = e.target.id;
 
     // получаем объекты
-    let orig = document.getElementById(idTakenElement);
+    let orignalElem = document.getElementById(idTakenElement);
     let currentElem = document.getElementById(currentId);
 
     // создаём новый объект
@@ -1746,20 +1739,21 @@ function drop7(e) {
     objectBeingCreated.style.cursor = "grab";
 
     // меняем поля местами
-    orig.style.opacity = "0.5";
-    orig.style.cursor = "default";
 
     currentElem.appendChild(objectBeingCreated);
 
     if (classElemGrandparent != "true" || classElemGrandparent != "false") {
         e.target.style.opacity = "1";
+        orignalElem.src = "./pictures/7que/emptyPlace.svg";
+        orignalElem.style.cursor = "default";
     }
 
     if (classElemGrandparent == "true" || classElemGrandparent == "false") {
-        let toRemove = document.getElementById(objectName);
-        toRemove.remove();
+        e.target.src = "./pictures/7que/" + idTakenElement + "7" + ".svg";
+        e.target.id = idTakenElement + "7";
+        e.target.style.cursor = "grab";
 
-        document.getElementById(objectName).remove();
+        document.getElementById(idTakenElement).remove();
     }
 }
 
