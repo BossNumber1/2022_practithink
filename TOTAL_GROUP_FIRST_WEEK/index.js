@@ -802,12 +802,23 @@ function question7() {
         "placeOfDroppingFigures7false"
     ).children;
 
-    debugger;
-
     // проверяем на пустоту
 
     if (contentBasketTrue.length > 0 && contentBasketFalse.length > 0) {
+        // верный контент
+        let correctOrderBasketTrue = [
+            "firstBtn",
+            "secondBtn",
+            "thirdBtn",
+            "sixthBtn",
+            "seventhBtn",
+        ];
+
         // сравниваем с верным контентом
+        for (let i = 0; i < contentBasketTrue.length; i++) {
+            console.log(contentBasketTrue[i].id);
+        }
+
         // неподходящие элементы окрашиваем в алый, подходящие ...
     } else if (
         contentBasketTrue.length === 0 &&
