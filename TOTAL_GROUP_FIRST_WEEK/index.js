@@ -793,8 +793,30 @@ function question6() {
 
 function question7() {
     // получаем содержимое корзин
-    // сравниваем с верным контентом
-    // неподходящие элементы окрашиваем в алый, подходящие ...
+
+    let contentBasketTrue = document.getElementById(
+        "placeOfDroppingFigures7true"
+    ).children;
+
+    let contentBasketFalse = document.getElementById(
+        "placeOfDroppingFigures7false"
+    ).children;
+
+    debugger;
+
+    // проверяем на пустоту
+
+    if (contentBasketTrue.length > 0 && contentBasketFalse.length > 0) {
+        // сравниваем с верным контентом
+        // неподходящие элементы окрашиваем в алый, подходящие ...
+        alert(" there is something in the baskets ");
+    } else {
+        document.getElementsByClassName("true")[0].style.border =
+            "2px solid #FFB47D";
+
+        document.getElementsByClassName("false")[0].style.border =
+            "2px solid #FFB47D";
+    }
 }
 
 // 8 QUESTION
