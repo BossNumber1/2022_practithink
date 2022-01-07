@@ -44,8 +44,10 @@
     flex-direction: column;
     align-items: center;
 
-    border: 1px solid;
+    /* border: 1px solid; */
 }
+
+/* cubes styles */
 
 .cubes11 {
     display: flex;
@@ -54,8 +56,43 @@
     width: 309.04px;
     height: 187.65px;
 
-    border: 1px solid;
+    /* border: 1px solid; */
 }
+
+.leftColumnsBaza,
+.rightColumnsBaza {
+    display: flex;
+    top: 10px;
+}
+
+.leftColumnsBaza {
+    margin-right: 38px;
+}
+
+.firstColumn11 div,
+.secondColumn11 div,
+.thirdColumn11 div {
+    margin: -10.7px 0;
+    cursor: grab;
+}
+
+.fourthColumn11 div,
+.fifthColumn11 div,
+.sixthColumn11 div {
+    margin: -10px 0;
+    cursor: grab;
+}
+
+.firstColumn11,
+.secondColumn11,
+.thirdColumn11,
+.fourthColumn11,
+.fifthColumn11,
+.sixthColumn11 {
+    margin-right: 6px;
+}
+
+/* inputs styles */
 
 .inputs11 {
     top: 40px;
@@ -106,6 +143,8 @@
     flex-grow: 0;
     margin-right: 30px;
 }
+
+/* btns styles */
 
 .btns11 {
     top: 74px;
