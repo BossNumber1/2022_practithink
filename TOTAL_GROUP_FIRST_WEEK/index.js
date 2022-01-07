@@ -809,7 +809,18 @@ function question7() {
     if (contentBasketTrue.length > 0 && contentBasketFalse.length > 0) {
         // сравниваем с верным контентом
         // неподходящие элементы окрашиваем в алый, подходящие ...
-        alert(" there is something in the baskets ");
+    } else if (
+        contentBasketTrue.length === 0 &&
+        contentBasketFalse.length > 0
+    ) {
+        document.getElementsByClassName("true")[0].style.border =
+            "2px solid #FFB47D";
+    } else if (
+        contentBasketFalse.length === 0 &&
+        contentBasketTrue.length > 0
+    ) {
+        document.getElementsByClassName("false")[0].style.border =
+            "2px solid #FFB47D";
     } else {
         document.getElementsByClassName("true")[0].style.border =
             "2px solid #FFB47D";
