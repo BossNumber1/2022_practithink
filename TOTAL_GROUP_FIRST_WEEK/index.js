@@ -2162,6 +2162,43 @@ function drop7(e) {
     }
 }
 
+// 9 QUESTION
+
+function drag9(e) {
+    localStorage.setItem("idOrigin9question", e.target.id);
+}
+
+function drop9(e) {
+    // получаем имя и id взятого элемента
+    let idOrig = localStorage.getItem("idOrigin9question");
+    // let nameObjectOrig = idOrig.slice(0, -1);
+
+    // получаем имя и id, на который кладём элемент
+    let currentId = e.target.id;
+    // let nameObjectCurrent = currentId.slice(0, -1);
+
+    // получаем объекты
+    let orignalElement = document.getElementById(idOrig);
+    let currentElement = document.getElementById(currentId);
+
+    // меняем картинки местами
+    currentElement.src = "./pictures/9que/" + idOrig + ".svg";
+    orignalElement.src = "./pictures/9que/" + currentId + ".svg";
+
+    // меняем id местами
+    currentElement.id = idOrig;
+    orignalElement.id = currentId;
+
+    // меняем фон при определённом условии
+    // if (nameObjectCurrent === "emptyPlace") {
+    //     currentElement.parentElement.style.backgroundColor = "white";
+    // }
+
+    // меняем вид курсора
+    currentElement.style.cursor = "grab";
+    orignalElement.style.cursor = "default";
+}
+
 // 11 QUESTION
 
 // для кубиков
