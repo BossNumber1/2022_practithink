@@ -443,6 +443,13 @@ function addCorrectAnswerQuestion7() {
     addCorrectAnswer("correctAnswer7", "7que", "app7", "contentCorrectAnswer7");
 }
 
+// 8 QUESTION
+
+function addCorrectAnswerQuestion8() {
+    document.getElementsByClassName("app8")[0].style.height = "350px";
+    addCorrectAnswer("correctAnswer8", "8que", "app8", "contentCorrectAnswer");
+}
+
 // 9 QUESTION
 
 function addCorrectAnswerQuestion9() {
@@ -1537,6 +1544,8 @@ function question8() {
                 "app8",
                 8
             );
+
+            addCorrectAnswerQuestion8();
         }
     } else {
         document.getElementById("firstNumber8").style.border =
