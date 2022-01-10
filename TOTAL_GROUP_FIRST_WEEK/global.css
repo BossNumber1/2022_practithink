@@ -122,11 +122,6 @@ body {
     top: 70px;
 }
 
-.correctAnswer4 {
-    top: 320px;
-}
-
-.correctAnswer16,
 .correctAnswer18,
 .correctAnswer13 {
     top: 120px;
@@ -141,6 +136,14 @@ body {
 .correctAnswer11,
 .correctAnswer17 {
     top: 180px;
+}
+
+.correctAnswer16 {
+    top: 220px;
+}
+
+.correctAnswer4 {
+    top: 320px;
 }
 
 .correctAnswer7 img:not(:last-child),
@@ -203,9 +206,12 @@ body {
 .contentCorrectAnswer7,
 .contentCorrectAnswer12,
 .contentCorrectAnswer17,
-.contentCorrectAnswer16,
 .contentCorrectAnswer13 {
     top: 80px;
+}
+
+.contentCorrectAnswer16 {
+    top: 100px;
 }
 
 .contentCorrectAnswer14 {
