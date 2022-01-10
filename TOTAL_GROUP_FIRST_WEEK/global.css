@@ -63,28 +63,6 @@ body {
     margin: 0 0 5px 40px;
 }
 
-.submit input {
-    justify-content: center;
-    align-items: center;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 24px;
-    color: #369cb7;
-    flex-direction: column;
-    padding: 20px;
-    width: 200px;
-    height: 40px;
-    background: #369cb7;
-    border: 0.5px solid #369cb7;
-    border-radius: 5px;
-    color: white;
-    cursor: pointer;
-    margin-bottom: 47px;
-    margin-left: 505px;
-    margin-top: 10px;
-}
-
 /* correct answer styles */
 
 .correctAnswer1,
@@ -252,4 +230,72 @@ body {
     left: calc(50% - 170px / 2);
     width: 170px;
     /* border: 1px solid gray; */
+}
+
+/* STYLES THE END PAGE */
+
+.btnsEnd {
+    display: flex;
+    margin-left: 40px;
+    margin-bottom: 47px;
+    margin-top: 10px;
+}
+
+.submit input {
+    justify-content: center;
+    align-items: center;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    color: #369cb7;
+    flex-direction: column;
+    padding: 20px;
+    width: 270px;
+    height: 50px;
+    background: #369cb7;
+    border: 0.5px solid #369cb7;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.clear div:not(.nameBtn) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: static;
+    width: 270px;
+    height: 50px;
+    left: calc(50% - 270px / 2 + 150px);
+    top: calc(50% - 50px / 2);
+    background: #ffffff;
+    border: 1px solid #369cb7;
+    box-sizing: border-box;
+    border-radius: 5px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin-left: 30px;
+    cursor: pointer;
+}
+
+.nameBtn {
+    position: static;
+    left: 48.15%;
+    right: 35.56%;
+    top: 26%;
+    bottom: 26%;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #369cb7;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 0px 10px;
 }

@@ -2559,7 +2559,7 @@ function addCorrectAnswerQuestion11() {
 
 // 16 QUESTION
 
-function addCorrectAnswerQuestion11() {
+function addCorrectAnswerQuestion16() {
     document.getElementsByClassName("app16")[0].style.height = "750px";
     addCorrectAnswer(
         "correctAnswer16",
