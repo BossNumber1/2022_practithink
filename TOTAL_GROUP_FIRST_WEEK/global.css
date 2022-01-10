@@ -110,7 +110,6 @@ body {
 .correctAnswer2,
 .correctAnswer5,
 .correctAnswer8,
-.correctAnswer9,
 .correctAnswer11,
 .correctAnswer14,
 .correctAnswer15 {
@@ -139,6 +138,7 @@ body {
 }
 
 .correctAnswer6,
+.correctAnswer9,
 .correctAnswer17 {
     top: 180px;
 }
@@ -166,6 +166,7 @@ body {
 
 .contentCorrectAnswer,
 .contentCorrectAnswer3,
+.contentCorrectAnswer9,
 .contentCorrectAnswer10,
 .contentCorrectAnswer6,
 .contentCorrectAnswer7,
@@ -187,6 +188,10 @@ body {
 
 .contentCorrectAnswer {
     top: 20px;
+}
+
+.contentCorrectAnswer9 {
+    top: 40px;
 }
 
 .contentCorrectAnswer3,
