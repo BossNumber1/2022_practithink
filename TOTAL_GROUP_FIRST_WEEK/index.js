@@ -1636,6 +1636,28 @@ function question9() {
                 9
             );
         } else {
+            // подсвечиваем неверновыбранные вагоны
+            if (fourthWagon !== "secondWagon9") {
+                document.getElementById(fourthWagon).style.border =
+                    "2px solid red";
+            }
+
+            if (twelfthWagon !== "firstWagon9") {
+                document.getElementById(twelfthWagon).style.border =
+                    "2px solid red";
+            }
+
+            if (fourteenWagon !== "thirdWagon9") {
+                document.getElementById(fourteenWagon).style.border =
+                    "2px solid red";
+            }
+
+            if (eighteenWagon !== "fourthWagon9") {
+                document.getElementById(eighteenWagon).style.border =
+                    "2px solid red";
+            }
+
+            // ставим статус
             addImage(
                 "failure",
                 document.getElementsByClassName("question9"),
