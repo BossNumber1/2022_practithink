@@ -1,3 +1,5 @@
+@import "adaptiv.css";
+
 @import "./styles/question1.css";
 @import "./styles/question2.css";
 @import "./styles/question3.css";
@@ -23,6 +25,13 @@
 
 body {
     font-family: "Montserrat", sans-serif;
+    display: grid;
+    grid-template-areas: "app";
+    grid-template-columns: 99%;
+}
+
+.app {
+    grid-area: app;
 }
 
 * {
