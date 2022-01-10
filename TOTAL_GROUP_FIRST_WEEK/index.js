@@ -1364,7 +1364,13 @@ function question6() {
 
         // выносим общий статус к номеру вопроса
 
-        if (selectedButtons.includes("right") === true) {
+        if (
+            selectedButton6.firstBtn6 !== "" &&
+            selectedButton6.secondBtn6 !== "" &&
+            selectedButton6.thirdBtn6 !== "" &&
+            selectedButton6.fourthBtn6 !== "" &&
+            selectedButton6.fifthBtn6 !== ""
+        ) {
             addImage(
                 "success",
                 document.getElementsByClassName("question6"),
@@ -1372,6 +1378,33 @@ function question6() {
                 6
             );
         } else {
+            // подсветим невыбранные блоки
+            if (selectedButton6.firstBtn6 === "") {
+                document.getElementById("firstBtn6").style.border =
+                    "2px solid #FFB47D";
+            }
+
+            if (selectedButton6.secondBtn6 === "") {
+                document.getElementById("secondBtn6").style.border =
+                    "2px solid #FFB47D";
+            }
+
+            if (selectedButton6.thirdBtn6 === "") {
+                document.getElementById("thirdBtn6").style.border =
+                    "2px solid #FFB47D";
+            }
+
+            if (selectedButton6.fourthBtn6 === "") {
+                document.getElementById("fourthBtn6").style.border =
+                    "2px solid #FFB47D";
+            }
+
+            if (selectedButton6.fifthBtn6 === "") {
+                document.getElementById("fifthBtn6").style.border =
+                    "2px solid #FFB47D";
+            }
+
+            // придадим статуса
             addImage(
                 "failure",
                 document.getElementsByClassName("question6"),
