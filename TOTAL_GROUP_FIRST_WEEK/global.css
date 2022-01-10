@@ -90,8 +90,7 @@ body {
     height: 94px;
 }
 
-.correctAnswer5,
-.correctAnswer15 {
+.correctAnswer5 {
     top: 100px;
 }
 
@@ -103,7 +102,8 @@ body {
 .correctAnswer2,
 .correctAnswer8,
 .correctAnswer10,
-.correctAnswer14 {
+.correctAnswer14,
+.correctAnswer15 {
     top: 160px;
 }
 
@@ -167,6 +167,7 @@ body {
 .contentCorrectAnswer12,
 .contentCorrectAnswer13,
 .contentCorrectAnswer14,
+.contentCorrectAnswer15,
 .contentCorrectAnswer17,
 .contentCorrectAnswer18,
 .contentCorrectAnswer19 {
@@ -180,7 +181,8 @@ body {
     top: 20px;
 }
 
-.contentCorrectAnswer9 {
+.contentCorrectAnswer9,
+.contentCorrectAnswer15 {
     top: 40px;
 }
 
