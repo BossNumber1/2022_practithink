@@ -1850,17 +1850,25 @@ function question10() {
             addCorrectAnswerQuestion10();
         }
     } else {
-        document.getElementById("firstNumber10").style.border =
-            "2px solid #FFB47D";
+        if (numbers10.firstNumber === "") {
+            document.getElementById("firstNumber10").style.border =
+                "2px solid #FFB47D";
+        }
 
-        document.getElementById("secondNumber10").style.border =
-            "2px solid #FFB47D";
+        if (numbers10.secondNumber === "") {
+            document.getElementById("secondNumber10").style.border =
+                "2px solid #FFB47D";
+        }
 
-        document.getElementById("thirdNumber10").style.border =
-            "2px solid #FFB47D";
+        if (numbers10.thirdNumber === "") {
+            document.getElementById("thirdNumber10").style.border =
+                "2px solid #FFB47D";
+        }
 
-        document.getElementById("fourthNumber10").style.border =
-            "2px solid #FFB47D";
+        if (numbers10.fourthNumber === "") {
+            document.getElementById("fourthNumber10").style.border =
+                "2px solid #FFB47D";
+        }
     }
 }
 
