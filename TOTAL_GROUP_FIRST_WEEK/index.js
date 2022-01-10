@@ -498,6 +498,18 @@ function addCorrectAnswerQuestion13() {
     );
 }
 
+// 14 QUESTION
+
+function addCorrectAnswerQuestion14() {
+    document.getElementsByClassName("app14")[0].style.height = "600px";
+    addCorrectAnswer(
+        "correctAnswer14",
+        "14que",
+        "app14",
+        "contentCorrectAnswer"
+    );
+}
+
 // 16 QUESTION
 
 function addCorrectAnswerQuestion16() {
@@ -2075,6 +2087,8 @@ function question14() {
                 "app14",
                 14
             );
+
+            addCorrectAnswerQuestion14();
         }
     } else {
         document.getElementById("firstBtn14").style.border =
