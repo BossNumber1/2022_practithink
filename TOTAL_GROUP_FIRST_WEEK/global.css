@@ -89,9 +89,7 @@ body {
     height: 94px;
 }
 
-.correctAnswer3,
-.correctAnswer20,
-.correctAnswer10 {
+.correctAnswer20 {
     top: 70px;
 }
 
@@ -109,6 +107,7 @@ body {
 
 .correctAnswer1,
 .correctAnswer2,
+.correctAnswer10,
 .correctAnswer12 {
     top: 160px;
 }
@@ -127,6 +126,10 @@ body {
 
 .correctAnswer16 {
     top: 220px;
+}
+
+.correctAnswer3 {
+    top: 260px;
 }
 
 .correctAnswer7 img:not(:last-child),

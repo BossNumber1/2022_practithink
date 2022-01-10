@@ -2519,6 +2519,13 @@ function addCorrectAnswerQuestion2() {
     addCorrectAnswer("correctAnswer2", "2que", "app2", "contentCorrectAnswer");
 }
 
+// 3 QUESTION
+
+function addCorrectAnswerQuestion3() {
+    document.getElementsByClassName("app3")[0].style.height = "600px";
+    addCorrectAnswer("correctAnswer3", "3que", "app3", "contentCorrectAnswer");
+}
+
 // 4 QUESTION
 
 function addCorrectAnswerQuestion4() {
@@ -2559,6 +2566,18 @@ function addCorrectAnswerQuestion9() {
     addCorrectAnswer("correctAnswer9", "9que", "app9", "contentCorrectAnswer9");
 }
 
+// 10 QUESTION
+
+function addCorrectAnswerQuestion10() {
+    document.getElementsByClassName("app10")[0].style.height = "500px";
+    addCorrectAnswer(
+        "correctAnswer10",
+        "10que",
+        "app10",
+        "contentCorrectAnswer10"
+    );
+}
+
 // 11 QUESTION
 
 function addCorrectAnswerQuestion11() {
@@ -2591,6 +2610,7 @@ document.getElementById("submit").onclick = function () {
     question2();
     addCorrectAnswerQuestion2();
     question3();
+    addCorrectAnswerQuestion3();
     question4();
     addCorrectAnswerQuestion4();
     question5();
@@ -2603,6 +2623,7 @@ document.getElementById("submit").onclick = function () {
     question9();
     addCorrectAnswerQuestion9();
     question10();
+    addCorrectAnswerQuestion10();
     question11();
     addCorrectAnswerQuestion11();
     question12();
