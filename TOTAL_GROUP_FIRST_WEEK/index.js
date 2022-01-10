@@ -2114,31 +2114,6 @@ function question20() {
     }
 }
 
-// RESULT
-
-document.getElementById("submit").onclick = function () {
-    question1();
-    question2();
-    question3();
-    question4();
-    question5();
-    question6();
-    question7();
-    question8();
-    question9();
-    question10();
-    question11();
-    question12();
-    question13();
-    question14();
-    question15();
-    question16();
-    question17();
-    question18();
-    question19();
-    question20();
-};
-
 // -------------------------------------------------------------- ROTATE RULER FOR 14 QUESTION -----------------------------------------------
 
 let ruler14question = document.getElementsByClassName("ruler14")[0];
@@ -2491,3 +2466,79 @@ function drop18(e) {
         orig.remove();
     }
 }
+
+// ---------------------------------------------------------------------- SHOWING THE CORRECT ANSWER
+
+// для одной картинки
+
+function addCorrectAnswer(
+    numberCorrectAnswer,
+    numberQue,
+    numberContent,
+    numberContentCorrectAnswer
+) {
+    let newElement = document.createElement("div");
+    newElement.className = numberCorrectAnswer;
+
+    let childNewElement = document.createElement("div"); // сосед 1
+    childNewElement.className = "headerCorrectAnswer";
+    childNewElement.textContent = "Correct answer";
+
+    let secondChildNewElement = document.createElement("div"); // сосед 2
+    secondChildNewElement.className = numberContentCorrectAnswer;
+
+    let contentContent = document.createElement("img");
+    contentContent.src = "./pictures/" + numberQue + "/correctAnswer.svg";
+    contentContent.alt = "correct answer";
+
+    secondChildNewElement.appendChild(contentContent);
+
+    document.getElementsByClassName(numberContent)[0].appendChild(newElement);
+
+    document
+        .getElementsByClassName(numberCorrectAnswer)[0]
+        .appendChild(childNewElement);
+    document
+        .getElementsByClassName(numberCorrectAnswer)[0]
+        .appendChild(secondChildNewElement);
+}
+
+// realization
+
+// 5 QUESTION
+
+function addCorrectAnswerQuestion5() {
+    document.getElementsByClassName("app5")[0].style.height = "550px";
+    addCorrectAnswer(
+        "correctAnswer5",
+        "5que",
+        "content5",
+        "contentCorrectAnswer"
+    );
+}
+
+// ------------------------------------------------------------------------------ RESULT --------------------------------------------------------
+
+document.getElementById("submit").onclick = function () {
+    question1();
+    question2();
+    question3();
+    question4();
+    question5();
+    addCorrectAnswerQuestion5();
+    question6();
+    question7();
+    question8();
+    question9();
+    question10();
+    question11();
+    question12();
+    question13();
+    question14();
+    question15();
+    question16();
+    question17();
+    question18();
+    question19();
+    question20();
+};
