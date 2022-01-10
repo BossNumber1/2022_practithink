@@ -1157,14 +1157,20 @@ function question4() {
             addCorrectAnswerQuestion4();
         }
     } else {
-        document.getElementById("firstNumber4").style.border =
-            "2px solid #FFB47D";
+        if (numbers4.firstNumber === "") {
+            document.getElementById("firstNumber4").style.border =
+                "2px solid #FFB47D";
+        }
 
-        document.getElementById("secondNumber4").style.border =
-            "2px solid #FFB47D";
+        if (numbers4.secondNumber === "") {
+            document.getElementById("secondNumber4").style.border =
+                "2px solid #FFB47D";
+        }
 
-        document.getElementById("thirdNumber4").style.border =
-            "2px solid #FFB47D";
+        if (numbers4.thirdNumber === "") {
+            document.getElementById("thirdNumber4").style.border =
+                "2px solid #FFB47D";
+        }
     }
 }
 
