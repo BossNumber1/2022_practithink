@@ -1041,17 +1041,25 @@ function question3() {
             addCorrectAnswerQuestion3();
         }
     } else {
-        document.getElementById("firstNumber3").style.border =
-            "2px solid #FFB47D";
+        if (numbers3.firstNumber === "") {
+            document.getElementById("firstNumber3").style.border =
+                "2px solid #FFB47D";
+        }
 
-        document.getElementById("secondNumber3").style.border =
-            "2px solid #FFB47D";
+        if (numbers3.secondNumber === "") {
+            document.getElementById("secondNumber3").style.border =
+                "2px solid #FFB47D";
+        }
 
-        document.getElementById("thirdNumber3").style.border =
-            "2px solid #FFB47D";
+        if (numbers3.thirdNumber === "") {
+            document.getElementById("thirdNumber3").style.border =
+                "2px solid #FFB47D";
+        }
 
-        document.getElementById("fourthNumber3").style.border =
-            "2px solid #FFB47D";
+        if (numbers3.fourthNumber === "") {
+            document.getElementById("fourthNumber3").style.border =
+                "2px solid #FFB47D";
+        }
     }
 }
 
