@@ -95,7 +95,6 @@ body {
     top: 70px;
 }
 
-.correctAnswer1,
 .correctAnswer2,
 .correctAnswer5,
 .correctAnswer8,
@@ -109,6 +108,7 @@ body {
     top: 120px;
 }
 
+.correctAnswer1,
 .correctAnswer12 {
     top: 160px;
 }

@@ -2505,6 +2505,13 @@ function addCorrectAnswer(
 
 // realization
 
+// 1 QUESTION
+
+function addCorrectAnswerQuestion1() {
+    document.getElementsByClassName("app1")[0].style.height = "600px";
+    addCorrectAnswer("correctAnswer1", "1que", "app1", "contentCorrectAnswer");
+}
+
 // 4 QUESTION
 
 function addCorrectAnswerQuestion4() {
@@ -2573,6 +2580,7 @@ function addCorrectAnswerQuestion16() {
 
 document.getElementById("submit").onclick = function () {
     question1();
+    addCorrectAnswerQuestion1();
     question2();
     question3();
     question4();
