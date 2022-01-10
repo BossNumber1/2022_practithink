@@ -1600,16 +1600,16 @@ function question8() {
 function question9() {
     let train = document.getElementsByClassName("train")[0];
 
-    let four = train.children[4].children[0].id;
-    let elev = train.children[12].children[0].id;
-    let foti = train.children[14].children[0].id;
-    let eighty = train.children[18].children[0].id;
+    let fourthWagon = train.children[4].children[0].id;
+    let twelfthWagon = train.children[12].children[0].id;
+    let fourteenWagon = train.children[14].children[0].id;
+    let eighteenWagon = train.children[18].children[0].id;
 
     if (
-        four === "wagonEmpty0" &&
-        elev === "wagonEmpty1" &&
-        foti === "wagonEmpty2" &&
-        eighty === "wagonEmpty3"
+        fourthWagon === "wagonEmpty0" &&
+        twelfthWagon === "wagonEmpty1" &&
+        fourteenWagon === "wagonEmpty2" &&
+        eighteenWagon === "wagonEmpty3"
     ) {
         document.getElementById("wagonEmpty0").style.border =
             "2px solid #FFB47D";
@@ -1624,10 +1624,10 @@ function question9() {
             "2px solid #FFB47D";
     } else {
         if (
-            four === "secondWagon9" &&
-            elev === "firstWagon9" &&
-            foti === "thirdWagon9" &&
-            eighty === "fourthWagon9"
+            fourthWagon === "secondWagon9" &&
+            twelfthWagon === "firstWagon9" &&
+            fourteenWagon === "thirdWagon9" &&
+            eighteenWagon === "fourthWagon9"
         ) {
             addImage(
                 "success",
@@ -1646,65 +1646,6 @@ function question9() {
             addCorrectAnswerQuestion9();
         }
     }
-    // if (
-    //     numbers8.firstNumber != "" &&
-    //     numbers8.secondNumber != "" &&
-    //     numbers8.thirdNumber != ""
-    // ) {
-    //     succerror(
-    //         document.getElementById("firstNumber8"),
-    //         numbers8.firstNumber === "wrong"
-    //     );
-
-    //     succerror(
-    //         document.getElementById("secondNumber8"),
-    //         numbers8.secondNumber === "wrong"
-    //     );
-
-    //     succerror(
-    //         document.getElementById("thirdNumber8"),
-    //         numbers8.thirdNumber === "wrong"
-    //     );
-
-    //     // расставляем мини-иконки
-
-    //     createMiniIcon(
-    //         numbers8.firstNumber,
-    //         document.getElementById("firstNumber8")
-    //     );
-
-    //     createMiniIcon(
-    //         numbers8.secondNumber,
-    //         document.getElementById("secondNumber8")
-    //     );
-
-    //     createMiniIcon(
-    //         numbers8.thirdNumber,
-    //         document.getElementById("thirdNumber8")
-    //     );
-
-    //     // выносим общий статус к номеру вопроса
-
-    //     if (
-    //         numbers8.firstNumber === "right" &&
-    //         numbers8.secondNumber === "right" &&
-    //         numbers8.thirdNumber === "right"
-    //     ) {
-    //         addImage(
-    //             "success",
-    //             document.getElementsByClassName("question8"),
-    //             "app8",
-    //             8
-    //         );
-    //     } else {
-    //         addImage(
-    //             "failure",
-    //             document.getElementsByClassName("question8"),
-    //             "app8",
-    //             8
-    //         );
-    //     }
-    // }
 }
 
 // 10 QUESTION
@@ -2165,7 +2106,6 @@ function question15() {
         // теперь нужно проверить на соответствие данных
         currentOrder.map((el, index) => {
             if (el === correctOrder[index]) {
-                // alert("true");
                 document.getElementById(el + "0").style.border =
                     "2px solid green";
             } else {
