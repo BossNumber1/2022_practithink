@@ -1639,22 +1639,22 @@ function question9() {
             // подсвечиваем неверновыбранные вагоны
             if (fourthWagon !== "secondWagon9") {
                 document.getElementById(fourthWagon).style.border =
-                    "2px solid red";
+                    "2px solid #ED7777";
             }
 
             if (twelfthWagon !== "firstWagon9") {
                 document.getElementById(twelfthWagon).style.border =
-                    "2px solid red";
+                    "2px solid #ED7777";
             }
 
             if (fourteenWagon !== "thirdWagon9") {
                 document.getElementById(fourteenWagon).style.border =
-                    "2px solid red";
+                    "2px solid #ED7777";
             }
 
             if (eighteenWagon !== "fourthWagon9") {
                 document.getElementById(eighteenWagon).style.border =
-                    "2px solid red";
+                    "2px solid #ED7777";
             }
 
             // ставим статус
@@ -2225,19 +2225,22 @@ document.getElementById("fourthFigure16").onclick = function () {
 };
 
 function question16() {
-    let selectedFigures = [],
-        selButsName = [],
-        isTheArrayEmpty = 0;
+    // создаём стартовые переменные
+    let selectedFigures = [], // для верно-неверно
+        selButsName = [], // для имён фигур
+        isTheArrayEmpty = 0; // чтобы узнать - выбрано ли что-то
 
     for (let key in selectedFigures16) {
         if (selectedFigures16[key] !== "") {
-            selectedFigures.push(selectedFigures16[key]);
-            selButsName.push(key);
-            isTheArrayEmpty++;
+            // данный блок выполняется, если что-то выбрано
+            selectedFigures.push(selectedFigures16[key]); // добавляем статус фигуры
+            selButsName.push(key); // добавляем имя фигуры
+            isTheArrayEmpty++; // чтобы в будущем понять, что что-то было выбрано
         }
     }
 
     if (isTheArrayEmpty > 0) {
+        // данный блок выполняется, если что-то выбрано
         selButsName.map((el, index) => {
             if (selectedFigures[index] === "wrong") {
                 document.getElementById(el).style.border = "2px solid #ED7777";
@@ -2248,7 +2251,10 @@ function question16() {
 
         // выносим общий статус к номеру вопроса
 
-        if (selectedFigures.includes("right") === true) {
+        if (
+            selectedFigures16.firstFigure16 !== "" &&
+            selectedFigures16.thirdFigure16 !== ""
+        ) {
             addImage(
                 "success",
                 document.getElementsByClassName("question16"),
@@ -2256,6 +2262,29 @@ function question16() {
                 16
             );
         } else {
+            // подсвечиваем ложновыбранные фигуры
+            if (selectedFigures16.secondFigure16 !== "") {
+                document.getElementById("secondFigure16").style.border =
+                    "2px solid #ED7777";
+            }
+
+            if (selectedFigures16.fourthFigure16 !== "") {
+                document.getElementById("fourthFigure16").style.border =
+                    "2px solid #ED7777";
+            }
+
+            // подсвечиваем невыранные фигуры
+            if (selectedFigures16.firstFigure16 === "") {
+                document.getElementById("firstFigure16").style.border =
+                    "2px solid #FFB47D";
+            }
+
+            if (selectedFigures16.thirdFigure16 === "") {
+                document.getElementById("thirdFigure16").style.border =
+                    "2px solid #FFB47D";
+            }
+
+            // ставим статус
             addImage(
                 "failure",
                 document.getElementsByClassName("question16"),
