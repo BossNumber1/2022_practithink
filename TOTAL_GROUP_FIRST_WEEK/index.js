@@ -2028,11 +2028,15 @@ function question12() {
             addCorrectAnswerQuestion12();
         }
     } else {
-        document.getElementById("leftNumber12").style.border =
-            "2px solid #FFB47D";
+        if (numbers12.firstNumber === "") {
+            document.getElementById("leftNumber12").style.border =
+                "2px solid #FFB47D";
+        }
 
-        document.getElementById("rightNumber12").style.border =
-            "2px solid #FFB47D";
+        if (numbers12.secondNumber === "") {
+            document.getElementById("rightNumber12").style.border =
+                "2px solid #FFB47D";
+        }
     }
 }
 
