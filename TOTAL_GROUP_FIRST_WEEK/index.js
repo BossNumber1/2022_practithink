@@ -905,7 +905,22 @@ function question2() {
 
             addCorrectAnswerQuestion2();
         }
-    } else {
+    } else if (
+        numbers2.leftNumber !== "right" &&
+        numbers2.rightNumber === "right"
+    ) {
+        document.getElementById("leftNumber2").style.border =
+            "2px solid #FFB47D";
+    } else if (
+        numbers2.rightNumber !== "right" &&
+        numbers2.leftNumber === "right"
+    ) {
+        document.getElementById("rightNumber2").style.border =
+            "2px solid #FFB47D";
+    } else if (
+        numbers2.leftNumber !== "right" &&
+        numbers2.rightNumber !== "right"
+    ) {
         document.getElementById("leftNumber2").style.border =
             "2px solid #FFB47D";
 
