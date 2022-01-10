@@ -99,11 +99,13 @@ body {
 .correctAnswer13 {
     left: calc(50% - 450px / 2);
     width: 450px;
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
     height: 94px;
-    /* border: 1px solid gray; */
+}
+
+.correctAnswer3,
+.correctAnswer20,
+.correctAnswer10 {
+    top: 70px;
 }
 
 .correctAnswer1,
@@ -115,15 +117,8 @@ body {
     top: 100px;
 }
 
-.correctAnswer3,
-.correctAnswer20,
-.correctAnswer7,
-.correctAnswer10 {
-    top: 70px;
-}
-
-.correctAnswer18,
-.correctAnswer13 {
+.correctAnswer13,
+.correctAnswer18 {
     top: 120px;
 }
 
@@ -137,6 +132,10 @@ body {
 .correctAnswer11,
 .correctAnswer17 {
     top: 180px;
+}
+
+.correctAnswer7 {
+    top: 200px;
 }
 
 .correctAnswer16 {
@@ -164,6 +163,8 @@ body {
     color: #2f2f2f;
 }
 
+/* content correct answer styles */
+
 .contentCorrectAnswer,
 .contentCorrectAnswer3,
 .contentCorrectAnswer9,
@@ -177,13 +178,9 @@ body {
 .contentCorrectAnswer17,
 .contentCorrectAnswer18 {
     display: flex;
-    /* flex-direction: row;
-    align-items: flex-start; */
     justify-content: center;
     align-items: center;
-    /* width: 450px; */
     height: 50px;
-    /* border: 1px solid violet; */
 }
 
 .contentCorrectAnswer {
@@ -200,7 +197,6 @@ body {
 }
 
 .contentCorrectAnswer6,
-.contentCorrectAnswer7,
 .contentCorrectAnswer12,
 .contentCorrectAnswer17,
 .contentCorrectAnswer13 {
@@ -211,6 +207,7 @@ body {
     top: 100px;
 }
 
+.contentCorrectAnswer7,
 .contentCorrectAnswer14 {
     top: 120px;
 }
