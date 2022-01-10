@@ -17,7 +17,7 @@
 
 @media only screen and (orientation: portrait) {
     body {
-        /* -webkit-transform: rotate(90deg); */
+        transform: rotate(90deg);
         width: 100%;
         height: 100%;
         overflow: hidden;
