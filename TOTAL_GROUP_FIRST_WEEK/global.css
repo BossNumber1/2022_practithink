@@ -131,6 +131,7 @@ body {
     top: 160px;
 }
 
+.correctAnswer4,
 .correctAnswer6,
 .correctAnswer9,
 .correctAnswer11,
@@ -140,10 +141,6 @@ body {
 
 .correctAnswer16 {
     top: 220px;
-}
-
-.correctAnswer4 {
-    top: 320px;
 }
 
 .correctAnswer7 img:not(:last-child),
