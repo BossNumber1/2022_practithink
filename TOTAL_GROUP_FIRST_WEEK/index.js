@@ -1643,14 +1643,20 @@ function question8() {
             addCorrectAnswerQuestion8();
         }
     } else {
-        document.getElementById("firstNumber8").style.border =
-            "2px solid #FFB47D";
+        if (numbers8.firstNumber === "") {
+            document.getElementById("firstNumber8").style.border =
+                "2px solid #FFB47D";
+        }
 
-        document.getElementById("secondNumber8").style.border =
-            "2px solid #FFB47D";
+        if (numbers8.secondNumber === "") {
+            document.getElementById("secondNumber8").style.border =
+                "2px solid #FFB47D";
+        }
 
-        document.getElementById("thirdNumber8").style.border =
-            "2px solid #FFB47D";
+        if (numbers8.thirdNumber === "") {
+            document.getElementById("thirdNumber8").style.border =
+                "2px solid #FFB47D";
+        }
     }
 }
 
