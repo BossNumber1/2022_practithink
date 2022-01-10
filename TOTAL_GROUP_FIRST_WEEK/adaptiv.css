@@ -1,12 +1,4 @@
 @media (min-width: 375px) and (orientation: landscape) {
-    /* * {
-        -webkit-transform: rotate(-90deg);
-        -moz-transform: rotate(-90deg);
-        -ms-transform: rotate(-90deg);
-        -o-transform: rotate(-90deg);
-        transform: rotate(-90deg);
-    } */
-
     body {
         position: absolute;
     }
@@ -18,14 +10,6 @@
 }
 
 @media (min-width: 1200px) and (orientation: landscape) {
-    /* * {
-        -webkit-transform: rotate(0deg);
-        -moz-transform: rotate(0deg);
-        -ms-transform: rotate(0deg);
-        -o-transform: rotate(0deg);
-        transform: rotate(0deg);
-    } */
-
     body {
         position: relative;
     }
@@ -33,7 +17,7 @@
 
 @media only screen and (orientation: portrait) {
     body {
-        -webkit-transform: rotate(90deg);
+        /* -webkit-transform: rotate(90deg); */
         width: 100%;
         height: 100%;
         overflow: hidden;
