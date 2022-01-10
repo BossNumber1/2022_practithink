@@ -2473,14 +2473,20 @@ function question17() {
             addCorrectAnswerQuestion17();
         }
     } else {
-        document.getElementById("firstInput17").style.border =
-            "2px solid #FFB47D";
+        if (numbers17.firstNumber === "") {
+            document.getElementById("firstInput17").style.border =
+                "2px solid #FFB47D";
+        }
 
-        document.getElementById("secondInput17").style.border =
-            "2px solid #FFB47D";
+        if (numbers17.secondNumber === "") {
+            document.getElementById("secondInput17").style.border =
+                "2px solid #FFB47D";
+        }
 
-        document.getElementById("thirdInput17").style.border =
-            "2px solid #FFB47D";
+        if (numbers17.thirdNumber === "") {
+            document.getElementById("thirdInput17").style.border =
+                "2px solid #FFB47D";
+        }
     }
 }
 
