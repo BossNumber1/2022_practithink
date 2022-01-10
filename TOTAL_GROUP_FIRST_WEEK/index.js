@@ -522,6 +522,18 @@ function addCorrectAnswerQuestion19() {
     );
 }
 
+// 20 QUESTION
+
+function addCorrectAnswerQuestion20() {
+    document.getElementsByClassName("app20")[0].style.height = "650px";
+    addCorrectAnswer(
+        "correctAnswer20",
+        "20que",
+        "app20",
+        "contentCorrectAnswer"
+    );
+}
+
 // ---------------------------------------------------------- CHECK IMPLEMENTATION --------------------------------------------------------
 
 // -------------------------------------------------------------common function---------------------------------------------------
@@ -2655,6 +2667,8 @@ function question20() {
                 "app20",
                 20
             );
+
+            addCorrectAnswerQuestion20();
         }
     } else {
         document.getElementById("firstBtn20").style.border =

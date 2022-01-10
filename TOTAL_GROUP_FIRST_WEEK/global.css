@@ -90,10 +90,6 @@ body {
     height: 94px;
 }
 
-.correctAnswer20 {
-    top: 70px;
-}
-
 .correctAnswer5,
 .correctAnswer8,
 .correctAnswer14,
@@ -121,7 +117,8 @@ body {
     top: 180px;
 }
 
-.correctAnswer7 {
+.correctAnswer7,
+.correctAnswer20 {
     top: 200px;
 }
 
