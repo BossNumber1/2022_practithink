@@ -100,7 +100,6 @@ body {
     top: 100px;
 }
 
-.correctAnswer13,
 .correctAnswer18 {
     top: 120px;
 }
@@ -116,6 +115,7 @@ body {
 .correctAnswer9,
 .correctAnswer11,
 .correctAnswer12,
+.correctAnswer13,
 .correctAnswer17 {
     top: 180px;
 }
