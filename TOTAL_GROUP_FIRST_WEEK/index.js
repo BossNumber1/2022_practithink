@@ -541,6 +541,18 @@ function addCorrectAnswerQuestion16() {
     );
 }
 
+// 17 QUESTION
+
+function addCorrectAnswerQuestion17() {
+    document.getElementsByClassName("app17")[0].style.height = "950px";
+    addCorrectAnswer(
+        "correctAnswer17",
+        "17que",
+        "app17",
+        "contentCorrectAnswer17"
+    );
+}
+
 // 18 QUESTION
 
 function addCorrectAnswerQuestion18() {
@@ -2383,6 +2395,8 @@ function question17() {
                 "app17",
                 17
             );
+
+            addCorrectAnswerQuestion17();
         }
     } else {
         document.getElementById("firstInput17").style.border =
