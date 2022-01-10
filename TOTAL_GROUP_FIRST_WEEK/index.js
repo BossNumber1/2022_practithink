@@ -541,6 +541,18 @@ function addCorrectAnswerQuestion16() {
     );
 }
 
+// 18 QUESTION
+
+function addCorrectAnswerQuestion18() {
+    document.getElementsByClassName("app18")[0].style.height = "1100px";
+    addCorrectAnswer(
+        "correctAnswer18",
+        "18que",
+        "app18",
+        "contentCorrectAnswer18"
+    );
+}
+
 // 19 QUESTION
 
 function addCorrectAnswerQuestion19() {
@@ -2496,6 +2508,8 @@ function question18() {
                 "app18",
                 18
             );
+
+            addCorrectAnswerQuestion18();
         }
     } else {
         document.getElementsByClassName("circle-container")[0].style.border =
