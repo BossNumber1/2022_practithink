@@ -827,12 +827,20 @@ function question1() {
             addCorrectAnswerQuestion1();
         }
     } else {
-        document.getElementById("leftNumber").style.border =
-            "2px solid #FFB47D";
-        document.getElementById("centerNumber").style.border =
-            "2px solid #FFB47D";
-        document.getElementById("rightNumber").style.border =
-            "2px solid #FFB47D";
+        if (numbers1.leftNumber === "") {
+            document.getElementById("leftNumber").style.border =
+                "2px solid #FFB47D";
+        }
+
+        if (numbers1.centerNumber === "") {
+            document.getElementById("centerNumber").style.border =
+                "2px solid #FFB47D";
+        }
+
+        if (numbers1.rightNumber === "") {
+            document.getElementById("rightNumber").style.border =
+                "2px solid #FFB47D";
+        }
     }
 }
 
