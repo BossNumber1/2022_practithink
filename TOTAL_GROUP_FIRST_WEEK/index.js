@@ -1954,13 +1954,19 @@ function question11() {
             addCorrectAnswerQuestion11();
         }
     } else {
-        document.getElementById("firstNumber11").style.border =
-            "2px solid #FFB47D";
+        if (numbers11.firstNumber === "") {
+            document.getElementById("firstNumber11").style.border =
+                "2px solid #FFB47D";
+        }
 
-        requiredElement.style.border = "2px solid #FFB47D";
+        if (numbers11.secondNumber === "") {
+            document.getElementById("secondNumber11").style.border =
+                "2px solid #FFB47D";
+        }
 
-        document.getElementById("secondNumber11").style.border =
-            "2px solid #FFB47D";
+        if (selectedSign !== ">") {
+            requiredElement.style.border = "2px solid #FFB47D";
+        }
     }
 }
 
