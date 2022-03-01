@@ -1,4 +1,4 @@
-.app19 {
+.app23 {
     width: 1170px;
     height: 457px;
     left: calc(50% - 1170px / 2);
@@ -9,7 +9,7 @@
     margin-bottom: 51px;
 }
 
-.titlePage19 {
+.titlePage23 {
     top: 26px;
     width: 1170px;
     height: 22px;
@@ -21,7 +21,7 @@
     color: #2f2f2f;
 }
 
-.subtitle19 {
+.subtitle23 {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -37,11 +37,11 @@
     margin-left: 10px;
 }
 
-.subtitle19 img {
+.subtitle23 img {
     margin-right: 5px;
 }
 
-.lineUnderHeading19 {
+.lineUnderHeading23 {
     position: absolute;
     width: 1169px;
     height: 0px;
@@ -51,7 +51,7 @@
 
 /* content styles */
 
-.content19 {
+.content23 {
     top: 167px;
     left: calc(50% - 770px / 2);
     width: 770px;
@@ -62,7 +62,7 @@
     align-items: flex-start;
 }
 
-.content19 div {
+.content23 div {
     position: static;
     width: 170px;
     height: 170px;

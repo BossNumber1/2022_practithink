@@ -565,15 +565,15 @@ function addCorrectAnswerQuestion18() {
     );
 }
 
-// 19 QUESTION
+// 23 QUESTION
 
-function addCorrectAnswerQuestion19() {
-    document.getElementsByClassName("app19")[0].style.height = "800px";
+function addCorrectAnswerQuestion23() {
+    document.getElementsByClassName("app23")[0].style.height = "800px";
     addCorrectAnswer(
-        "correctAnswer19",
-        "19que",
-        "app19",
-        "contentCorrectAnswer19"
+        "correctAnswer23",
+        "23que",
+        "app23",
+        "contentCorrectAnswer23"
     );
 }
 
@@ -2614,67 +2614,67 @@ function question18() {
     }
 }
 
-// 19 QUESTION
+// 23 QUESTION
 
-let selectedFigures19 = {
-    firstFigure19: "",
-    secondFigure19: "",
-    thirdFigure19: "",
-    fourthFigure19: "",
+let selectedFigures23 = {
+    firstFigure23: "",
+    secondFigure23: "",
+    thirdFigure23: "",
+    fourthFigure23: "",
 };
 
-document.getElementById("firstFigure19").onclick = function () {
-    let clickedElement = document.getElementById("firstFigure19");
+document.getElementById("firstFigure23").onclick = function () {
+    let clickedElement = document.getElementById("firstFigure23");
 
     clickedElement.style.boxShadow =
         "2px 2px 20px 1px rgba(54, 156, 183, 0.29)";
     clickedElement.style.border = "2px solid #369CB7";
     clickedElement.style.borderRadius = "10px";
 
-    selectedFigures19.firstFigure19 = "right";
+    selectedFigures23.firstFigure23 = "right";
 };
 
-document.getElementById("secondFigure19").onclick = function () {
-    let clickedElement = document.getElementById("secondFigure19");
+document.getElementById("secondFigure23").onclick = function () {
+    let clickedElement = document.getElementById("secondFigure23");
 
     clickedElement.style.boxShadow =
         "2px 2px 20px 1px rgba(54, 156, 183, 0.29)";
     clickedElement.style.border = "2px solid #369CB7";
     clickedElement.style.borderRadius = "10px";
 
-    selectedFigures19.secondFigure19 = "wrong";
+    selectedFigures23.secondFigure23 = "wrong";
 };
 
-document.getElementById("thirdFigure19").onclick = function () {
-    let clickedElement = document.getElementById("thirdFigure19");
+document.getElementById("thirdFigure23").onclick = function () {
+    let clickedElement = document.getElementById("thirdFigure23");
 
     clickedElement.style.boxShadow =
         "2px 2px 20px 1px rgba(54, 156, 183, 0.29)";
     clickedElement.style.border = "2px solid #369CB7";
     clickedElement.style.borderRadius = "10px";
 
-    selectedFigures19.thirdFigure19 = "right";
+    selectedFigures23.thirdFigure23 = "right";
 };
 
-document.getElementById("fourthFigure19").onclick = function () {
-    let clickedElement = document.getElementById("fourthFigure19");
+document.getElementById("fourthFigure23").onclick = function () {
+    let clickedElement = document.getElementById("fourthFigure23");
 
     clickedElement.style.boxShadow =
         "2px 2px 20px 1px rgba(54, 156, 183, 0.29)";
     clickedElement.style.border = "2px solid #369CB7";
     clickedElement.style.borderRadius = "10px";
 
-    selectedFigures19.fourthFigure19 = "wrong";
+    selectedFigures23.fourthFigure23 = "wrong";
 };
 
-function question19() {
+function question23() {
     let selectedFigures = [],
         selButsName = [],
         isTheArrayEmpty = 0;
 
-    for (let key in selectedFigures19) {
-        if (selectedFigures19[key] !== "") {
-            selectedFigures.push(selectedFigures19[key]);
+    for (let key in selectedFigures23) {
+        if (selectedFigures23[key] !== "") {
+            selectedFigures.push(selectedFigures23[key]);
             selButsName.push(key);
             isTheArrayEmpty++;
         }
@@ -2694,36 +2694,36 @@ function question19() {
         if (selectedFigures.includes("right") === true) {
             addImage(
                 "success",
-                document.getElementsByClassName("question19"),
-                "app19",
-                19
+                document.getElementsByClassName("question23"),
+                "app23",
+                23
             );
         } else {
             addImage(
                 "failure",
-                document.getElementsByClassName("question19"),
-                "app19",
-                19
+                document.getElementsByClassName("question23"),
+                "app23",
+                23
             );
 
-            addCorrectAnswerQuestion19();
+            addCorrectAnswerQuestion23();
         }
     } else {
-        document.getElementById("firstFigure19").style.border =
+        document.getElementById("firstFigure23").style.border =
             "2px solid #FFB47D";
-        document.getElementById("firstFigure19").style.borderRadius = "5px";
+        document.getElementById("firstFigure23").style.borderRadius = "5px";
 
-        document.getElementById("secondFigure19").style.border =
+        document.getElementById("secondFigure23").style.border =
             "2px solid #FFB47D";
-        document.getElementById("secondFigure19").style.borderRadius = "5px";
+        document.getElementById("secondFigure23").style.borderRadius = "5px";
 
-        document.getElementById("thirdFigure19").style.border =
+        document.getElementById("thirdFigure23").style.border =
             "2px solid #FFB47D";
-        document.getElementById("thirdFigure19").style.borderRadius = "5px";
+        document.getElementById("thirdFigure23").style.borderRadius = "5px";
 
-        document.getElementById("fourthFigure19").style.border =
+        document.getElementById("fourthFigure23").style.border =
             "2px solid #FFB47D";
-        document.getElementById("fourthFigure19").style.borderRadius = "5px";
+        document.getElementById("fourthFigure23").style.borderRadius = "5px";
     }
 }
 
@@ -2846,6 +2846,6 @@ document.getElementById("submit").onclick = function () {
     question16();
     question17();
     question18();
-    question19();
+    question23();
     question24();
 };
