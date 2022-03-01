@@ -1,4 +1,4 @@
-.app17 {
+.app21 {
     width: 1170px;
     height: 732px;
     left: calc(50% - 1170px / 2);
@@ -9,7 +9,7 @@
     margin-bottom: 51px;
 }
 
-.titlePage17 {
+.titlePage21 {
     top: 25px;
     left: calc(50% - 770px / 2);
     width: 770px;
@@ -22,7 +22,7 @@
     color: #2f2f2f;
 }
 
-.lineUnderHeading17 {
+.lineUnderHeading21 {
     position: absolute;
     width: 1169px;
     height: 0px;
@@ -32,7 +32,7 @@
 
 /* content styles */
 
-.content17 {
+.content21 {
     top: 154px;
     left: calc(50% - 584px / 2);
     width: 584px;

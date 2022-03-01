@@ -541,15 +541,15 @@ function addCorrectAnswerQuestion16() {
     );
 }
 
-// 17 QUESTION
+// 21 QUESTION
 
-function addCorrectAnswerQuestion17() {
-    document.getElementsByClassName("app17")[0].style.height = "950px";
+function addCorrectAnswerQuestion21() {
+    document.getElementsByClassName("app21")[0].style.height = "950px";
     addCorrectAnswer(
-        "correctAnswer17",
-        "17que",
-        "app17",
-        "contentCorrectAnswer17"
+        "correctAnswer21",
+        "21que",
+        "app21",
+        "contentCorrectAnswer21"
     );
 }
 
@@ -2396,95 +2396,95 @@ function question16() {
     }
 }
 
-// 17 QUESTION
+// 21 QUESTION
 
-let numbers17 = {
+let numbers21 = {
     firstNumber: "",
     secondNumber: "",
     thirdNumber: "",
 };
 
-document.getElementById("firstInput17").onchange = function (e) {
+document.getElementById("firstInput21").onchange = function (e) {
     if (e.target.value == 12) {
-        numbers17.firstNumber = "right";
+        numbers21.firstNumber = "right";
     } else {
-        numbers17.firstNumber = "wrong";
+        numbers21.firstNumber = "wrong";
     }
 };
 
-document.getElementById("secondInput17").onchange = function (e) {
+document.getElementById("secondInput21").onchange = function (e) {
     if (e.target.value == 4) {
-        numbers17.secondNumber = "right";
+        numbers21.secondNumber = "right";
     } else {
-        numbers17.secondNumber = "wrong";
+        numbers21.secondNumber = "wrong";
     }
 };
 
-document.getElementById("thirdInput17").onchange = function (e) {
+document.getElementById("thirdInput21").onchange = function (e) {
     if (e.target.value == 4) {
-        numbers17.thirdNumber = "right";
+        numbers21.thirdNumber = "right";
     } else {
-        numbers17.thirdNumber = "wrong";
+        numbers21.thirdNumber = "wrong";
     }
 };
 
-function question17() {
+function question21() {
     if (
-        numbers17.firstNumber != "" &&
-        numbers17.secondNumber != "" &&
-        numbers17.thirdNumber != ""
+        numbers21.firstNumber != "" &&
+        numbers21.secondNumber != "" &&
+        numbers21.thirdNumber != ""
     ) {
         succerror(
-            document.getElementById("firstInput17"),
-            numbers17.firstNumber === "wrong"
+            document.getElementById("firstInput21"),
+            numbers21.firstNumber === "wrong"
         );
 
         succerror(
-            document.getElementById("secondInput17"),
-            numbers17.secondNumber === "wrong"
+            document.getElementById("secondInput21"),
+            numbers21.secondNumber === "wrong"
         );
 
         succerror(
-            document.getElementById("thirdInput17"),
-            numbers17.thirdNumber === "wrong"
+            document.getElementById("thirdInput21"),
+            numbers21.thirdNumber === "wrong"
         );
 
         // выносим общий статус к номеру вопроса
 
         if (
-            numbers17.firstNumber === "right" &&
-            numbers17.secondNumber === "right" &&
-            numbers17.thirdNumber === "right"
+            numbers21.firstNumber === "right" &&
+            numbers21.secondNumber === "right" &&
+            numbers21.thirdNumber === "right"
         ) {
             addImage(
                 "success",
-                document.getElementsByClassName("question17"),
-                "app17",
-                17
+                document.getElementsByClassName("question21"),
+                "app21",
+                21
             );
         } else {
             addImage(
                 "failure",
-                document.getElementsByClassName("question17"),
-                "app17",
-                17
+                document.getElementsByClassName("question21"),
+                "app21",
+                21
             );
 
-            addCorrectAnswerQuestion17();
+            addCorrectAnswerQuestion21();
         }
     } else {
-        if (numbers17.firstNumber === "") {
-            document.getElementById("firstInput17").style.border =
+        if (numbers21.firstNumber === "") {
+            document.getElementById("firstInput21").style.border =
                 "2px solid #FFB47D";
         }
 
-        if (numbers17.secondNumber === "") {
-            document.getElementById("secondInput17").style.border =
+        if (numbers21.secondNumber === "") {
+            document.getElementById("secondInput21").style.border =
                 "2px solid #FFB47D";
         }
 
-        if (numbers17.thirdNumber === "") {
-            document.getElementById("thirdInput17").style.border =
+        if (numbers21.thirdNumber === "") {
+            document.getElementById("thirdInput21").style.border =
                 "2px solid #FFB47D";
         }
     }
@@ -2844,7 +2844,7 @@ document.getElementById("submit").onclick = function () {
     question14();
     question15();
     question16();
-    question17();
+    question21();
     question22();
     question23();
     question24();
