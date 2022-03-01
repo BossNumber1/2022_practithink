@@ -248,15 +248,15 @@ function drop11p2(e) {
     }
 }
 
-// 15 QUESTION
+// 18 QUESTION
 
-function drag15(e) {
-    localStorage.setItem("idOrigin15question3class", e.target.id);
+function drag18(e) {
+    localStorage.setItem("idOrigin18question1grade", e.target.id);
 }
 
-function drop15(e) {
+function drop18(e) {
     // получаем имя и id взятого элемента
-    let idOrig = localStorage.getItem("idOrigin15question3class");
+    let idOrig = localStorage.getItem("idOrigin18question1grade");
     let nameObjectOrig = idOrig.slice(0, -1);
 
     // получаем имя и id, на который кладём элемент
@@ -268,8 +268,8 @@ function drop15(e) {
     let currentElement = document.getElementById(currentId);
 
     // меняем картинки местами
-    currentElement.src = "./pictures/15que/" + nameObjectOrig + ".svg";
-    orignalElement.src = "./pictures/15que/" + nameObjectCurrent + ".svg";
+    currentElement.src = "./pictures/18que/" + nameObjectOrig + ".svg";
+    orignalElement.src = "./pictures/18que/" + nameObjectCurrent + ".svg";
 
     // меняем id местами
     currentElement.id = idOrig;
@@ -517,15 +517,15 @@ function addCorrectAnswerQuestion14() {
     );
 }
 
-// 15 QUESTION
+// 18 QUESTION
 
-function addCorrectAnswerQuestion15() {
-    document.getElementsByClassName("app15")[0].style.height = "600px";
+function addCorrectAnswerQuestion18() {
+    document.getElementsByClassName("app18")[0].style.height = "600px";
     addCorrectAnswer(
-        "correctAnswer15",
-        "15que",
-        "app15",
-        "contentCorrectAnswer15"
+        "correctAnswer18",
+        "18que",
+        "app18",
+        "contentCorrectAnswer18"
     );
 }
 
@@ -2191,14 +2191,14 @@ function question14() {
     }
 }
 
-// 15 QUESTION
+// 18 QUESTION
 
-function question15() {
+function question18() {
     let wrongOrder = "yes";
     let correctOrder = ["centerTree", "rightTree", "leftTree"];
     let currentOrder = [];
     let howManyAreSelected = 0;
-    let childs = document.getElementsByClassName("topRow15")[0].children;
+    let childs = document.getElementsByClassName("topRow18")[0].children;
 
     for (let i = 0; i < childs.length; i++) {
         if (childs[i].children[0].id.slice(0, -1) !== "emptyPlace") {
@@ -2225,19 +2225,19 @@ function question15() {
         if (wrongOrder === "yes") {
             addImage(
                 "success",
-                document.getElementsByClassName("question15"),
-                "app15",
-                15
+                document.getElementsByClassName("question18"),
+                "app18",
+                18
             );
         } else {
             addImage(
                 "failure",
-                document.getElementsByClassName("question15"),
-                "app15",
-                15
+                document.getElementsByClassName("question18"),
+                "app18",
+                18
             );
 
-            addCorrectAnswerQuestion15();
+            addCorrectAnswerQuestion18();
         }
     } else {
         document.getElementById("emptyPlace0").style.border =
@@ -2842,7 +2842,7 @@ document.getElementById("submit").onclick = function () {
     question12();
     question13();
     question14();
-    question15();
+    question18();
     question19();
     question21();
     question22();
