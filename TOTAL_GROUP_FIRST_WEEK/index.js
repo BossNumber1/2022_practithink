@@ -529,15 +529,15 @@ function addCorrectAnswerQuestion15() {
     );
 }
 
-// 16 QUESTION
+// 19 QUESTION
 
-function addCorrectAnswerQuestion16() {
-    document.getElementsByClassName("app16")[0].style.height = "750px";
+function addCorrectAnswerQuestion19() {
+    document.getElementsByClassName("app19")[0].style.height = "750px";
     addCorrectAnswer(
-        "correctAnswer16",
-        "16que",
-        "app16",
-        "contentCorrectAnswer16"
+        "correctAnswer19",
+        "19que",
+        "app19",
+        "contentCorrectAnswer19"
     );
 }
 
@@ -2254,69 +2254,69 @@ function question15() {
     }
 }
 
-// 16 QUESTION
+// 19 QUESTION
 
-let selectedFigures16 = {
-    firstFigure16: "",
-    secondFigure16: "",
-    thirdFigure16: "",
-    fourthFigure16: "",
+let selectedFigures19 = {
+    firstFigure19: "",
+    secondFigure19: "",
+    thirdFigure19: "",
+    fourthFigure19: "",
 };
 
-document.getElementById("firstFigure16").onclick = function () {
-    let clickedElement = document.getElementById("firstFigure16");
+document.getElementById("firstFigure19").onclick = function () {
+    let clickedElement = document.getElementById("firstFigure19");
 
     clickedElement.style.boxShadow =
         "2px 2px 20px 1px rgba(54, 156, 183, 0.29)";
     clickedElement.style.border = "2px solid #369CB7";
     clickedElement.style.borderRadius = "10px";
 
-    selectedFigures16.firstFigure16 = "right";
+    selectedFigures19.firstFigure19 = "right";
 };
 
-document.getElementById("secondFigure16").onclick = function () {
-    let clickedElement = document.getElementById("secondFigure16");
+document.getElementById("secondFigure19").onclick = function () {
+    let clickedElement = document.getElementById("secondFigure19");
 
     clickedElement.style.boxShadow =
         "2px 2px 20px 1px rgba(54, 156, 183, 0.29)";
     clickedElement.style.border = "2px solid #369CB7";
     clickedElement.style.borderRadius = "10px";
 
-    selectedFigures16.secondFigure16 = "wrong";
+    selectedFigures19.secondFigure19 = "wrong";
 };
 
-document.getElementById("thirdFigure16").onclick = function () {
-    let clickedElement = document.getElementById("thirdFigure16");
+document.getElementById("thirdFigure19").onclick = function () {
+    let clickedElement = document.getElementById("thirdFigure19");
 
     clickedElement.style.boxShadow =
         "2px 2px 20px 1px rgba(54, 156, 183, 0.29)";
     clickedElement.style.border = "2px solid #369CB7";
     clickedElement.style.borderRadius = "10px";
 
-    selectedFigures16.thirdFigure16 = "right";
+    selectedFigures19.thirdFigure19 = "right";
 };
 
-document.getElementById("fourthFigure16").onclick = function () {
-    let clickedElement = document.getElementById("fourthFigure16");
+document.getElementById("fourthFigure19").onclick = function () {
+    let clickedElement = document.getElementById("fourthFigure19");
 
     clickedElement.style.boxShadow =
         "2px 2px 20px 1px rgba(54, 156, 183, 0.29)";
     clickedElement.style.border = "2px solid #369CB7";
     clickedElement.style.borderRadius = "10px";
 
-    selectedFigures16.fourthFigure16 = "wrong";
+    selectedFigures19.fourthFigure19 = "wrong";
 };
 
-function question16() {
+function question19() {
     // создаём стартовые переменные
     let selectedFigures = [], // для верно-неверно
         selButsName = [], // для имён фигур
         isTheArrayEmpty = 0; // чтобы узнать - выбрано ли что-то
 
-    for (let key in selectedFigures16) {
-        if (selectedFigures16[key] !== "") {
+    for (let key in selectedFigures19) {
+        if (selectedFigures19[key] !== "") {
             // данный блок выполняется, если что-то выбрано
-            selectedFigures.push(selectedFigures16[key]); // добавляем статус фигуры
+            selectedFigures.push(selectedFigures19[key]); // добавляем статус фигуры
             selButsName.push(key); // добавляем имя фигуры
             isTheArrayEmpty++; // чтобы в будущем понять, что что-то было выбрано
         }
@@ -2335,64 +2335,64 @@ function question16() {
         // выносим общий статус к номеру вопроса
 
         if (
-            selectedFigures16.firstFigure16 !== "" &&
-            selectedFigures16.thirdFigure16 !== ""
+            selectedFigures19.firstFigure19 !== "" &&
+            selectedFigures19.thirdFigure19 !== ""
         ) {
             addImage(
                 "success",
-                document.getElementsByClassName("question16"),
-                "app16",
-                16
+                document.getElementsByClassName("question19"),
+                "app19",
+                19
             );
         } else {
             // подсвечиваем ложновыбранные фигуры
-            if (selectedFigures16.secondFigure16 !== "") {
-                document.getElementById("secondFigure16").style.border =
+            if (selectedFigures19.secondFigure19 !== "") {
+                document.getElementById("secondFigure19").style.border =
                     "2px solid #ED7777";
             }
 
-            if (selectedFigures16.fourthFigure16 !== "") {
-                document.getElementById("fourthFigure16").style.border =
+            if (selectedFigures19.fourthFigure19 !== "") {
+                document.getElementById("fourthFigure19").style.border =
                     "2px solid #ED7777";
             }
 
             // подсвечиваем невыранные фигуры
-            if (selectedFigures16.firstFigure16 === "") {
-                document.getElementById("firstFigure16").style.border =
+            if (selectedFigures19.firstFigure19 === "") {
+                document.getElementById("firstFigure19").style.border =
                     "2px solid #FFB47D";
             }
 
-            if (selectedFigures16.thirdFigure16 === "") {
-                document.getElementById("thirdFigure16").style.border =
+            if (selectedFigures19.thirdFigure19 === "") {
+                document.getElementById("thirdFigure19").style.border =
                     "2px solid #FFB47D";
             }
 
             // ставим статус
             addImage(
                 "failure",
-                document.getElementsByClassName("question16"),
-                "app16",
-                16
+                document.getElementsByClassName("question19"),
+                "app19",
+                19
             );
 
-            addCorrectAnswerQuestion16();
+            addCorrectAnswerQuestion19();
         }
     } else {
-        document.getElementById("firstFigure16").style.border =
+        document.getElementById("firstFigure19").style.border =
             "2px solid #FFB47D";
-        document.getElementById("firstFigure16").style.borderRadius = "5px";
+        document.getElementById("firstFigure19").style.borderRadius = "5px";
 
-        document.getElementById("secondFigure16").style.border =
+        document.getElementById("secondFigure19").style.border =
             "2px solid #FFB47D";
-        document.getElementById("secondFigure16").style.borderRadius = "5px";
+        document.getElementById("secondFigure19").style.borderRadius = "5px";
 
-        document.getElementById("thirdFigure16").style.border =
+        document.getElementById("thirdFigure19").style.border =
             "2px solid #FFB47D";
-        document.getElementById("thirdFigure16").style.borderRadius = "5px";
+        document.getElementById("thirdFigure19").style.borderRadius = "5px";
 
-        document.getElementById("fourthFigure16").style.border =
+        document.getElementById("fourthFigure19").style.border =
             "2px solid #FFB47D";
-        document.getElementById("fourthFigure16").style.borderRadius = "5px";
+        document.getElementById("fourthFigure19").style.borderRadius = "5px";
     }
 }
 
@@ -2843,7 +2843,7 @@ document.getElementById("submit").onclick = function () {
     question13();
     question14();
     question15();
-    question16();
+    question19();
     question21();
     question22();
     question23();
