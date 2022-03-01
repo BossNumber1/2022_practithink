@@ -1,4 +1,4 @@
-.app20 {
+.app24 {
     width: 1170px;
     height: 510px;
     left: calc(50% - 1170px / 2);
@@ -9,7 +9,7 @@
     margin-bottom: 51px;
 }
 
-.titlePage20 {
+.titlePage24 {
     top: 25px;
     width: 1170px;
     height: 22px;
@@ -24,7 +24,7 @@
     color: #2f2f2f;
 }
 
-.lineUnderHeading20 {
+.lineUnderHeading24 {
     position: absolute;
     width: 1169px;
     height: 0px;
@@ -34,20 +34,20 @@
 
 /* content styles */
 
-.content20 {
+.content24 {
     top: 132px;
     left: calc(50% - 570px / 2);
     width: 570px;
     height: 258px;
 }
 
-.triangles20 {
+.triangles24 {
     left: calc(50% - 370px / 2);
     width: 370px;
     height: 163px;
 }
 
-.btns20 {
+.btns24 {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -56,7 +56,7 @@
     top: 47px;
 }
 
-.btns20 div {
+.btns24 div {
     display: flex;
     flex-direction: row;
     justify-content: center;

@@ -577,14 +577,14 @@ function addCorrectAnswerQuestion19() {
     );
 }
 
-// 20 QUESTION
+// 24 QUESTION
 
-function addCorrectAnswerQuestion20() {
-    document.getElementsByClassName("app20")[0].style.height = "650px";
+function addCorrectAnswerQuestion24() {
+    document.getElementsByClassName("app24")[0].style.height = "650px";
     addCorrectAnswer(
-        "correctAnswer20",
-        "20que",
-        "app20",
+        "correctAnswer24",
+        "24que",
+        "app24",
         "contentCorrectAnswer"
     );
 }
@@ -1977,7 +1977,7 @@ let numbers12 = {
     secondNumber: "",
 };
 
-document.getElementById("leftNumber12").onchange = function (e) {
+document.getElementById("firstNumber12").onchange = function (e) {
     if (e.target.value == 45) {
         numbers12.firstNumber = "right";
     } else {
@@ -1985,7 +1985,7 @@ document.getElementById("leftNumber12").onchange = function (e) {
     }
 };
 
-document.getElementById("rightNumber12").onchange = function (e) {
+document.getElementById("secondNumber12").onchange = function (e) {
     if (e.target.value == 75) {
         numbers12.secondNumber = "right";
     } else {
@@ -1996,12 +1996,12 @@ document.getElementById("rightNumber12").onchange = function (e) {
 function question12() {
     if (numbers12.firstNumber != "" && numbers12.secondNumber != "") {
         succerror(
-            document.getElementById("leftNumber12"),
+            document.getElementById("firstNumber12"),
             numbers12.firstNumber === "wrong"
         );
 
         succerror(
-            document.getElementById("rightNumber12"),
+            document.getElementById("secondNumber12"),
             numbers12.secondNumber === "wrong"
         );
 
@@ -2029,12 +2029,12 @@ function question12() {
         }
     } else {
         if (numbers12.firstNumber === "") {
-            document.getElementById("leftNumber12").style.border =
+            document.getElementById("firstNumber12").style.border =
                 "2px solid #FFB47D";
         }
 
         if (numbers12.secondNumber === "") {
-            document.getElementById("rightNumber12").style.border =
+            document.getElementById("secondNumber12").style.border =
                 "2px solid #FFB47D";
         }
     }
@@ -2727,100 +2727,100 @@ function question19() {
     }
 }
 
-// 20 QUESTION
+// 24 QUESTION
 
-let selectedButton20 = "",
-    selectedNameButton20;
+let selectedButton24 = "",
+    selectedNameButton24;
 
-document.getElementById("firstBtn20").onclick = function () {
-    let clickedElement = document.getElementById("firstBtn20");
-
-    clickedElement.style.backgroundColor = "#bbedf4";
-    clickedElement.style.color = "#0e80a4";
-    clickedElement.style.border = "1px solid #BBEDF4";
-
-    selectedButton20 = "wrong";
-    selectedNameButton20 = "firstBtn20";
-
-    document.getElementById("secondBtn20").style.backgroundColor = "white";
-    document.getElementById("secondBtn20").style.color = "black";
-    document.getElementById("secondBtn20").style.border = "1px solid black";
-
-    document.getElementById("thirdBtn20").style.backgroundColor = "white";
-    document.getElementById("thirdBtn20").style.color = "black";
-    document.getElementById("thirdBtn20").style.border = "1px solid black";
-};
-
-document.getElementById("secondBtn20").onclick = function () {
-    let clickedElement = document.getElementById("secondBtn20");
+document.getElementById("firstBtn24").onclick = function () {
+    let clickedElement = document.getElementById("firstBtn24");
 
     clickedElement.style.backgroundColor = "#bbedf4";
     clickedElement.style.color = "#0e80a4";
     clickedElement.style.border = "1px solid #BBEDF4";
 
-    selectedButton20 = "right";
-    selectedNameButton20 = "secondBtn20";
+    selectedButton24 = "wrong";
+    selectedNameButton24 = "firstBtn24";
 
-    document.getElementById("thirdBtn20").style.backgroundColor = "white";
-    document.getElementById("thirdBtn20").style.color = "black";
-    document.getElementById("thirdBtn20").style.border = "1px solid black";
+    document.getElementById("secondBtn24").style.backgroundColor = "white";
+    document.getElementById("secondBtn24").style.color = "black";
+    document.getElementById("secondBtn24").style.border = "1px solid black";
 
-    document.getElementById("firstBtn20").style.backgroundColor = "white";
-    document.getElementById("firstBtn20").style.color = "black";
-    document.getElementById("firstBtn20").style.border = "1px solid black";
+    document.getElementById("thirdBtn24").style.backgroundColor = "white";
+    document.getElementById("thirdBtn24").style.color = "black";
+    document.getElementById("thirdBtn24").style.border = "1px solid black";
 };
 
-document.getElementById("thirdBtn20").onclick = function () {
-    let clickedElement = document.getElementById("thirdBtn20");
+document.getElementById("secondBtn24").onclick = function () {
+    let clickedElement = document.getElementById("secondBtn24");
 
     clickedElement.style.backgroundColor = "#bbedf4";
     clickedElement.style.color = "#0e80a4";
     clickedElement.style.border = "1px solid #BBEDF4";
 
-    selectedButton20 = "wrong";
-    selectedNameButton20 = "thirdBtn20";
+    selectedButton24 = "right";
+    selectedNameButton24 = "secondBtn24";
 
-    document.getElementById("secondBtn20").style.backgroundColor = "white";
-    document.getElementById("secondBtn20").style.color = "black";
-    document.getElementById("secondBtn20").style.border = "1px solid black";
+    document.getElementById("thirdBtn24").style.backgroundColor = "white";
+    document.getElementById("thirdBtn24").style.color = "black";
+    document.getElementById("thirdBtn24").style.border = "1px solid black";
 
-    document.getElementById("firstBtn20").style.backgroundColor = "white";
-    document.getElementById("firstBtn20").style.color = "black";
-    document.getElementById("firstBtn20").style.border = "1px solid black";
+    document.getElementById("firstBtn24").style.backgroundColor = "white";
+    document.getElementById("firstBtn24").style.color = "black";
+    document.getElementById("firstBtn24").style.border = "1px solid black";
 };
 
-function question20() {
-    if (selectedButton20 != "") {
+document.getElementById("thirdBtn24").onclick = function () {
+    let clickedElement = document.getElementById("thirdBtn24");
+
+    clickedElement.style.backgroundColor = "#bbedf4";
+    clickedElement.style.color = "#0e80a4";
+    clickedElement.style.border = "1px solid #BBEDF4";
+
+    selectedButton24 = "wrong";
+    selectedNameButton24 = "thirdBtn24";
+
+    document.getElementById("secondBtn24").style.backgroundColor = "white";
+    document.getElementById("secondBtn24").style.color = "black";
+    document.getElementById("secondBtn24").style.border = "1px solid black";
+
+    document.getElementById("firstBtn24").style.backgroundColor = "white";
+    document.getElementById("firstBtn24").style.color = "black";
+    document.getElementById("firstBtn24").style.border = "1px solid black";
+};
+
+function question24() {
+    if (selectedButton24 != "") {
         succerror(
-            document.getElementById(selectedNameButton20),
-            selectedButton20 === "wrong"
+            document.getElementById(selectedNameButton24),
+            selectedButton24 === "wrong"
         );
 
         // выносим общий статус к номеру вопроса
 
-        if (selectedButton20 === "right") {
+        if (selectedButton24 === "right") {
             addImage(
                 "success",
-                document.getElementsByClassName("question20"),
-                "app20",
-                20
+                document.getElementsByClassName("question24"),
+                "app24",
+                24
             );
         } else {
             addImage(
                 "failure",
-                document.getElementsByClassName("question20"),
-                "app20",
-                20
+                document.getElementsByClassName("question24"),
+                "app24",
+                24
             );
 
-            addCorrectAnswerQuestion20();
+            addCorrectAnswerQuestion24();
         }
     } else {
-        document.getElementById("firstBtn20").style.border =
+        document.getElementById("firstBtn24").style.border =
             "2px solid #FFB47D";
-        document.getElementById("secondBtn20").style.border =
+        document.getElementById("secondBtn24").style.border =
             "2px solid #FFB47D";
-        document.getElementById("thirdBtn20").style.border =
+        document.getElementById("thirdBtn24").style.border =
             "2px solid #FFB47D";
     }
 }
@@ -2847,5 +2847,5 @@ document.getElementById("submit").onclick = function () {
     question17();
     question18();
     question19();
-    question20();
+    question24();
 };
