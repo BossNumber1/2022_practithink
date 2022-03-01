@@ -285,17 +285,17 @@ function drop15(e) {
     orignalElement.style.cursor = "default";
 }
 
-// 18 QUESTION
+// 22 QUESTION
 
-function drag18(e) {
-    localStorage.setItem("idOriginal18", e.target.id);
+function drag22(e) {
+    localStorage.setItem("idOriginal22", e.target.id);
 }
 
-function drop18(e) {
+function drop22(e) {
     e = e || window.event;
 
     // забираем данные из хранилища
-    let idFigure = localStorage.getItem("idOriginal18");
+    let idFigure = localStorage.getItem("idOriginal22");
 
     // получаем позицию области для вставки
     let positionCircleArea = e.target.dataset.position;
@@ -329,7 +329,7 @@ function drop18(e) {
         tray.style.marginLeft = e.offsetX + "px";
 
         let objectBeingCreated = document.createElement("img");
-        objectBeingCreated.src = "./pictures/18que/" + idFigure + ".svg";
+        objectBeingCreated.src = "./pictures/22que/" + idFigure + ".svg";
         objectBeingCreated.id = idFigure;
 
         if (currentClass !== "circle-container") {
@@ -339,11 +339,11 @@ function drop18(e) {
         currentElement.appendChild(tray).appendChild(objectBeingCreated);
 
         // заменяем место объекта на квадрат
-        orig.src = "./pictures/18que/emptyPlace.svg";
+        orig.src = "./pictures/22que/emptyPlace.svg";
         orig.style.cursor = "default";
         orig.id = "emptyPlace";
     } else {
-        currentElement.src = "./pictures/18que/" + idFigure + ".svg";
+        currentElement.src = "./pictures/22que/" + idFigure + ".svg";
         currentElement.style.cursor = "grab";
         currentElement.id = idFigure;
 
@@ -553,15 +553,15 @@ function addCorrectAnswerQuestion17() {
     );
 }
 
-// 18 QUESTION
+// 22 QUESTION
 
-function addCorrectAnswerQuestion18() {
-    document.getElementsByClassName("app18")[0].style.height = "1100px";
+function addCorrectAnswerQuestion22() {
+    document.getElementsByClassName("app22")[0].style.height = "1100px";
     addCorrectAnswer(
-        "correctAnswer18",
-        "18que",
-        "app18",
-        "contentCorrectAnswer18"
+        "correctAnswer22",
+        "22que",
+        "app22",
+        "contentCorrectAnswer22"
     );
 }
 
@@ -2490,9 +2490,9 @@ function question17() {
     }
 }
 
-// 18 QUESTION
+// 22 QUESTION
 
-let result18 = {
+let result22 = {
     areaFourSided: "",
     areaBlueShapes: "",
     intersection: "",
@@ -2521,7 +2521,7 @@ function checkFourSided() {
                     "1px solid #FFB47D";
                 document.getElementById(selectedChildId).style.borderRadius =
                     "5px";
-                result18.areaFourSided = "wrong";
+                result22.areaFourSided = "wrong";
             }
         }
     }
@@ -2543,13 +2543,13 @@ function checkBlueShapes() {
                 selectedChildId === "bluePentagon" ||
                 selectedChildId === "blueTriangle"
             ) {
-                result18.areaBlueShapes = "right";
+                result22.areaBlueShapes = "right";
             } else {
                 document.getElementById(selectedChildId).style.border =
                     "1px solid #FFB47D";
                 document.getElementById(selectedChildId).style.borderRadius =
                     "5px";
-                result18.areaBlueShapes = "wrong";
+                result22.areaBlueShapes = "wrong";
             }
         }
     }
@@ -2560,7 +2560,7 @@ function checkIntersection() {
 
     if (element.children.length === 1) {
         if (element.children[0].children[0].id === "blueSquare") {
-            result18.intersection = "right";
+            result22.intersection = "right";
         } else {
             document.getElementById(
                 element.children[0].children[0].id
@@ -2569,41 +2569,41 @@ function checkIntersection() {
                 element.children[0].children[0].id
             ).style.borderRadius = "5px";
 
-            result18.intersection = "wrong";
+            result22.intersection = "wrong";
         }
     }
 }
 
-function question18() {
+function question22() {
     checkFourSided();
     checkBlueShapes();
     checkIntersection();
 
     if (
-        result18.areaFourSided !== "" &&
-        result18.areaBlueShapes !== "" &&
-        result18.intersection !== ""
+        result22.areaFourSided !== "" &&
+        result22.areaBlueShapes !== "" &&
+        result22.intersection !== ""
     ) {
         if (
-            result18.areaFourSided === "right" &&
-            result18.areaBlueShapes === "right" &&
-            result18.intersection === "right"
+            result22.areaFourSided === "right" &&
+            result22.areaBlueShapes === "right" &&
+            result22.intersection === "right"
         ) {
             addImage(
                 "success",
-                document.getElementsByClassName("question18"),
-                "app18",
-                18
+                document.getElementsByClassName("question22"),
+                "app22",
+                22
             );
         } else {
             addImage(
                 "failure",
-                document.getElementsByClassName("question18"),
-                "app18",
-                18
+                document.getElementsByClassName("question22"),
+                "app22",
+                22
             );
 
-            addCorrectAnswerQuestion18();
+            addCorrectAnswerQuestion22();
         }
     } else {
         document.getElementsByClassName("circle-container")[0].style.border =
@@ -2845,7 +2845,7 @@ document.getElementById("submit").onclick = function () {
     question15();
     question16();
     question17();
-    question18();
+    question22();
     question23();
     question24();
 };

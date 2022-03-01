@@ -1,4 +1,4 @@
-.app18 {
+.app22 {
     width: 1170px;
     height: 680px;
     left: calc(50% - 1170px / 2);
@@ -9,7 +9,7 @@
     margin-bottom: 51px;
 }
 
-.titlePage18 {
+.titlePage22 {
     top: 25px;
     left: calc(50% - 770px / 2);
     width: 770px;
@@ -22,7 +22,7 @@
     text-align: center;
 }
 
-.lineUnderHeading18 {
+.lineUnderHeading22 {
     position: absolute;
     width: 1169px;
     height: 0px;
@@ -32,14 +32,14 @@
 
 /* content styles */
 
-.content18 {
+.content22 {
     top: 132px;
     left: calc(50% - 610px / 2);
     width: 610px;
     height: 428px;
 }
 
-.row18 {
+.row22 {
     left: calc(50% - 610px / 2);
     display: flex;
     align-items: flex-end;
@@ -48,7 +48,7 @@
     height: 50px;
 }
 
-.row18 img {
+.row22 img {
     position: static;
     width: 50px;
     height: 50px;
@@ -59,7 +59,7 @@
     cursor: grab;
 }
 
-.row18 img:hover {
+.row22 img:hover {
     transform: scale(1.2);
 }
 
