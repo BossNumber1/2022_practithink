@@ -1,4 +1,4 @@
-.app11 {
+.app14 {
     width: 1170px;
     height: 580px;
     left: calc(50% - 1170px / 2);
@@ -9,7 +9,7 @@
     margin-bottom: 51px;
 }
 
-.titlePage11 {
+.titlePage14 {
     top: 25px;
     left: calc(50% - 770px / 2);
     width: 770px;
@@ -25,7 +25,7 @@
     justify-content: center;
 }
 
-.lineUnderHeading11 {
+.lineUnderHeading14 {
     position: absolute;
     width: 1169px;
     height: 0px;
@@ -35,7 +35,7 @@
 
 /* content styles */
 
-.content11 {
+.content14 {
     top: 132px;
     left: calc(50% - 309.04px / 2);
     width: 309.04px;
@@ -43,20 +43,16 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    /* border: 1px solid; */
 }
 
 /* cubes styles */
 
-.cubes11 {
+.cubes14 {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     width: 309.04px;
     height: 187.65px;
-
-    /* border: 1px solid; */
 }
 
 .leftColumnsBaza,
@@ -69,32 +65,32 @@
     margin-right: 38px;
 }
 
-.firstColumn11 div,
-.secondColumn11 div,
-.thirdColumn11 div {
+.firstColumn14 div,
+.secondColumn14 div,
+.thirdColumn14 div {
     margin: -10.7px 0;
     cursor: grab;
 }
 
-.fourthColumn11 div,
-.fifthColumn11 div,
-.sixthColumn11 div {
+.fourthColumn14 div,
+.fifthColumn14 div,
+.sixthColumn14 div {
     margin: -10px 0;
     cursor: grab;
 }
 
-.firstColumn11,
-.secondColumn11,
-.thirdColumn11,
-.fourthColumn11,
-.fifthColumn11,
-.sixthColumn11 {
+.firstColumn14,
+.secondColumn14,
+.thirdColumn14,
+.fourthColumn14,
+.fifthColumn14,
+.sixthColumn14 {
     margin-right: 6px;
 }
 
 /* inputs styles */
 
-.inputs11 {
+.inputs14 {
     top: 40px;
     width: 222.11px;
     height: 30.2px;
@@ -103,7 +99,7 @@
     justify-content: space-between;
 }
 
-.inputContent11 input {
+.inputContent14 input {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -146,7 +142,7 @@
 
 /* btns styles */
 
-.btns11 {
+.btns14 {
     top: 74px;
     width: 222px;
     height: 30px;
@@ -155,7 +151,7 @@
     justify-content: space-between;
 }
 
-.btnContent11 div {
+.btnContent14 div {
     display: flex;
     flex-direction: row;
     justify-content: center;

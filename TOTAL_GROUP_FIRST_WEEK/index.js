@@ -168,17 +168,17 @@ function drop9(e) {
     orignalElement.style.cursor = "default";
 }
 
-// 11 QUESTION
+// 14 QUESTION
 
 // для кубиков
 
-function drag11(e) {
-    localStorage.setItem("idOrig11", e.target.id);
+function drag14(e) {
+    localStorage.setItem("idOrig14", e.target.id);
 }
 
-function drop11(e) {
+function drop14(e) {
     // получаем имя и id взятого элемента
-    let idOrig = localStorage.getItem("idOrig11");
+    let idOrig = localStorage.getItem("idOrig14");
     let nameObjectOrig = idOrig.slice(0, -2);
 
     // получаем имя и id, на который кладём элемент
@@ -190,11 +190,11 @@ function drop11(e) {
     let currentElement = document.getElementById(currentId);
 
     // меняем картинки местами
-    currentElement.src = "./pictures/11que/" + nameObjectOrig + ".svg";
+    currentElement.src = "./pictures/14que/" + nameObjectOrig + ".svg";
     currentElement.style.opacity = "1";
     currentElement.style.cursor = "grab";
 
-    orig.src = "./pictures/11que/" + nameObjectCurrent + ".svg";
+    orig.src = "./pictures/14que/" + nameObjectCurrent + ".svg";
 
     // меняем id местами
     currentElement.id = idOrig;
@@ -206,19 +206,19 @@ function drop11(e) {
 
 // для полей ввода
 
-function drag11p2(e) {
-    localStorage.setItem("idSign11", e.target.id);
+function drag14p2(e) {
+    localStorage.setItem("idSign14", e.target.id);
     localStorage.setItem(
-        "classGrandparentElement11",
+        "classGrandparentElement14",
         e.target.parentElement.className
     );
 }
 
-function drop11p2(e) {
+function drop14p2(e) {
     // получаем id взятого элемента и класс прародителя
-    let idSign = localStorage.getItem("idSign11");
+    let idSign = localStorage.getItem("idSign14");
     let classGrandparentElement = localStorage.getItem(
-        "classGrandparentElement11"
+        "classGrandparentElement14"
     );
 
     // берем id того элемента, на который положим несомый
@@ -237,7 +237,7 @@ function drop11p2(e) {
     orignalElem.textContent = "";
     orignalElem.id = currentId;
 
-    if (orignalElem.parentElement.parentElement.className !== "inputs11") {
+    if (orignalElem.parentElement.parentElement.className !== "inputs14") {
         currentElem.style.backgroundColor = "#369cb7";
         orignalElem.style.backgroundColor = "#c2e1e9";
         orignalElem.style.border = "1px solid #c2e1e9";
@@ -469,14 +469,14 @@ function addCorrectAnswerQuestion10() {
     );
 }
 
-// 11 QUESTION
+// 14 QUESTION
 
-function addCorrectAnswerQuestion11() {
-    document.getElementsByClassName("app11")[0].style.height = "700px";
+function addCorrectAnswerQuestion14() {
+    document.getElementsByClassName("app14")[0].style.height = "700px";
     addCorrectAnswer(
-        "correctAnswer11",
-        "11que",
-        "app11",
+        "correctAnswer14",
+        "14que",
+        "app14",
         "contentCorrectAnswer"
     );
 }
@@ -1872,95 +1872,95 @@ function question10() {
     }
 }
 
-// 11 QUESTION
+// 14 QUESTION
 
-let numbers11 = {
+let numbers14 = {
     firstNumber: "",
     secondNumber: "",
 };
 
-document.getElementById("firstNumber11").onchange = function (e) {
+document.getElementById("firstNumber14").onchange = function (e) {
     if (e.target.value == 27) {
-        numbers11.firstNumber = "right";
+        numbers14.firstNumber = "right";
     } else {
-        numbers11.firstNumber = "wrong";
+        numbers14.firstNumber = "wrong";
     }
 };
 
-document.getElementById("secondNumber11").onchange = function (e) {
+document.getElementById("secondNumber14").onchange = function (e) {
     if (e.target.value == 26) {
-        numbers11.secondNumber = "right";
+        numbers14.secondNumber = "right";
     } else {
-        numbers11.secondNumber = "wrong";
+        numbers14.secondNumber = "wrong";
     }
 };
 
-function question11() {
+function question14() {
     // проверяем на присутствие знака
     let requiredElement =
-        document.getElementsByClassName("inputs11")[0].children[1].children[0];
+        document.getElementsByClassName("inputs14")[0].children[1].children[0];
     let selectedSign = requiredElement.textContent.trim();
 
     if (
-        numbers11.firstNumber != "" &&
+        numbers14.firstNumber != "" &&
         selectedSign != "" &&
-        numbers11.secondNumber != ""
+        numbers14.secondNumber != ""
     ) {
         succerror(
-            document.getElementById("firstNumber11"),
-            numbers11.firstNumber === "wrong"
+            document.getElementById("firstNumber14"),
+            numbers14.firstNumber === "wrong"
         );
 
         succerror(requiredElement, selectedSign !== ">");
 
         succerror(
-            document.getElementById("secondNumber11"),
-            numbers11.secondNumber === "wrong"
+            document.getElementById("secondNumber14"),
+            numbers14.secondNumber === "wrong"
         );
 
         // расставляем мини-иконки
 
         createMiniIcon(
-            numbers11.firstNumber,
-            document.getElementById("firstNumber11")
+            numbers14.firstNumber,
+            document.getElementById("firstNumber14")
         );
 
         createMiniIcon(
-            numbers11.secondNumber,
-            document.getElementById("secondNumber11")
+            numbers14.secondNumber,
+            document.getElementById("secondNumber14")
         );
 
         // выносим общий статус к номеру вопроса
 
         if (
-            numbers11.firstNumber === "right" &&
+            numbers14.firstNumber === "right" &&
             selectedSign === ">" &&
-            numbers11.secondNumber === "right"
+            numbers14.secondNumber === "right"
         ) {
             addImage(
                 "success",
-                document.getElementsByClassName("question11"),
-                "app11",
-                11
+                document.getElementsByClassName("question14"),
+                "app14",
+                14
             );
         } else {
             addImage(
                 "failure",
-                document.getElementsByClassName("question11"),
-                "app11",
-                11
+                document.getElementsByClassName("question14"),
+                "app14",
+                14
             );
 
-            addCorrectAnswerQuestion11();
+            addCorrectAnswerQuestion14();
         }
     } else {
-        if (numbers11.firstNumber === "") {
-            document.getElementById("firstNumber11").style.border =
+        if (numbers14.firstNumber === "") {
+            document.getElementById("firstNumber14").style.border =
                 "2px solid #FFB47D";
         }
 
-        if (numbers11.secondNumber === "") {
-            document.getElementById("secondNumber11").style.border =
+        if (numbers14.secondNumber === "") {
+            document.getElementById("secondNumber14").style.border =
                 "2px solid #FFB47D";
         }
 
@@ -2838,7 +2838,7 @@ document.getElementById("submit").onclick = function () {
     question8();
     question9();
     question10();
-    question11();
+    question14();
     question15();
     question16();
     question17();
