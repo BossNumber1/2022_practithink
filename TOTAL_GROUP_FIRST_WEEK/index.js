@@ -2849,3 +2849,61 @@ document.getElementById("submit").onclick = function () {
     question23();
     question24();
 };
+
+document.getElementById("clear").onclick = function () {
+    let allInputs = document.querySelectorAll("input");
+
+    for (let i = 0; i < allInputs.length; i++) {
+        allInputs[i].style.border = "1px solid";
+    }
+
+    document.getElementById("firstBtn5").style.border = "1px solid";
+    document.getElementById("secondBtn5").style.border = "1px solid";
+    document.getElementById("thirdBtn5").style.border = "1px solid";
+    document.getElementById("fourthBtn5").style.border = "1px solid";
+
+    document.getElementById("firstBtn6").style.border = "1px solid";
+    document.getElementById("secondBtn6").style.border = "1px solid";
+    document.getElementById("thirdBtn6").style.border = "1px solid";
+    document.getElementById("fourthBtn6").style.border = "1px solid";
+    document.getElementById("fifthBtn6").style.border = "1px solid";
+
+    document.getElementsByClassName("true")[0].style.border =
+        "1px solid #d0d0d0";
+    document.getElementsByClassName("false")[0].style.border =
+        "1px solid #d0d0d0";
+
+    document.getElementById("wagonEmpty0").style.border = "none";
+    document.getElementById("wagonEmpty1").style.border = "none";
+    document.getElementById("wagonEmpty2").style.border = "none";
+    document.getElementById("wagonEmpty3").style.border = "none";
+
+    document.getElementById("selectInput11").style.border = "1px solid #d0d0d0";
+
+    document.getElementById("firstBtn14").style.border = "1px solid";
+    document.getElementById("secondBtn14").style.border = "1px solid";
+    document.getElementById("thirdBtn14").style.border = "1px solid";
+
+    document.getElementById("emptyPlace0").style.border = "none";
+    document.getElementById("emptyPlace1").style.border = "none";
+    document.getElementById("emptyPlace2").style.border = "none";
+
+    document.getElementById("firstFigure19").style.border = "none";
+    document.getElementById("secondFigure19").style.border = "none";
+    document.getElementById("thirdFigure19").style.border = "none";
+    document.getElementById("fourthFigure19").style.border = "none";
+
+    document.getElementsByClassName("circles")[0].children[0].style.border =
+        "1px solid #a1a6d9";
+    document.getElementsByClassName("circles")[0].children[1].style.border =
+        "1px solid #a1a6d9";
+
+    document.getElementById("firstFigure23").style.border = "none";
+    document.getElementById("secondFigure23").style.border = "none";
+    document.getElementById("thirdFigure23").style.border = "none";
+    document.getElementById("fourthFigure23").style.border = "none";
+
+    document.getElementById("firstBtn24").style.border = "1px solid";
+    document.getElementById("secondBtn24").style.border = "1px solid";
+    document.getElementById("thirdBtn24").style.border = "1px solid";
+};
