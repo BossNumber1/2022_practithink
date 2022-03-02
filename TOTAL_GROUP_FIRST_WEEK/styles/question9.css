@@ -1,4 +1,4 @@
-.app7 {
+.app9 {
     width: 1170px;
     height: 684px;
     left: calc(50% - 1170px / 2);
@@ -9,7 +9,7 @@
     margin-bottom: 51px;
 }
 
-.titlePage7 {
+.titlePage9 {
     top: 25px;
     left: calc(50% - 770px / 2);
     width: 770px;
@@ -22,7 +22,7 @@
     color: #2f2f2f;
 }
 
-.lineUnderHeading7 {
+.lineUnderHeading9 {
     position: absolute;
     width: 1169px;
     height: 0px;
@@ -32,33 +32,30 @@
 
 /* content styles */
 
-.content7 {
+.content9 {
     top: 154px;
     left: calc(50% - 570px / 2);
     width: 570px;
     height: 410px;
-    /* border: 1px solid; */
 }
 
 /* expressions styles */
 
-.expressions7 {
+.expressions9 {
     display: flex;
     flex-direction: column;
     align-items: center;
     left: calc(50% - 570px / 2);
     width: 570px;
     height: 120px;
-
-    /* border: 1px solid; */
 }
 
-.topRow7 div,
-.bottomRow7 div {
+.topRow9 div,
+.bottomRow9 div {
     cursor: grab;
 }
 
-.topRow7 {
+.topRow9 {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -66,15 +63,12 @@
     left: calc(50% - 340px / 2);
     width: 340px;
     height: 45px;
-
     flex: none;
     order: 0;
     flex-grow: 0;
-
-    /* border: 1px solid orange; */
 }
 
-.bottomRow7 {
+.bottomRow9 {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -86,21 +80,17 @@
     order: 1;
     flex-grow: 0;
     margin-top: 27px;
-
-    /* border: 1px solid red; */
 }
 
 /* baskets styles */
 
-.baskets7 {
+.baskets9 {
     top: 77px;
     width: 570px;
     height: 210px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    /* border: 1px solid; */
 }
 
 .true,
@@ -132,16 +122,15 @@
     border-top-right-radius: 5px;
 }
 
-.placeOfDroppingFigures7 {
+.placeOfDroppingFigures9 {
     width: 270px;
     height: 183px;
-    /* border: 1px solid; */
     left: -1px;
     top: -1px;
 }
 
-.expression70,
-.expression71 {
+.expression90,
+.expression91 {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -150,9 +139,6 @@
     border: 1px solid #369cb7;
     box-sizing: border-box;
     border-radius: 5px;
-
-    /* below text styles */
-
     position: static;
     font-style: normal;
     font-weight: 500;
@@ -163,10 +149,10 @@
     margin-right: 10px;
 }
 
-.expression70 {
+.expression90 {
     width: 80px;
 }
 
-.expression71 {
+.expression91 {
     width: 120px;
 }

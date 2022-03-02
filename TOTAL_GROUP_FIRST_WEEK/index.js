@@ -70,26 +70,26 @@ function allowDrop(e) {
     e.preventDefault();
 }
 
-// 7 QUESTION
+// 9 QUESTION
 
-function drag7(e) {
-    localStorage.setItem("idOrigin7question3class", e.target.id);
+function drag9(e) {
+    localStorage.setItem("idOrigin9question1grade", e.target.id);
     localStorage.setItem(
-        "classElemGrandparent7",
+        "classElemGrandparent9",
         e.target.parentElement.parentElement.className
     );
-    localStorage.setItem("positionElem7", e.target.dataset.position);
-    localStorage.setItem("textElem7", e.target.dataset.text);
-    localStorage.setItem("classElem7", e.target.dataset.class);
+    localStorage.setItem("positionElem9", e.target.dataset.position);
+    localStorage.setItem("textElem9", e.target.dataset.text);
+    localStorage.setItem("classElem9", e.target.dataset.class);
 }
 
-function drop7(e) {
+function drop9(e) {
     // получаем id несомого элемента и класс прародителя
-    let classElemGrandparent = localStorage.getItem("classElemGrandparent7");
-    let idTakenElement = localStorage.getItem("idOrigin7question3class");
-    let positionElem = localStorage.getItem("positionElem7");
-    let classElem = localStorage.getItem("classElem7");
-    let textElem = localStorage.getItem("textElem7");
+    let classElemGrandparent = localStorage.getItem("classElemGrandparent9");
+    let idTakenElement = localStorage.getItem("idOrigin9question1grade");
+    let positionElem = localStorage.getItem("positionElem9");
+    let classElem = localStorage.getItem("classElem9");
+    let textElem = localStorage.getItem("textElem9");
     let objectName = idTakenElement.slice(0, -1);
 
     // берем id того элемента, на который положим несомый
@@ -124,7 +124,7 @@ function drop7(e) {
     if (classElemGrandparent == "true" || classElemGrandparent == "false") {
         e.target.style.opacity = "1";
         e.target.textContent = textElem;
-        e.target.id = idTakenElement + "7";
+        e.target.id = idTakenElement + "9";
         e.target.style.cursor = "grab";
 
         document.getElementById(idTakenElement).remove();
@@ -431,11 +431,11 @@ function addCorrectAnswerQuestion6() {
     addCorrectAnswer("correctAnswer6", "6que", "app6", "contentCorrectAnswer");
 }
 
-// 7 QUESTION
+// 9 QUESTION
 
-function addCorrectAnswerQuestion7() {
-    document.getElementsByClassName("app7")[0].style.height = "1000px";
-    addCorrectAnswer("correctAnswer7", "7que", "app7", "contentCorrectAnswer7");
+function addCorrectAnswerQuestion9() {
+    document.getElementsByClassName("app9")[0].style.height = "1000px";
+    addCorrectAnswer("correctAnswer9", "9que", "app9", "contentCorrectAnswer9");
 }
 
 // 10 QUESTION
@@ -1456,16 +1456,16 @@ function question6() {
     }
 }
 
-// 7 QUESTION
+// 9 QUESTION
 
-function question7() {
+function question9() {
     // получаем содержимое корзин
     let contentBasketTrue = document.getElementById(
-        "placeOfDroppingFigures7true"
+        "placeOfDroppingFigures9true"
     ).children;
 
     let contentBasketFalse = document.getElementById(
-        "placeOfDroppingFigures7false"
+        "placeOfDroppingFigures9false"
     ).children;
 
     // проверяем на пустоту
@@ -1519,19 +1519,19 @@ function question7() {
         ) {
             addImage(
                 "success",
-                document.getElementsByClassName("question7"),
-                "app7",
-                7
+                document.getElementsByClassName("question9"),
+                "app9",
+                9
             );
         } else {
             addImage(
                 "failure",
-                document.getElementsByClassName("question7"),
-                "app7",
-                7
+                document.getElementsByClassName("question9"),
+                "app9",
+                9
             );
 
-            addCorrectAnswerQuestion7();
+            addCorrectAnswerQuestion9();
         }
     } else if (
         contentBasketTrue.length === 0 &&
@@ -2839,7 +2839,7 @@ document.getElementById("submit").onclick = function () {
     question4();
     question5();
     question6();
-    question7();
+    question9();
     question10();
     question12();
     question13();
