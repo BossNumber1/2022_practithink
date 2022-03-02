@@ -398,11 +398,11 @@ function addCorrectAnswerQuestion2() {
     addCorrectAnswer("correctAnswer2", "2que", "app2", "contentCorrectAnswer");
 }
 
-// 3 QUESTION
+// 4 QUESTION
 
-function addCorrectAnswerQuestion3() {
-    document.getElementsByClassName("app3")[0].style.height = "600px";
-    addCorrectAnswer("correctAnswer3", "3que", "app3", "contentCorrectAnswer");
+function addCorrectAnswerQuestion4() {
+    document.getElementsByClassName("app4")[0].style.height = "600px";
+    addCorrectAnswer("correctAnswer4", "4que", "app4", "contentCorrectAnswer");
 }
 
 // 5 QUESTION
@@ -931,138 +931,138 @@ function question2() {
     }
 }
 
-// 3 QUESTION
+// 4 QUESTION
 
-let numbers3 = {
+let numbers4 = {
     firstNumber: "",
     secondNumber: "",
     thirdNumber: "",
     fourthNumber: "",
 };
 
-document.getElementById("firstNumber3").onchange = function (e) {
+document.getElementById("firstNumber4").onchange = function (e) {
     if (e.target.value == 2) {
-        numbers3.firstNumber = "right";
+        numbers4.firstNumber = "right";
     } else {
-        numbers3.firstNumber = "wrong";
+        numbers4.firstNumber = "wrong";
     }
 };
 
-document.getElementById("secondNumber3").onchange = function (e) {
+document.getElementById("secondNumber4").onchange = function (e) {
     if (e.target.value == 4) {
-        numbers3.secondNumber = "right";
+        numbers4.secondNumber = "right";
     } else {
-        numbers3.secondNumber = "wrong";
+        numbers4.secondNumber = "wrong";
     }
 };
 
-document.getElementById("thirdNumber3").onchange = function (e) {
+document.getElementById("thirdNumber4").onchange = function (e) {
     if (e.target.value == 5) {
-        numbers3.thirdNumber = "right";
+        numbers4.thirdNumber = "right";
     } else {
-        numbers3.thirdNumber = "wrong";
+        numbers4.thirdNumber = "wrong";
     }
 };
 
-document.getElementById("fourthNumber3").onchange = function (e) {
+document.getElementById("fourthNumber4").onchange = function (e) {
     if (e.target.value == 11) {
-        numbers3.fourthNumber = "right";
+        numbers4.fourthNumber = "right";
     } else {
-        numbers3.fourthNumber = "wrong";
+        numbers4.fourthNumber = "wrong";
     }
 };
 
-function question3() {
+function question4() {
     if (
-        numbers3.firstNumber != "" &&
-        numbers3.secondNumber != "" &&
-        numbers3.thirdNumber != "" &&
-        numbers3.fourthNumber != ""
+        numbers4.firstNumber != "" &&
+        numbers4.secondNumber != "" &&
+        numbers4.thirdNumber != "" &&
+        numbers4.fourthNumber != ""
     ) {
         succerror(
-            document.getElementById("firstNumber3"),
-            numbers3.firstNumber === "wrong"
+            document.getElementById("firstNumber4"),
+            numbers4.firstNumber === "wrong"
         );
 
         succerror(
-            document.getElementById("secondNumber3"),
-            numbers3.secondNumber === "wrong"
+            document.getElementById("secondNumber4"),
+            numbers4.secondNumber === "wrong"
         );
 
         succerror(
-            document.getElementById("thirdNumber3"),
-            numbers3.thirdNumber === "wrong"
+            document.getElementById("thirdNumber4"),
+            numbers4.thirdNumber === "wrong"
         );
 
         succerror(
-            document.getElementById("fourthNumber3"),
-            numbers3.fourthNumber === "wrong"
+            document.getElementById("fourthNumber4"),
+            numbers4.fourthNumber === "wrong"
         );
 
         // расставляем мини-иконки
 
         createMiniIcon(
-            numbers3.firstNumber,
-            document.getElementById("firstNumber3")
+            numbers4.firstNumber,
+            document.getElementById("firstNumber4")
         );
 
         createMiniIcon(
-            numbers3.secondNumber,
-            document.getElementById("secondNumber3")
+            numbers4.secondNumber,
+            document.getElementById("secondNumber4")
         );
 
         createMiniIcon(
-            numbers3.thirdNumber,
-            document.getElementById("thirdNumber3")
+            numbers4.thirdNumber,
+            document.getElementById("thirdNumber4")
         );
 
         createMiniIcon(
-            numbers3.fourthNumber,
-            document.getElementById("fourthNumber3")
+            numbers4.fourthNumber,
+            document.getElementById("fourthNumber4")
         );
 
         // выносим общий статус к номеру вопроса
 
         if (
-            numbers3.firstNumber === "right" &&
-            numbers3.secondNumber === "right" &&
-            numbers3.thirdNumber === "right" &&
-            numbers3.fourthNumber === "right"
+            numbers4.firstNumber === "right" &&
+            numbers4.secondNumber === "right" &&
+            numbers4.thirdNumber === "right" &&
+            numbers4.fourthNumber === "right"
         ) {
             addImage(
                 "success",
-                document.getElementsByClassName("question3"),
-                "app3",
-                3
+                document.getElementsByClassName("question4"),
+                "app4",
+                4
             );
         } else {
             addImage(
                 "failure",
-                document.getElementsByClassName("question3"),
-                "app3",
-                3
+                document.getElementsByClassName("question4"),
+                "app4",
+                4
             );
 
-            addCorrectAnswerQuestion3();
+            addCorrectAnswerQuestion4();
         }
     } else {
-        if (numbers3.firstNumber === "") {
-            document.getElementById("firstNumber3").style.border =
+        if (numbers4.firstNumber === "") {
+            document.getElementById("firstNumber4").style.border =
                 "2px solid #FFB47D";
         }
 
-        if (numbers3.secondNumber === "") {
-            document.getElementById("secondNumber3").style.border =
+        if (numbers4.secondNumber === "") {
+            document.getElementById("secondNumber4").style.border =
                 "2px solid #FFB47D";
         }
 
-        if (numbers3.thirdNumber === "") {
-            document.getElementById("thirdNumber3").style.border =
+        if (numbers4.thirdNumber === "") {
+            document.getElementById("thirdNumber4").style.border =
                 "2px solid #FFB47D";
         }
 
-        if (numbers3.fourthNumber === "") {
-            document.getElementById("fourthNumber3").style.border =
+        if (numbers4.fourthNumber === "") {
+            document.getElementById("fourthNumber4").style.border =
                 "2px solid #FFB47D";
         }
     }
@@ -2835,7 +2835,7 @@ function question24() {
 document.getElementById("submit").onclick = function () {
     question1();
     question2();
-    question3();
+    question4();
     question5();
     question6();
     question7();

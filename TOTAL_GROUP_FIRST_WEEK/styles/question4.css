@@ -1,7 +1,6 @@
-.app3 {
+.app4 {
     width: 1170px;
     height: 403px;
-    /* 503 */
     left: calc(50% - 1170px / 2);
     top: 10px;
     box-shadow: 4px 4px 50px rgba(0, 0, 0, 0.05);
@@ -10,7 +9,7 @@
     margin-bottom: 51px;
 }
 
-.titlePage3 {
+.titlePage4 {
     top: 26px;
     left: calc(50% - 770px / 2);
     width: 770px;
@@ -23,7 +22,7 @@
     color: #2f2f2f;
 }
 
-.lineUnderHeading3 {
+.lineUnderHeading4 {
     position: absolute;
     width: 1169px;
     height: 0px;
@@ -33,13 +32,11 @@
 
 /* content styles */
 
-.content3 {
+.content4 {
     top: 105px;
     left: calc(50% - 514px / 2);
     width: 514px;
     height: 105px;
-
-    /* border: 1px solid gray; */
 }
 
 /* inputs styles */
@@ -68,7 +65,7 @@
     text-align: center;
 }
 
-.sign3 {
+.sign4 {
     position: static;
     width: 11px;
     height: 22px;
