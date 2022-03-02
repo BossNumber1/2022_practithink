@@ -405,11 +405,11 @@ function addCorrectAnswerQuestion3() {
     addCorrectAnswer("correctAnswer3", "3que", "app3", "contentCorrectAnswer");
 }
 
-// 4 QUESTION
+// 5 QUESTION
 
-function addCorrectAnswerQuestion4() {
-    document.getElementsByClassName("app4")[0].style.height = "550px";
-    addCorrectAnswer("correctAnswer4", "4que", "app4", "contentCorrectAnswer");
+function addCorrectAnswerQuestion5() {
+    document.getElementsByClassName("app5")[0].style.height = "550px";
+    addCorrectAnswer("correctAnswer5", "5que", "app5", "contentCorrectAnswer");
 }
 
 // 6 QUESTION
@@ -1068,112 +1068,112 @@ function question3() {
     }
 }
 
-// 4 QUESTION
+// 5 QUESTION
 
-let numbers4 = {
+let numbers5 = {
     firstNumber: "",
     secondNumber: "",
     thirdNumber: "",
 };
 
-document.getElementById("firstNumber4").onchange = function (e) {
+document.getElementById("firstNumber5").onchange = function (e) {
     if (e.target.value == 5) {
-        numbers4.firstNumber = "right";
+        numbers5.firstNumber = "right";
     } else {
-        numbers4.firstNumber = "wrong";
+        numbers5.firstNumber = "wrong";
     }
 };
 
-document.getElementById("secondNumber4").onchange = function (e) {
+document.getElementById("secondNumber5").onchange = function (e) {
     if (e.target.value == 4) {
-        numbers4.secondNumber = "right";
+        numbers5.secondNumber = "right";
     } else {
-        numbers4.secondNumber = "wrong";
+        numbers5.secondNumber = "wrong";
     }
 };
 
-document.getElementById("thirdNumber4").onchange = function (e) {
+document.getElementById("thirdNumber5").onchange = function (e) {
     if (e.target.value == 9) {
-        numbers4.thirdNumber = "right";
+        numbers5.thirdNumber = "right";
     } else {
-        numbers4.thirdNumber = "wrong";
+        numbers5.thirdNumber = "wrong";
     }
 };
 
-function question4() {
+function question5() {
     if (
-        numbers4.firstNumber != "" &&
-        numbers4.secondNumber != "" &&
-        numbers4.thirdNumber != ""
+        numbers5.firstNumber != "" &&
+        numbers5.secondNumber != "" &&
+        numbers5.thirdNumber != ""
     ) {
         succerror(
-            document.getElementById("firstNumber4"),
-            numbers4.firstNumber === "wrong"
+            document.getElementById("firstNumber5"),
+            numbers5.firstNumber === "wrong"
         );
 
         succerror(
-            document.getElementById("secondNumber4"),
-            numbers4.secondNumber === "wrong"
+            document.getElementById("secondNumber5"),
+            numbers5.secondNumber === "wrong"
         );
 
         succerror(
-            document.getElementById("thirdNumber4"),
-            numbers4.thirdNumber === "wrong"
+            document.getElementById("thirdNumber5"),
+            numbers5.thirdNumber === "wrong"
         );
 
         // расставляем мини-иконки
 
         createMiniIcon(
-            numbers4.firstNumber,
-            document.getElementById("firstNumber4")
+            numbers5.firstNumber,
+            document.getElementById("firstNumber5")
         );
 
         createMiniIcon(
-            numbers4.secondNumber,
-            document.getElementById("secondNumber4")
+            numbers5.secondNumber,
+            document.getElementById("secondNumber5")
         );
 
         createMiniIcon(
-            numbers4.thirdNumber,
-            document.getElementById("thirdNumber4")
+            numbers5.thirdNumber,
+            document.getElementById("thirdNumber5")
         );
 
         // выносим общий статус к номеру вопроса
 
         if (
-            numbers4.firstNumber === "right" &&
-            numbers4.secondNumber === "right" &&
-            numbers4.thirdNumber === "right"
+            numbers5.firstNumber === "right" &&
+            numbers5.secondNumber === "right" &&
+            numbers5.thirdNumber === "right"
         ) {
             addImage(
                 "success",
-                document.getElementsByClassName("question4"),
-                "app4",
-                4
+                document.getElementsByClassName("question5"),
+                "app5",
+                5
             );
         } else {
             addImage(
                 "failure",
-                document.getElementsByClassName("question4"),
-                "app4",
-                4
+                document.getElementsByClassName("question5"),
+                "app5",
+                5
             );
 
-            addCorrectAnswerQuestion4();
+            addCorrectAnswerQuestion5();
         }
     } else {
-        if (numbers4.firstNumber === "") {
-            document.getElementById("firstNumber4").style.border =
+        if (numbers5.firstNumber === "") {
+            document.getElementById("firstNumber5").style.border =
                 "2px solid #FFB47D";
         }
 
-        if (numbers4.secondNumber === "") {
-            document.getElementById("secondNumber4").style.border =
+        if (numbers5.secondNumber === "") {
+            document.getElementById("secondNumber5").style.border =
                 "2px solid #FFB47D";
         }
 
-        if (numbers4.thirdNumber === "") {
-            document.getElementById("thirdNumber4").style.border =
+        if (numbers5.thirdNumber === "") {
+            document.getElementById("thirdNumber5").style.border =
                 "2px solid #FFB47D";
         }
     }
@@ -2836,7 +2836,7 @@ document.getElementById("submit").onclick = function () {
     question1();
     question2();
     question3();
-    question4();
+    question5();
     question6();
     question7();
     question9();

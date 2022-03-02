@@ -1,4 +1,4 @@
-.app4 {
+.app5 {
     width: 1170px;
     height: 443px;
     left: calc(50% - 1170px / 2);
@@ -9,7 +9,7 @@
     margin-bottom: 51px;
 }
 
-.titlePage4 {
+.titlePage5 {
     top: 25px;
     left: calc(50% - 770px / 2);
     width: 770px;
@@ -35,7 +35,7 @@
     font-weight: lighter;
 }
 
-.lineUnderHeading4 {
+.lineUnderHeading5 {
     position: absolute;
     width: 1169px;
     height: 0px;
@@ -45,24 +45,22 @@
 
 /* content styles */
 
-.content4 {
+.content5 {
     top: 136px;
     left: calc(50% - 212px / 2);
     width: 212px;
     height: 164px;
-    /* border: 1px solid gray; */
 }
 
 .cubes {
     left: calc(50% - 143.21px / 2);
     width: 143.21px;
     height: 85px;
-    /* border: 1px solid gray; */
 }
 
 /* inputs styles */
 
-.inputsCollections4 {
+.inputsCollections5 {
     top: 35px;
     left: calc(50% - 212px / 2);
     width: 212px;
@@ -73,7 +71,7 @@
     align-items: center;
 }
 
-.inputContent4 input {
+.inputContent5 input {
     position: static;
     width: 50px;
     height: 30px;
@@ -86,7 +84,7 @@
     text-align: center;
 }
 
-.sign4 {
+.sign5 {
     position: static;
     width: 11px;
     height: 22px;
