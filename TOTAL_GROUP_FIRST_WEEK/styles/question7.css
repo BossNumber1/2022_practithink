@@ -1,4 +1,4 @@
-.app6 {
+.app7 {
     width: 1170px;
     height: 331px;
     left: calc(50% - 1170px / 2);
@@ -9,7 +9,7 @@
     margin-bottom: 51px;
 }
 
-.titlePage6 {
+.titlePage7 {
     top: 25px;
     left: calc(50% - 770px / 2);
     width: 770px;
@@ -22,7 +22,7 @@
     color: #2f2f2f;
 }
 
-.subtitle6 {
+.subtitle7 {
     top: 10px;
     left: calc(50% - 338px / 2);
     width: 338px;
@@ -35,7 +35,7 @@
     font-weight: lighter;
 }
 
-.lineUnderHeading6 {
+.lineUnderHeading7 {
     position: absolute;
     width: 1169px;
     height: 0px;
@@ -45,7 +45,7 @@
 
 /* content styles */
 
-.content6 {
+.content7 {
     top: 136px;
     left: calc(50% - 520px / 2);
     width: 520px;
@@ -55,7 +55,7 @@
     align-items: flex-start;
 }
 
-.content6 div {
+.content7 div {
     position: static;
     width: 80px;
     height: 45px;
@@ -72,6 +72,6 @@
     cursor: pointer;
 }
 
-.content6 div:not(:last-child) {
+.content7 div:not(:last-child) {
     margin-right: 30px;
 }
