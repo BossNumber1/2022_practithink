@@ -2855,6 +2855,7 @@ document.getElementById("clear").onclick = function () {
 
     for (let i = 0; i < allInputs.length; i++) {
         allInputs[i].style.border = "1px solid";
+        // allInputs[i].value = "";
     }
 
     document.getElementById("firstBtn5").style.border = "1px solid";
@@ -2906,4 +2907,6 @@ document.getElementById("clear").onclick = function () {
     document.getElementById("firstBtn24").style.border = "1px solid";
     document.getElementById("secondBtn24").style.border = "1px solid";
     document.getElementById("thirdBtn24").style.border = "1px solid";
+
+    window.location.reload();
 };
