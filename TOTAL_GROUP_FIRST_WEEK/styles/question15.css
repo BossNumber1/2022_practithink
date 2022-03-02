@@ -1,4 +1,4 @@
-.app12 {
+.app15 {
     width: 1170px;
     height: 299px;
     left: calc(50% - 1170px / 2);
@@ -9,7 +9,7 @@
     margin-bottom: 51px;
 }
 
-.titlePage12 {
+.titlePage15 {
     top: 26px;
     width: 1170px;
     height: 22px;
@@ -21,17 +21,17 @@
     color: #2f2f2f;
 }
 
-.lineUnderHeading12 {
+.lineUnderHeading15 {
     position: absolute;
     width: 1169px;
     height: 0px;
-    top: 100px;
+    top: 70px;
     border-bottom: 1px solid #a8a8a8;
 }
 
 /* content styles */
 
-.content12 {
+.content15 {
     top: 132px;
     left: calc(50% - 569px / 2);
     width: 569px;
@@ -44,8 +44,8 @@
     line-height: 22px;
 }
 
-#firstNumber12,
-#secondNumber12 {
+#firstNumber15,
+#secondNumber15 {
     top: 23px;
     position: absolute;
     width: 50px;
@@ -55,10 +55,10 @@
     text-align: center;
 }
 
-#firstNumber12 {
+#firstNumber15 {
     left: 97px;
 }
 
-#secondNumber12 {
+#secondNumber15 {
     left: 340px;
 }
