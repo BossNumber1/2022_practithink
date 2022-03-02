@@ -1,4 +1,4 @@
-.app9 {
+.app12 {
     width: 1170px;
     height: 427px;
     left: calc(50% - 1170px / 2);
@@ -9,7 +9,7 @@
     margin-bottom: 51px;
 }
 
-.titlePage9 {
+.titlePage12 {
     top: 26px;
     left: calc(50% - 770px / 2);
     width: 770px;
@@ -22,7 +22,7 @@
     color: #2f2f2f;
 }
 
-.lineUnderHeading9 {
+.lineUnderHeading12 {
     position: absolute;
     width: 1169px;
     height: 0px;
@@ -32,25 +32,17 @@
 
 /* content styles */
 
-.content9 {
+.content12 {
     top: 133px;
     left: calc(50% - 758.8px / 2);
     width: 758.8px;
     height: 174px;
-
-    /* border: 1px solid gray; */
 }
 
 .train {
     width: 758.8px;
     height: 62.2px;
-
-    /* transform: matrix(-1, 0, 0, 1, 0, 0); */
-
-    /* border: 1px solid; */
-
     display: flex;
-    /* flex-direction: row; */
     align-items: center;
     justify-content: space-between;
 }
@@ -60,9 +52,7 @@
     left: calc(50% - 330px / 2);
     width: 330px;
     height: 62.2px;
-
     display: flex;
-    /* flex-direction: row; */
     align-items: center;
     justify-content: space-between;
 }

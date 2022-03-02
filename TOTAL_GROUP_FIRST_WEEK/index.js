@@ -131,15 +131,15 @@ function drop7(e) {
     }
 }
 
-// 9 QUESTION
+// 12 QUESTION
 
-function drag9(e) {
-    localStorage.setItem("idOrigin9question", e.target.id);
+function drag12(e) {
+    localStorage.setItem("idOrigin12question", e.target.id);
 }
 
-function drop9(e) {
+function drop12(e) {
     // получаем имя и id взятого элемента
-    let idOrig = localStorage.getItem("idOrigin9question");
+    let idOrig = localStorage.getItem("idOrigin12question");
     let nameObjectOrig = idOrig.slice(0, -1);
 
     // получаем имя и id, на который кладём элемент
@@ -151,17 +151,12 @@ function drop9(e) {
     let currentElement = document.getElementById(currentId);
 
     // меняем картинки местами
-    currentElement.src = "./pictures/9que/" + nameObjectOrig + ".svg";
-    orignalElement.src = "./pictures/9que/" + nameObjectCurrent + ".svg";
+    currentElement.src = "./pictures/12que/" + nameObjectOrig + ".svg";
+    orignalElement.src = "./pictures/12que/" + nameObjectCurrent + ".svg";
 
     // меняем id местами
     currentElement.id = idOrig;
     orignalElement.id = currentId;
-
-    // меняем фон при определённом условии
-    // if (nameObjectCurrent === "emptyPlace") {
-    //     currentElement.parentElement.style.backgroundColor = "white";
-    // }
 
     // меняем вид курсора
     currentElement.style.cursor = "grab";
@@ -450,11 +445,16 @@ function addCorrectAnswerQuestion8() {
     addCorrectAnswer("correctAnswer8", "8que", "app8", "contentCorrectAnswer");
 }
 
-// 9 QUESTION
+// 12 QUESTION
 
-function addCorrectAnswerQuestion9() {
-    document.getElementsByClassName("app9")[0].style.height = "600px";
-    addCorrectAnswer("correctAnswer9", "9que", "app9", "contentCorrectAnswer9");
+function addCorrectAnswerQuestion12() {
+    document.getElementsByClassName("app12")[0].style.height = "600px";
+    addCorrectAnswer(
+        "correctAnswer12",
+        "12que",
+        "app12",
+        "contentCorrectAnswer12"
+    );
 }
 
 // 13 QUESTION
@@ -1660,9 +1660,9 @@ function question8() {
     }
 }
 
-// 9 QUESTION
+// 12 QUESTION
 
-function question9() {
+function question12() {
     let train = document.getElementsByClassName("train")[0];
 
     let fourthWagon = train.children[4].children[0].id;
@@ -1689,35 +1689,35 @@ function question9() {
             "2px solid #FFB47D";
     } else {
         if (
-            fourthWagon === "secondWagon9" &&
-            twelfthWagon === "firstWagon9" &&
-            fourteenWagon === "thirdWagon9" &&
-            eighteenWagon === "fourthWagon9"
+            fourthWagon === "secondWagon0" &&
+            twelfthWagon === "firstWagon0" &&
+            fourteenWagon === "thirdWagon0" &&
+            eighteenWagon === "fourthWagon0"
         ) {
             addImage(
                 "success",
-                document.getElementsByClassName("question9"),
-                "app9",
-                9
+                document.getElementsByClassName("question12"),
+                "app12",
+                12
             );
         } else {
             // подсвечиваем неверновыбранные вагоны
-            if (fourthWagon !== "secondWagon9") {
+            if (fourthWagon !== "secondWagon0") {
                 document.getElementById(fourthWagon).style.border =
                     "2px solid #ED7777";
             }
 
-            if (twelfthWagon !== "firstWagon9") {
+            if (twelfthWagon !== "firstWagon0") {
                 document.getElementById(twelfthWagon).style.border =
                     "2px solid #ED7777";
             }
 
-            if (fourteenWagon !== "thirdWagon9") {
+            if (fourteenWagon !== "thirdWagon0") {
                 document.getElementById(fourteenWagon).style.border =
                     "2px solid #ED7777";
             }
 
-            if (eighteenWagon !== "fourthWagon9") {
+            if (eighteenWagon !== "fourthWagon0") {
                 document.getElementById(eighteenWagon).style.border =
                     "2px solid #ED7777";
             }
@@ -1725,12 +1725,12 @@ function question9() {
             // ставим статус
             addImage(
                 "failure",
-                document.getElementsByClassName("question9"),
-                "app9",
-                9
+                document.getElementsByClassName("question12"),
+                "app12",
+                12
             );
 
-            addCorrectAnswerQuestion9();
+            addCorrectAnswerQuestion12();
         }
     }
 }
@@ -2836,7 +2836,7 @@ document.getElementById("submit").onclick = function () {
     question6();
     question7();
     question8();
-    question9();
+    question12();
     question13();
     question14();
     question15();
