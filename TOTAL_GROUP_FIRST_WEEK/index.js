@@ -493,14 +493,14 @@ function addCorrectAnswerQuestion12() {
     );
 }
 
-// 13 QUESTION
+// 16 QUESTION
 
-function addCorrectAnswerQuestion13() {
-    document.getElementsByClassName("app13")[0].style.height = "400px";
+function addCorrectAnswerQuestion16() {
+    document.getElementsByClassName("app16")[0].style.height = "400px";
     addCorrectAnswer(
-        "correctAnswer13",
-        "13que",
-        "app13",
+        "correctAnswer16",
+        "16que",
+        "app16",
         "contentCorrectAnswer"
     );
 }
@@ -2040,55 +2040,55 @@ function question12() {
     }
 }
 
-// 13 QUESTION
+// 16 QUESTION
 
-let numbers13 = {
+let numbers16 = {
     firstNumber: "",
 };
 
-document.getElementById("firstNumber13").onchange = function (e) {
+document.getElementById("firstNumber16").onchange = function (e) {
     if (e.target.value == 18) {
-        numbers13.firstNumber = "right";
+        numbers16.firstNumber = "right";
     } else {
-        numbers13.firstNumber = "wrong";
+        numbers16.firstNumber = "wrong";
     }
 };
 
-function question13() {
-    if (numbers13.firstNumber != "") {
+function question16() {
+    if (numbers16.firstNumber != "") {
         succerror(
-            document.getElementById("firstNumber13"),
-            numbers13.firstNumber === "wrong"
+            document.getElementById("firstNumber16"),
+            numbers16.firstNumber === "wrong"
         );
 
         // расставляем мини-иконки
 
         createMiniIcon(
-            numbers13.firstNumber,
-            document.getElementById("firstNumber13")
+            numbers16.firstNumber,
+            document.getElementById("firstNumber16")
         );
 
         // выносим общий статус к номеру вопроса
 
-        if (numbers13.firstNumber === "right") {
+        if (numbers16.firstNumber === "right") {
             addImage(
                 "success",
-                document.getElementsByClassName("question13"),
-                "app13",
-                13
+                document.getElementsByClassName("question16"),
+                "app16",
+                16
             );
         } else {
             addImage(
                 "failure",
-                document.getElementsByClassName("question13"),
-                "app13",
-                13
+                document.getElementsByClassName("question16"),
+                "app16",
+                16
             );
 
-            addCorrectAnswerQuestion13();
+            addCorrectAnswerQuestion16();
         }
     } else {
-        document.getElementById("firstNumber13").style.border =
+        document.getElementById("firstNumber16").style.border =
             "2px solid #FFB47D";
     }
 }
@@ -2840,7 +2840,7 @@ document.getElementById("submit").onclick = function () {
     question10();
     question11();
     question12();
-    question13();
+    question16();
     question17();
     question18();
     question19();

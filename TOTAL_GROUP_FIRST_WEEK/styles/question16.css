@@ -1,4 +1,4 @@
-.app13 {
+.app16 {
     width: 1170px;
     height: 317px;
     left: calc(50% - 1170px / 2);
@@ -9,7 +9,7 @@
     margin-bottom: 51px;
 }
 
-.titlePage13 {
+.titlePage16 {
     top: 26px;
     width: 1170px;
     height: 22px;
@@ -21,7 +21,7 @@
     color: #2f2f2f;
 }
 
-.subtitle13 {
+.subtitle16 {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -29,10 +29,7 @@
     left: calc(50% - 298px / 2);
     width: 298px;
     height: 24px;
-    /* left: 571px; */
-    /* top: 6906px; */
     color: #065b5b;
-
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -40,7 +37,7 @@
     margin-left: 10px;
 }
 
-.lineUnderHeading13 {
+.lineUnderHeading16 {
     position: absolute;
     width: 1169px;
     height: 0px;
@@ -50,14 +47,11 @@
 
 /* content styles */
 
-.content13 {
+.content16 {
     top: 137px;
     left: calc(50% - 339px / 2);
     width: 339px;
     height: 30px;
-
-    /* border: 1px solid gray; */
-
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -67,7 +61,7 @@
     line-height: 22px;
 }
 
-.input13 {
+.input16 {
     position: static;
     width: 50px;
     height: 30px;
@@ -76,7 +70,6 @@
     flex: none;
     order: 1;
     flex-grow: 0;
-    /* margin: 0 5px; */
     border-radius: 5px;
     border: 1px solid #2f2f2f;
     text-align: center;
