@@ -1,4 +1,4 @@
-.app10 {
+.app13 {
     width: 1170px;
     height: 343px;
     left: calc(50% - 1170px / 2);
@@ -9,7 +9,7 @@
     margin-bottom: 51px;
 }
 
-.titlePage10 {
+.titlePage13 {
     top: 26px;
     width: 1170px;
     height: 22px;
@@ -21,7 +21,7 @@
     color: #2f2f2f;
 }
 
-.lineUnderHeading10 {
+.lineUnderHeading13 {
     position: absolute;
     width: 1169px;
     height: 0px;
@@ -31,8 +31,8 @@
 
 /* content styles */
 
-.content10 {
-    top: 110px;
+.content13 {
+    top: 130px;
     left: calc(50% - 240px / 2);
     width: 260px;
     height: 90px;
@@ -41,7 +41,7 @@
     align-items: center;
 }
 
-.topRow10 {
+.topRow13 {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -55,7 +55,7 @@
     flex-grow: 0;
 }
 
-.bottomRow10 {
+.bottomRow13 {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -65,7 +65,7 @@
     top: 27px;
 }
 
-.input10 {
+.input13 {
     position: static;
     width: 50px;
     height: 30px;
