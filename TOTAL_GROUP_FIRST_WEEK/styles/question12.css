@@ -36,10 +36,6 @@
     left: calc(50% - 569px / 2);
     width: 569px;
     height: 47.2px;
-
-    /* border: 1px solid gray; */
-
-    display: flex;
     align-items: center;
     justify-content: space-between;
     font-style: normal;
@@ -48,8 +44,8 @@
     line-height: 22px;
 }
 
-#leftNumber12,
-#rightNumber12 {
+#firstNumber12,
+#secondNumber12 {
     top: 23px;
     position: absolute;
     width: 50px;
@@ -59,10 +55,10 @@
     text-align: center;
 }
 
-#leftNumber12 {
+#firstNumber12 {
     left: 97px;
 }
 
-#rightNumber12 {
+#secondNumber12 {
     left: 340px;
 }
