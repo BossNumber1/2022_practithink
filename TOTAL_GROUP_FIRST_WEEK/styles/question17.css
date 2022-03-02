@@ -1,4 +1,4 @@
-.app14 {
+.app17 {
     width: 1170px;
     height: 489px;
     left: calc(50% - 1170px / 2);
@@ -9,7 +9,7 @@
     margin-bottom: 51px;
 }
 
-.titlePage14 {
+.titlePage17 {
     top: 25px;
     left: calc(50% - 570px / 2);
     width: 570px;
@@ -25,7 +25,7 @@
     justify-content: center;
 }
 
-.subtitle14 {
+.subtitle17 {
     margin-top: 25px;
     width: 1170px;
     height: 24px;
@@ -37,11 +37,11 @@
     text-align: center;
 }
 
-.subtitle14 img {
+.subtitle17 img {
     margin-right: 5px;
 }
 
-.lineUnderHeading14 {
+.lineUnderHeading17 {
     position: absolute;
     width: 1169px;
     height: 0px;
@@ -51,28 +51,20 @@
 
 /* content styles */
 
-.content14 {
+.content17 {
     top: 102px;
     left: calc(50% - 570px / 2);
     width: 570px;
     height: 236px;
 }
 
-.pencils14 {
+.pencils17 {
     left: calc(50% - 420.06px / 2);
     width: 420.06px;
     height: 62.74px;
 }
 
-/* .ruler14 {
-    top: 29px;
-    width: 270px;
-    height: 57px;
-    left: 226px;
-    cursor: grab;
-} */
-
-.btns14 {
+.btns17 {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -81,7 +73,7 @@
     top: 120px;
 }
 
-.btns14 div {
+.btns17 div {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -102,7 +94,7 @@
 
 /* ruler styles */
 
-.ruler14 {
+.ruler17 {
     position: absolute;
     display: flex;
     top: 89px;
@@ -111,12 +103,6 @@
     left: 130px;
     cursor: grab;
 }
-
-/* .ruler {
-    position: absolute;
-    top: 121px;
-    display: flex;
-} */
 
 .leftEdge,
 .rightEdge {

@@ -1,10 +1,10 @@
 // -------------------------------------------------------------- ROTATE RULER FOR 14 QUESTION -----------------------------------------------
 
-let ruler14question = document.getElementsByClassName("ruler14")[0];
+let ruler17question = document.getElementsByClassName("ruler17")[0];
 
-dragElement(ruler14question);
+dragElement(ruler17question);
 
-const rotationFunction = new Propeller(ruler14question, {
+const rotationFunction = new Propeller(ruler17question, {
     inertia: 0,
 });
 
@@ -43,14 +43,14 @@ function dragElement(element) {
     }
 }
 
-ruler14question.addEventListener("mousedown", (e) => {
+ruler17question.addEventListener("mousedown", (e) => {
     if (
         (e.target.className !== "leftEdge" ||
             e.target.className !== "rightEdge") &&
         e.target.className === "imgRuler"
     ) {
         rotationFunction.stop();
-        dragElement(ruler14question);
+        dragElement(ruler17question);
     }
 
     if (
@@ -505,14 +505,14 @@ function addCorrectAnswerQuestion13() {
     );
 }
 
-// 14 QUESTION
+// 17 QUESTION
 
-function addCorrectAnswerQuestion14() {
-    document.getElementsByClassName("app14")[0].style.height = "600px";
+function addCorrectAnswerQuestion17() {
+    document.getElementsByClassName("app17")[0].style.height = "600px";
     addCorrectAnswer(
-        "correctAnswer14",
-        "14que",
-        "app14",
+        "correctAnswer17",
+        "17que",
+        "app17",
         "contentCorrectAnswer"
     );
 }
@@ -2093,100 +2093,100 @@ function question13() {
     }
 }
 
-// 14 QUESTION
+// 17 QUESTION
 
-let selectedButton14 = "",
-    selectedNameButton14;
+let selectedButton17 = "",
+    selectedNameButton17;
 
-document.getElementById("firstBtn14").onclick = function () {
-    let clickedElement = document.getElementById("firstBtn14");
-
-    clickedElement.style.backgroundColor = "#bbedf4";
-    clickedElement.style.color = "#0e80a4";
-    clickedElement.style.border = "1px solid #BBEDF4";
-
-    selectedButton14 = "right";
-    selectedNameButton14 = "firstBtn14";
-
-    document.getElementById("secondBtn14").style.backgroundColor = "white";
-    document.getElementById("secondBtn14").style.color = "black";
-    document.getElementById("secondBtn14").style.border = "1px solid black";
-
-    document.getElementById("thirdBtn14").style.backgroundColor = "white";
-    document.getElementById("thirdBtn14").style.color = "black";
-    document.getElementById("thirdBtn14").style.border = "1px solid black";
-};
-
-document.getElementById("secondBtn14").onclick = function () {
-    let clickedElement = document.getElementById("secondBtn14");
+document.getElementById("firstBtn17").onclick = function () {
+    let clickedElement = document.getElementById("firstBtn17");
 
     clickedElement.style.backgroundColor = "#bbedf4";
     clickedElement.style.color = "#0e80a4";
     clickedElement.style.border = "1px solid #BBEDF4";
 
-    selectedButton14 = "wrong";
-    selectedNameButton14 = "secondBtn14";
+    selectedButton17 = "right";
+    selectedNameButton17 = "firstBtn14";
 
-    document.getElementById("thirdBtn14").style.backgroundColor = "white";
-    document.getElementById("thirdBtn14").style.color = "black";
-    document.getElementById("thirdBtn14").style.border = "1px solid black";
+    document.getElementById("secondBtn17").style.backgroundColor = "white";
+    document.getElementById("secondBtn17").style.color = "black";
+    document.getElementById("secondBtn17").style.border = "1px solid black";
 
-    document.getElementById("firstBtn14").style.backgroundColor = "white";
-    document.getElementById("firstBtn14").style.color = "black";
-    document.getElementById("firstBtn14").style.border = "1px solid black";
+    document.getElementById("thirdBtn17").style.backgroundColor = "white";
+    document.getElementById("thirdBtn17").style.color = "black";
+    document.getElementById("thirdBtn17").style.border = "1px solid black";
 };
 
-document.getElementById("thirdBtn14").onclick = function () {
-    let clickedElement = document.getElementById("thirdBtn14");
+document.getElementById("secondBtn17").onclick = function () {
+    let clickedElement = document.getElementById("secondBtn17");
 
     clickedElement.style.backgroundColor = "#bbedf4";
     clickedElement.style.color = "#0e80a4";
     clickedElement.style.border = "1px solid #BBEDF4";
 
-    selectedButton14 = "wrong";
-    selectedNameButton14 = "thirdBtn14";
+    selectedButton17 = "wrong";
+    selectedNameButton17 = "secondBtn14";
 
-    document.getElementById("secondBtn14").style.backgroundColor = "white";
-    document.getElementById("secondBtn14").style.color = "black";
-    document.getElementById("secondBtn14").style.border = "1px solid black";
+    document.getElementById("thirdBtn17").style.backgroundColor = "white";
+    document.getElementById("thirdBtn17").style.color = "black";
+    document.getElementById("thirdBtn17").style.border = "1px solid black";
 
-    document.getElementById("firstBtn14").style.backgroundColor = "white";
-    document.getElementById("firstBtn14").style.color = "black";
-    document.getElementById("firstBtn14").style.border = "1px solid black";
+    document.getElementById("firstBtn17").style.backgroundColor = "white";
+    document.getElementById("firstBtn17").style.color = "black";
+    document.getElementById("firstBtn17").style.border = "1px solid black";
 };
 
-function question14() {
-    if (selectedButton14 != "") {
+document.getElementById("thirdBtn17").onclick = function () {
+    let clickedElement = document.getElementById("thirdBtn17");
+
+    clickedElement.style.backgroundColor = "#bbedf4";
+    clickedElement.style.color = "#0e80a4";
+    clickedElement.style.border = "1px solid #BBEDF4";
+
+    selectedButton17 = "wrong";
+    selectedNameButton17 = "thirdBtn14";
+
+    document.getElementById("secondBtn17").style.backgroundColor = "white";
+    document.getElementById("secondBtn17").style.color = "black";
+    document.getElementById("secondBtn17").style.border = "1px solid black";
+
+    document.getElementById("firstBtn17").style.backgroundColor = "white";
+    document.getElementById("firstBtn17").style.color = "black";
+    document.getElementById("firstBtn17").style.border = "1px solid black";
+};
+
+function question17() {
+    if (selectedButton17 != "") {
         succerror(
-            document.getElementById(selectedNameButton14),
-            selectedButton14 === "wrong"
+            document.getElementById(selectedNameButton17),
+            selectedButton17 === "wrong"
         );
 
         // выносим общий статус к номеру вопроса
 
-        if (selectedButton14 === "right") {
+        if (selectedButton17 === "right") {
             addImage(
                 "success",
-                document.getElementsByClassName("question14"),
-                "app14",
-                14
+                document.getElementsByClassName("question17"),
+                "app17",
+                17
             );
         } else {
             addImage(
                 "failure",
-                document.getElementsByClassName("question14"),
-                "app14",
-                14
+                document.getElementsByClassName("question17"),
+                "app17",
+                17
             );
 
-            addCorrectAnswerQuestion14();
+            addCorrectAnswerQuestion17();
         }
     } else {
-        document.getElementById("firstBtn14").style.border =
+        document.getElementById("firstBtn17").style.border =
             "2px solid #FFB47D";
-        document.getElementById("secondBtn14").style.border =
+        document.getElementById("secondBtn17").style.border =
             "2px solid #FFB47D";
-        document.getElementById("thirdBtn14").style.border =
+        document.getElementById("thirdBtn17").style.border =
             "2px solid #FFB47D";
     }
 }
@@ -2841,7 +2841,7 @@ document.getElementById("submit").onclick = function () {
     question11();
     question12();
     question13();
-    question14();
+    question17();
     question18();
     question19();
     question21();
