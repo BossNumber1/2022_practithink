@@ -391,11 +391,11 @@ function addCorrectAnswerQuestion1() {
     addCorrectAnswer("correctAnswer1", "1que", "app1", "contentCorrectAnswer");
 }
 
-// 2 QUESTION
+// 3 QUESTION
 
-function addCorrectAnswerQuestion2() {
-    document.getElementsByClassName("app2")[0].style.height = "400px";
-    addCorrectAnswer("correctAnswer2", "2que", "app2", "contentCorrectAnswer");
+function addCorrectAnswerQuestion3() {
+    document.getElementsByClassName("app3")[0].style.height = "400px";
+    addCorrectAnswer("correctAnswer3", "3que", "app3", "contentCorrectAnswer");
 }
 
 // 4 QUESTION
@@ -849,83 +849,83 @@ function question1() {
     }
 }
 
-// 2 QUESTION
+// 3 QUESTION
 
-let numbers2 = {
+let numbers3 = {
     leftNumber: "",
     rightNumber: "",
 };
 
-document.getElementById("leftNumber2").onchange = function (e) {
+document.getElementById("leftNumber3").onchange = function (e) {
     if (e.target.value == 16) {
-        numbers2.leftNumber = "right";
+        numbers3.leftNumber = "right";
     } else {
-        numbers2.leftNumber = "wrong";
+        numbers3.leftNumber = "wrong";
     }
 };
 
-document.getElementById("rightNumber2").onchange = function (e) {
+document.getElementById("rightNumber3").onchange = function (e) {
     if (e.target.value == 2) {
-        numbers2.rightNumber = "right";
+        numbers3.rightNumber = "right";
     } else {
-        numbers2.rightNumber = "wrong";
+        numbers3.rightNumber = "wrong";
     }
 };
 
-function question2() {
-    if (numbers2.leftNumber != "" && numbers2.rightNumber != "") {
+function question3() {
+    if (numbers3.leftNumber != "" && numbers3.rightNumber != "") {
         succerror(
-            document.getElementById("leftNumber2"),
-            numbers2.leftNumber === "wrong"
+            document.getElementById("leftNumber3"),
+            numbers3.leftNumber === "wrong"
         );
 
         succerror(
-            document.getElementById("rightNumber2"),
-            numbers2.rightNumber === "wrong"
+            document.getElementById("rightNumber3"),
+            numbers3.rightNumber === "wrong"
         );
 
         // расставляем мини-иконки
 
         createMiniIcon(
-            numbers2.leftNumber,
-            document.getElementById("leftNumber2")
+            numbers3.leftNumber,
+            document.getElementById("leftNumber3")
         );
 
         createMiniIcon(
-            numbers2.rightNumber,
-            document.getElementById("rightNumber2")
+            numbers3.rightNumber,
+            document.getElementById("rightNumber3")
         );
 
         // выносим общий статус к номеру вопроса
 
         if (
-            numbers2.leftNumber === "right" &&
-            numbers2.rightNumber === "right"
+            numbers3.leftNumber === "right" &&
+            numbers3.rightNumber === "right"
         ) {
             addImage(
                 "success",
-                document.getElementsByClassName("question2"),
-                "app2",
-                2
+                document.getElementsByClassName("question3"),
+                "app3",
+                3
             );
         } else {
             addImage(
                 "failure",
-                document.getElementsByClassName("question2"),
-                "app2",
-                2
+                document.getElementsByClassName("question3"),
+                "app3",
+                3
             );
 
-            addCorrectAnswerQuestion2();
+            addCorrectAnswerQuestion3();
         }
     } else {
-        if (numbers2.leftNumber === "") {
-            document.getElementById("leftNumber2").style.border =
+        if (numbers3.leftNumber === "") {
+            document.getElementById("leftNumber3").style.border =
                 "2px solid #FFB47D";
         }
 
-        if (numbers2.rightNumber === "") {
-            document.getElementById("rightNumber2").style.border =
+        if (numbers3.rightNumber === "") {
+            document.getElementById("rightNumber3").style.border =
                 "2px solid #FFB47D";
         }
     }
@@ -2834,7 +2834,7 @@ function question24() {
 
 document.getElementById("submit").onclick = function () {
     question1();
-    question2();
+    question3();
     question4();
     question5();
     question6();

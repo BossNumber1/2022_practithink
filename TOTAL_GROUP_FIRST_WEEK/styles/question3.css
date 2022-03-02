@@ -1,4 +1,4 @@
-.app2 {
+.app3 {
     width: 1170px;
     height: 348px;
     left: calc(50% - 1170px / 2);
@@ -9,7 +9,7 @@
     margin-bottom: 51px;
 }
 
-.titlePage2 {
+.titlePage3 {
     top: 25px;
     left: calc(50% - 770px / 2);
     width: 770px;
@@ -22,7 +22,7 @@
     color: #2f2f2f;
 }
 
-.lineUnderHeading2 {
+.lineUnderHeading3 {
     top: 138px;
     position: absolute;
     width: 1169px;
@@ -32,22 +32,17 @@
 
 /* content styles */
 
-.content2 {
+.content3 {
     top: 118px;
     left: calc(50% - 252px / 2);
     width: 252px;
     height: 30px;
-
-    /* border: 1px solid gray; */
-
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
-    /* flex-direction: row;
-    align-items: flex-start; */
 }
 
-.input2 {
+.input3 {
     position: static;
     width: 50px;
     height: 30px;
