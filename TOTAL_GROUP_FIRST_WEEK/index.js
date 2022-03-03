@@ -911,7 +911,7 @@ function addCorrectAnswerQuestion2() {
 // 3 QUESTION
 
 function addCorrectAnswerQuestion3() {
-    document.getElementsByClassName("app3")[0].style.height = "400px";
+    document.getElementsByClassName("app3")[0].style.height = "500px";
     addCorrectAnswer("correctAnswer3", "3que", "app3", "contentCorrectAnswer");
 }
 
@@ -1066,7 +1066,7 @@ function addCorrectAnswerQuestion17() {
 // 18 QUESTION
 
 function addCorrectAnswerQuestion18() {
-    document.getElementsByClassName("app18")[0].style.height = "600px";
+    document.getElementsByClassName("app18")[0].style.height = "800px";
     addCorrectAnswer(
         "correctAnswer18",
         "18que",
@@ -1078,7 +1078,7 @@ function addCorrectAnswerQuestion18() {
 // 19 QUESTION
 
 function addCorrectAnswerQuestion19() {
-    document.getElementsByClassName("app19")[0].style.height = "750px";
+    document.getElementsByClassName("app19")[0].style.height = "850px";
     addCorrectAnswer(
         "correctAnswer19",
         "19que",
@@ -2400,7 +2400,7 @@ function question10() {
 // 11 QUESTION
 
 let selectedButton11 = {
-    firstBtn11: "wrong",
+    firstBtn11: "",
     secondBtn11: "",
     thirdBtn11: "",
     fourthBtn11: "",
@@ -2413,11 +2413,11 @@ let selectedButton11 = {
 document.getElementById("firstBtn11").onclick = function () {
     document.getElementById("firstBtn11").classList.toggle("selectedCircle");
 
-    if (selectedButton11.firstBtn11 === "wrong") {
-        selectedButton11.firstBtn11 = "";
-    } else {
-        selectedButton11.firstBtn11 = "wrong";
-    }
+    // if (selectedButton11.firstBtn11 === "") {
+    selectedButton11.firstBtn11 = "wrong";
+    // } else {
+    //     selectedButton11.firstBtn11 = "wrong";
+    // }
 };
 
 document.getElementById("secondBtn11").onclick = function () {
