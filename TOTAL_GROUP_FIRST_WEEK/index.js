@@ -469,6 +469,18 @@ function addCorrectAnswerQuestion10() {
     );
 }
 
+// 11 QUESTION
+
+function addCorrectAnswerQuestion11() {
+    document.getElementsByClassName("app11")[0].style.height = "450px";
+    addCorrectAnswer(
+        "correctAnswer11",
+        "11que",
+        "app11",
+        "contentCorrectAnswer11"
+    );
+}
+
 // 12 QUESTION
 
 function addCorrectAnswerQuestion12() {
@@ -1863,6 +1875,122 @@ function question10() {
     }
 }
 
+// 11 QUESTION
+
+let selectedButton11 = {
+    firstBtn11: "right",
+    secondBtn11: "",
+    thirdBtn11: "",
+    fourthBtn11: "",
+    fifthBtn11: "",
+    sixthBtn11: "",
+    seventhBtn11: "",
+    eighthBtn11: "",
+};
+
+document.getElementById("firstBtn11").onclick = function () {
+    document.getElementById("firstBtn11").classList.toggle("selectedCircle");
+
+    selectedButton11.firstBtn11 = "right";
+};
+
+document.getElementById("secondBtn11").onclick = function () {
+    document.getElementById("secondBtn11").classList.toggle("selectedCircle");
+
+    selectedButton11.secondBtn11 = "wrong";
+};
+
+document.getElementById("thirdBtn11").onclick = function () {
+    document.getElementById("thirdBtn11").classList.toggle("selectedCircle");
+
+    selectedButton11.thirdBtn11 = "right";
+};
+
+document.getElementById("fourthBtn11").onclick = function () {
+    document.getElementById("fourthBtn11").classList.toggle("selectedCircle");
+
+    selectedButton11.fourthBtn11 = "wrong";
+};
+
+document.getElementById("fifthBtn11").onclick = function () {
+    document.getElementById("fifthBtn11").classList.toggle("selectedCircle");
+
+    selectedButton11.fifthBtn11 = "right";
+};
+
+document.getElementById("sixthBtn11").onclick = function () {
+    document.getElementById("sixthBtn11").classList.toggle("selectedCircle");
+
+    selectedButton11.sixthBtn11 = "wrong";
+};
+
+document.getElementById("seventhBtn11").onclick = function () {
+    document.getElementById("seventhBtn11").classList.toggle("selectedCircle");
+
+    selectedButton11.seventhBtn11 = "right";
+};
+
+document.getElementById("eighthBtn11").onclick = function () {
+    document.getElementById("eighthBtn11").classList.toggle("selectedCircle");
+
+    selectedButton11.eighthBtn11 = "wrong";
+};
+
+function question11() {
+    let selectedButtons = [],
+        namesSelectedButtons = [],
+        isTheArrayEmpty = 0;
+
+    for (let key in selectedButton11) {
+        if (selectedButton11[key] !== "") {
+            selectedButtons.push(selectedButton11[key]);
+            namesSelectedButtons.push(key);
+            isTheArrayEmpty++;
+        }
+    }
+
+    if (isTheArrayEmpty > 0) {
+        namesSelectedButtons.map((el, index) => {
+            if (selectedButtons[index] === "wrong") {
+                document.getElementById(el).style.border = "2px solid #ED7777";
+            } else {
+                document.getElementById(el).style.border = "2px solid #48B736";
+            }
+        });
+
+        // выносим общий статус к номеру вопроса
+
+        if (
+            selectedButton11.firstBtn11 === "right" &&
+            selectedButton11.thirdBtn11 === "right" &&
+            selectedButton11.fifthBtn11 === "right" &&
+            selectedButton11.seventhBtn11 === "right"
+        ) {
+            addImage(
+                "success",
+                document.getElementsByClassName("question11"),
+                "app11",
+                11
+            );
+        } else {
+            addImage(
+                "failure",
+                document.getElementsByClassName("question11"),
+                "app11",
+                11
+            );
+
+            addCorrectAnswerQuestion11();
+        }
+    } else {
+        document
+            .getElementById("firstBtn11")
+            .classList.remove("selectedCircle");
+        document.getElementsByClassName("content11")[0].style.border =
+            "1px solid #FFB47D";
+    }
+}
+
 // 12 QUESTION
 
 function question12() {
@@ -3041,6 +3169,7 @@ document.getElementById("submit").onclick = function () {
     question8();
     question9();
     question10();
+    question11();
     question12();
     question13();
     question14();
