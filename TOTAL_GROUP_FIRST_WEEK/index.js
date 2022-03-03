@@ -391,6 +391,13 @@ function addCorrectAnswerQuestion1() {
     addCorrectAnswer("correctAnswer1", "1que", "app1", "contentCorrectAnswer");
 }
 
+// 2 QUESTION
+
+function addCorrectAnswerQuestion2() {
+    document.getElementsByClassName("app2")[0].style.height = "400px";
+    addCorrectAnswer("correctAnswer2", "2que", "app2", "contentCorrectAnswer");
+}
+
 // 3 QUESTION
 
 function addCorrectAnswerQuestion3() {
@@ -846,6 +853,52 @@ function question1() {
             document.getElementById("rightNumber").style.border =
                 "2px solid #FFB47D";
         }
+    }
+}
+
+// 2 QUESTION
+
+let numbers2 = {
+    firstNumber: "",
+};
+
+document.getElementById("firstNumber2").onchange = function (e) {
+    if (e.target.value == 45) {
+        numbers2.firstNumber = "right";
+    } else {
+        numbers2.firstNumber = "wrong";
+    }
+};
+
+function question2() {
+    if (numbers2.firstNumber != "") {
+        succerror(
+            document.getElementById("firstNumber2"),
+            numbers2.firstNumber === "wrong"
+        );
+
+        // выносим общий статус к номеру вопроса
+
+        if (numbers2.firstNumber === "right") {
+            addImage(
+                "success",
+                document.getElementsByClassName("question2"),
+                "app2",
+                2
+            );
+        } else {
+            addImage(
+                "failure",
+                document.getElementsByClassName("question2"),
+                "app2",
+                2
+            );
+
+            addCorrectAnswerQuestion2();
+        }
+    } else {
+        document.getElementById("firstNumber2").style.border =
+            "2px solid #FFB47D";
     }
 }
 
@@ -2834,6 +2887,7 @@ function question24() {
 
 document.getElementById("submit").onclick = function () {
     question1();
+    question2();
     question3();
     question4();
     question5();
@@ -2863,16 +2917,16 @@ document.getElementById("clear").onclick = function () {
         // allInputs[i].value = "";
     }
 
-    document.getElementById("firstBtn5").style.border = "1px solid";
-    document.getElementById("secondBtn5").style.border = "1px solid";
-    document.getElementById("thirdBtn5").style.border = "1px solid";
-    document.getElementById("fourthBtn5").style.border = "1px solid";
-
     document.getElementById("firstBtn6").style.border = "1px solid";
     document.getElementById("secondBtn6").style.border = "1px solid";
     document.getElementById("thirdBtn6").style.border = "1px solid";
     document.getElementById("fourthBtn6").style.border = "1px solid";
-    document.getElementById("fifthBtn6").style.border = "1px solid";
+
+    document.getElementById("firstBtn7").style.border = "1px solid";
+    document.getElementById("secondBtn7").style.border = "1px solid";
+    document.getElementById("thirdBtn7").style.border = "1px solid";
+    document.getElementById("fourthBtn7").style.border = "1px solid";
+    document.getElementById("fifthBtn7").style.border = "1px solid";
 
     document.getElementsByClassName("true")[0].style.border =
         "1px solid #d0d0d0";
@@ -2884,11 +2938,11 @@ document.getElementById("clear").onclick = function () {
     document.getElementById("wagonEmpty2").style.border = "none";
     document.getElementById("wagonEmpty3").style.border = "none";
 
-    document.getElementById("selectInput11").style.border = "1px solid #d0d0d0";
+    document.getElementById("selectInput14").style.border = "1px solid #d0d0d0";
 
-    document.getElementById("firstBtn14").style.border = "1px solid";
-    document.getElementById("secondBtn14").style.border = "1px solid";
-    document.getElementById("thirdBtn14").style.border = "1px solid";
+    document.getElementById("firstBtn17").style.border = "1px solid";
+    document.getElementById("secondBtn17").style.border = "1px solid";
+    document.getElementById("thirdBtn17").style.border = "1px solid";
 
     document.getElementById("emptyPlace0").style.border = "none";
     document.getElementById("emptyPlace1").style.border = "none";
@@ -2913,5 +2967,5 @@ document.getElementById("clear").onclick = function () {
     document.getElementById("secondBtn24").style.border = "1px solid";
     document.getElementById("thirdBtn24").style.border = "1px solid";
 
-    window.location.reload();
+    // window.location.reload();
 };
