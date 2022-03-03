@@ -1,0 +1,65 @@
+.app20 {
+    width: 1170px;
+    height: 416px;
+    left: calc(50% - 1170px / 2);
+    top: 10px;
+    box-shadow: 4px 4px 50px rgba(0, 0, 0, 0.05);
+    border: 0.5px solid #a8a8a8;
+    border-radius: 7px;
+    margin-bottom: 51px;
+}
+
+.titlePage20 {
+    top: 25px;
+    left: calc(50% - 770px / 2);
+    width: 770px;
+    height: 22px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #2f2f2f;
+}
+
+.lineUnderHeading20 {
+    top: 70px;
+    position: absolute;
+    width: 1169px;
+    height: 0px;
+    border-bottom: 1px solid #a8a8a8;
+}
+
+/* content styles */
+
+.content20 {
+    top: 120px;
+    left: calc(50% - 312px / 2);
+    width: 312px;
+    height: 164px;
+}
+
+.bottomRow20 {
+    top: 20px;
+    width: 312px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bottomRow20 input {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    background: #ffffff;
+    border: 1px solid #369cb7;
+    box-sizing: border-box;
+    border-radius: 5px;
+    width: 100px;
+    height: 34px;
+    text-align: center;
+    color: #369cb7;
+}

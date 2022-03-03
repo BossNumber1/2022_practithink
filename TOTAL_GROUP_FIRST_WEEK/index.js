@@ -577,6 +577,18 @@ function addCorrectAnswerQuestion19() {
     );
 }
 
+// 20 QUESTION
+
+function addCorrectAnswerQuestion20() {
+    document.getElementsByClassName("app20")[0].style.height = "700px";
+    addCorrectAnswer(
+        "correctAnswer20",
+        "20que",
+        "app20",
+        "contentCorrectAnswer20"
+    );
+}
+
 // 21 QUESTION
 
 function addCorrectAnswerQuestion21() {
@@ -2727,6 +2739,46 @@ function question19() {
     }
 }
 
+// 20 QUESTION
+
+let numbers20 = {
+    firstNumber: "",
+    secondNumber: "",
+};
+
+gettingDataFromFields(2, ["12:10", "08:55"], 20, numbers20);
+
+function question20() {
+    if (numbers20.firstNumber != "" && numbers20.secondNumber != "") {
+        succerrorAndCreateMiniIcon(2, 20, numbers20);
+
+        // выносим общий статус к номеру вопроса
+
+        if (
+            numbers20.firstNumber === "right" &&
+            numbers20.secondNumber === "right"
+        ) {
+            addImage(
+                "success",
+                document.getElementsByClassName("question20"),
+                "app20",
+                20
+            );
+        } else {
+            addImage(
+                "failure",
+                document.getElementsByClassName("question20"),
+                "app20",
+                20
+            );
+
+            addCorrectAnswerQuestion20();
+        }
+    } else {
+        highlightUnselectedBlocks(2, 20, numbers20);
+    }
+}
+
 // 21 QUESTION
 
 let numbers21 = {
@@ -3178,6 +3230,7 @@ document.getElementById("submit").onclick = function () {
     question17();
     question18();
     question19();
+    question20();
     question21();
     question22();
     question23();
