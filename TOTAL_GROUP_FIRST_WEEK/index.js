@@ -438,6 +438,18 @@ function addCorrectAnswerQuestion7() {
     addCorrectAnswer("correctAnswer7", "7que", "app7", "contentCorrectAnswer");
 }
 
+// 8 QUESTION
+
+function addCorrectAnswerQuestion8() {
+    document.getElementsByClassName("app8")[0].style.height = "550px";
+    addCorrectAnswer(
+        "correctAnswer8",
+        "8que",
+        "content8",
+        "contentCorrectAnswer"
+    );
+}
+
 // 9 QUESTION
 
 function addCorrectAnswerQuestion9() {
@@ -1506,6 +1518,139 @@ function question7() {
         document.getElementById("fourthBtn7").style.border =
             "2px solid #FFB47D";
         document.getElementById("fifthBtn7").style.border = "2px solid #FFB47D";
+    }
+}
+
+// 8 QUESTION
+
+let selectedButton8 = "",
+    selectedNameButton8;
+
+document.getElementById("firstBtn8").onclick = function () {
+    let clickedElement = document.getElementById("firstBtn8");
+
+    clickedElement.style.backgroundColor = "#bbedf4";
+    clickedElement.style.color = "#0e80a4";
+    clickedElement.style.border = "1px solid #BBEDF4";
+
+    selectedButton8 = "right";
+    selectedNameButton8 = "firstBtn8";
+
+    document.getElementById("secondBtn8").style.backgroundColor = "white";
+    document.getElementById("secondBtn8").style.color = "black";
+    document.getElementById("secondBtn8").style.border = "1px solid black";
+
+    document.getElementById("thirdBtn8").style.backgroundColor = "white";
+    document.getElementById("thirdBtn8").style.color = "black";
+    document.getElementById("thirdBtn8").style.border = "1px solid black";
+
+    document.getElementById("fourthBtn8").style.backgroundColor = "white";
+    document.getElementById("fourthBtn8").style.color = "black";
+    document.getElementById("fourthBtn8").style.border = "1px solid black";
+};
+
+document.getElementById("secondBtn8").onclick = function () {
+    let clickedElement = document.getElementById("secondBtn8");
+
+    clickedElement.style.backgroundColor = "#bbedf4";
+    clickedElement.style.color = "#0e80a4";
+    clickedElement.style.border = "1px solid #BBEDF4";
+
+    selectedButton8 = "wrong";
+    selectedNameButton8 = "secondBtn8";
+
+    document.getElementById("thirdBtn8").style.backgroundColor = "white";
+    document.getElementById("thirdBtn8").style.color = "black";
+    document.getElementById("thirdBtn8").style.border = "1px solid black";
+
+    document.getElementById("fourthBtn8").style.backgroundColor = "white";
+    document.getElementById("fourthBtn8").style.color = "black";
+    document.getElementById("fourthBtn8").style.border = "1px solid black";
+
+    document.getElementById("firstBtn8").style.backgroundColor = "white";
+    document.getElementById("firstBtn8").style.color = "black";
+    document.getElementById("firstBtn8").style.border = "1px solid black";
+};
+
+document.getElementById("thirdBtn8").onclick = function () {
+    let clickedElement = document.getElementById("thirdBtn8");
+
+    clickedElement.style.backgroundColor = "#bbedf4";
+    clickedElement.style.color = "#0e80a4";
+    clickedElement.style.border = "1px solid #BBEDF4";
+
+    selectedButton8 = "wrong";
+    selectedNameButton8 = "thirdBtn8";
+
+    document.getElementById("fourthBtn8").style.backgroundColor = "white";
+    document.getElementById("fourthBtn8").style.color = "black";
+    document.getElementById("fourthBtn8").style.border = "1px solid black";
+
+    document.getElementById("firstBtn8").style.backgroundColor = "white";
+    document.getElementById("firstBtn8").style.color = "black";
+    document.getElementById("firstBtn8").style.border = "1px solid black";
+
+    document.getElementById("secondBtn8").style.backgroundColor = "white";
+    document.getElementById("secondBtn8").style.color = "black";
+    document.getElementById("secondBtn8").style.border = "1px solid black";
+};
+
+document.getElementById("fourthBtn8").onclick = function () {
+    let clickedElement = document.getElementById("fourthBtn8");
+
+    clickedElement.style.backgroundColor = "#bbedf4";
+    clickedElement.style.color = "#0e80a4";
+    clickedElement.style.border = "1px solid #BBEDF4";
+
+    selectedButton8 = "wrong";
+    selectedNameButton8 = "fourthBtn8";
+
+    document.getElementById("firstBtn8").style.backgroundColor = "white";
+    document.getElementById("firstBtn8").style.color = "black";
+    document.getElementById("firstBtn8").style.border = "1px solid black";
+
+    document.getElementById("secondBtn8").style.backgroundColor = "white";
+    document.getElementById("secondBtn8").style.color = "black";
+    document.getElementById("secondBtn8").style.border = "1px solid black";
+
+    document.getElementById("thirdBtn8").style.backgroundColor = "white";
+    document.getElementById("thirdBtn8").style.color = "black";
+    document.getElementById("thirdBtn8").style.border = "1px solid black";
+};
+
+function question8() {
+    if (selectedButton8 != "") {
+        succerror(
+            document.getElementById(selectedNameButton8),
+            selectedButton8 === "wrong"
+        );
+
+        // выносим общий статус к номеру вопроса
+
+        if (selectedButton8 === "right") {
+            addImage(
+                "success",
+                document.getElementsByClassName("question8"),
+                "app8",
+                8
+            );
+        } else {
+            addImage(
+                "failure",
+                document.getElementsByClassName("question8"),
+                "app8",
+                8
+            );
+
+            addCorrectAnswerQuestion8();
+        }
+    } else {
+        document.getElementById("firstBtn8").style.border = "2px solid #FFB47D";
+        document.getElementById("secondBtn8").style.border =
+            "2px solid #FFB47D";
+        document.getElementById("thirdBtn8").style.border = "2px solid #FFB47D";
+        document.getElementById("fourthBtn8").style.border =
+            "2px solid #FFB47D";
     }
 }
 
@@ -2893,6 +3038,7 @@ document.getElementById("submit").onclick = function () {
     question5();
     question6();
     question7();
+    question8();
     question9();
     question10();
     question12();

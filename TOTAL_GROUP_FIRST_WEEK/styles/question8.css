@@ -1,0 +1,81 @@
+.app8 {
+    width: 1170px;
+    height: 424px;
+    left: calc(50% - 1170px / 2);
+    top: 10px;
+    box-shadow: 4px 4px 50px rgba(0, 0, 0, 0.05);
+    border: 0.5px solid #a8a8a8;
+    border-radius: 7px;
+    margin-bottom: 51px;
+}
+
+.titlePage8 {
+    top: 26px;
+    width: 1170px;
+    height: 22px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #2f2f2f;
+}
+
+.lineUnderHeading8 {
+    position: absolute;
+    width: 1169px;
+    height: 0px;
+    top: 70px;
+    border-bottom: 1px solid #a8a8a8;
+}
+
+/* content styles */
+
+.content8 {
+    top: 132px;
+    left: calc(50% - 698px / 2);
+    width: 698px;
+    height: 172px;
+    align-items: center;
+    justify-content: space-between;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.topRow8 {
+    height: 77px;
+    margin-bottom: 50px;
+}
+
+.bottomRow8 {
+    left: calc(50% - 456px / 2);
+    width: 456px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bottomRow8 div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 99px;
+    height: 45px;
+    background: #ffffff;
+    border: 1px solid #2f2f2f;
+    box-sizing: border-box;
+    border-radius: 5px;
+    cursor: pointer;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 18px;
+}
+
+.bottomRow8 div:not(:last-child) {
+    margin-right: 20px;
+}
