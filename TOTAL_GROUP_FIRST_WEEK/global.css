@@ -81,6 +81,7 @@ body {
 .correctAnswer10,
 .correctAnswer11,
 .correctAnswer12,
+.correctAnswer13,
 .correctAnswer14,
 .correctAnswer15,
 .correctAnswer16,
@@ -88,7 +89,10 @@ body {
 .correctAnswer18,
 .correctAnswer19,
 .correctAnswer20,
-.correctAnswer13 {
+.correctAnswer21,
+.correctAnswer22,
+.correctAnswer23,
+.correctAnswer24 {
     left: calc(50% - 450px / 2);
     width: 450px;
     height: 94px;
@@ -102,8 +106,11 @@ body {
     top: 200px;
 }
 
+.correctAnswer8 {
+    top: 60px;
+}
+
 .correctAnswer1,
-.correctAnswer8,
 .correctAnswer10,
 .correctAnswer14,
 .correctAnswer15 {
