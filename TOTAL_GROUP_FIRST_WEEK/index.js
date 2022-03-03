@@ -1,3 +1,513 @@
+// -------------------------------------------------------------common function---------------------------------------------------
+
+function succerror(elem, checkElement) {
+    if (checkElement) {
+        elem.style.backgroundColor = "#ED7777";
+        elem.style.color = "white";
+        elem.style.border = "1px solid #ED7777";
+    } else {
+        elem.style.backgroundColor = "#48B736";
+        elem.style.color = "white";
+        elem.style.border = "1px solid #48B736";
+    }
+}
+
+// добавляем иконку статуса после номера вопроса
+
+function addImage(status, ancestor, appClass, position) {
+    let object = document.createElement("img");
+    object.style.marginLeft = "10px";
+
+    if (status === "success") {
+        object.src = "./pictures/successIcon.svg";
+        document.getElementsByClassName(appClass)[0].style.border =
+            "1px solid #9DD765";
+        document.getElementsByClassName(
+            "lineUnderHeading" + position
+        )[0].style.borderBottom = "1px solid #9DD765";
+    } else {
+        object.src = "./pictures/failureIcon.svg";
+        document.getElementsByClassName(appClass)[0].style.border =
+            "1px solid #FFB47D";
+        document.getElementsByClassName(
+            "lineUnderHeading" + position
+        )[0].style.borderBottom = "1px solid #FFB47D";
+    }
+
+    ancestor[0].children[0].appendChild(object);
+}
+
+// добавляем крестик или галочку над областью результата
+
+function addMiniIcon(elem, status) {
+    // создаём мини-иконку
+    let objDiv = document.createElement("div");
+
+    // получаем ширину элемента, чтобы выровнять по горизонтали
+    let widthAdjacentElement = elem.getBoundingClientRect().width;
+
+    // получаем отступы элемента, для того же
+
+    let rightIndent = window
+        .getComputedStyle(elem, null)
+        .getPropertyValue("margin-right");
+
+    objDiv.className = "statusMiniIcon";
+
+    objDiv.style.width = widthAdjacentElement;
+    objDiv.style.position = "absolute";
+
+    if (elem.parentElement.parentElement.className === "content2") {
+        objDiv.style.marginTop = "-50px";
+        objDiv.style.marginLeft =
+            elem.offsetLeft + widthAdjacentElement / 2 - 7 + "px";
+    } else if (elem.parentElement.parentElement.className === "content6") {
+        objDiv.style.marginTop = "-50px";
+        objDiv.style.marginLeft =
+            elem.offsetLeft + widthAdjacentElement / 2 - 7 + "px";
+    } else {
+        objDiv.style.marginTop = "-63px";
+        objDiv.style.marginLeft =
+            elem.offsetLeft + widthAdjacentElement / 2 - 7 + "px";
+    }
+
+    if (
+        elem.parentElement.parentElement.parentElement.className === "content5"
+    ) {
+        objDiv.style.marginTop = "-25px";
+        objDiv.style.marginLeft =
+            elem.offsetLeft + widthAdjacentElement / 2 - 7 + "px";
+    }
+
+    if (elem.parentElement.parentElement.className === "content10") {
+        objDiv.style.marginTop = "-25px";
+    }
+
+    if (
+        elem.parentElement.parentElement.parentElement.className === "content13"
+    ) {
+        objDiv.style.marginTop = "-25px";
+    }
+
+    if (elem.parentElement.parentElement.className === "fourthRow11") {
+        objDiv.style.marginTop = "-20px";
+        objDiv.style.marginLeft =
+            elem.offsetLeft + widthAdjacentElement / 2 - 7 + "px";
+    } else if (
+        elem.parentElement.parentElement.parentElement.className === "content11"
+    ) {
+        objDiv.style.marginTop = "-25px";
+        objDiv.style.marginLeft =
+            elem.offsetLeft + widthAdjacentElement / 2 - 23 + "px";
+    }
+
+    if (elem.parentElement.parentElement.className === "fourthRow12") {
+        objDiv.style.marginTop = "-20px";
+        objDiv.style.marginLeft =
+            elem.offsetLeft + widthAdjacentElement / 2 - 7 + "px";
+    }
+
+    if (elem.parentElement.parentElement.className === "content14") {
+        objDiv.style.marginTop = "-55px";
+    }
+
+    if (
+        elem.parentElement.parentElement.parentElement.className === "content9"
+    ) {
+        objDiv.style.marginTop = "-25px";
+    }
+
+    if (elem.parentElement.parentElement.className === "content16") {
+        objDiv.style.marginTop = "-50px";
+    }
+
+    if (
+        elem.parentElement.parentElement.parentElement.className === "content18"
+    ) {
+        objDiv.style.marginTop = "-17px";
+    }
+
+    if (elem.parentElement.parentElement.className === "content19") {
+        objDiv.style.marginTop = "-43px";
+    }
+
+    if (
+        elem.parentElement.parentElement.parentElement.className === "content20"
+    ) {
+        objDiv.style.marginTop = "-55px";
+    }
+
+    if (
+        elem.parentElement.parentElement.parentElement.className === "content8"
+    ) {
+        objDiv.style.marginTop = "-23px";
+        objDiv.style.marginLeft =
+            elem.offsetLeft + widthAdjacentElement / 2 - 27 + "px";
+    }
+
+    if (
+        elem.parentElement.parentElement.parentElement.parentElement
+            .className === "content22"
+    ) {
+        objDiv.style.marginTop = "-23px";
+    }
+
+    objDiv.style.marginRight = rightIndent;
+    objDiv.style.paddingBottom = "10px";
+    objDiv.style.display = "flex";
+    objDiv.style.justifyContent = "center";
+    objDiv.style.alignItems = "center";
+
+    let obj = document.createElement("img");
+
+    if (status === "success") {
+        obj.src = "./pictures/successMiniIcon.svg";
+    } else {
+        obj.src = "./pictures/failureMiniIcon.svg";
+    }
+
+    objDiv.appendChild(obj);
+
+    // устанавливаем её в нужное место
+    elem.parentElement.insertBefore(objDiv, elem);
+}
+
+// делаем появление мини-иконок над областью проверки
+
+function createMiniIcon(property, element) {
+    if (property === "right") {
+        addMiniIcon(element, "success");
+    } else {
+        addMiniIcon(element, "failure");
+    }
+}
+
+function gettingDataFromFields(
+    countId,
+    correctNumbers,
+    numberQuestion,
+    number
+) {
+    for (let i = 0; i < countId; i++) {
+        if (i === 0) {
+            document.getElementById("firstNumber" + numberQuestion).onchange =
+                function (e) {
+                    if (e.target.value == correctNumbers[i]) {
+                        number.firstNumber = "right";
+                    } else {
+                        number.firstNumber = "wrong";
+                    }
+                };
+        }
+
+        if (i === 1) {
+            document.getElementById("secondNumber" + numberQuestion).onchange =
+                function (e) {
+                    if (e.target.value == correctNumbers[i]) {
+                        number.secondNumber = "right";
+                    } else {
+                        number.secondNumber = "wrong";
+                    }
+                };
+        }
+
+        if (i === 2) {
+            document.getElementById("thirdNumber" + numberQuestion).onchange =
+                function (e) {
+                    if (e.target.value == correctNumbers[i]) {
+                        number.thirdNumber = "right";
+                    } else {
+                        number.thirdNumber = "wrong";
+                    }
+                };
+        }
+
+        if (i === 3) {
+            document.getElementById("fourthNumber" + numberQuestion).onchange =
+                function (e) {
+                    if (e.target.value == correctNumbers[i]) {
+                        number.fourthNumber = "right";
+                    } else {
+                        number.fourthNumber = "wrong";
+                    }
+                };
+        }
+
+        if (i === 4) {
+            document.getElementById("fifthNumber" + numberQuestion).onchange =
+                function (e) {
+                    if (e.target.value == correctNumbers[i]) {
+                        number.fifthNumber = "right";
+                    } else {
+                        number.fifthNumber = "wrong";
+                    }
+                };
+        }
+
+        if (i === 5) {
+            document.getElementById("sixthNumber" + numberQuestion).onchange =
+                function (e) {
+                    if (e.target.value == correctNumbers[i]) {
+                        number.sixthNumber = "right";
+                    } else {
+                        number.sixthNumber = "wrong";
+                    }
+                };
+        }
+
+        if (i === 6) {
+            document.getElementById("seventhNumber" + numberQuestion).onchange =
+                function (e) {
+                    if (e.target.value == correctNumbers[i]) {
+                        number.seventhNumber = "right";
+                    } else {
+                        number.seventhNumber = "wrong";
+                    }
+                };
+        }
+
+        if (i === 7) {
+            document.getElementById("eighthNumber" + numberQuestion).onchange =
+                function (e) {
+                    if (e.target.value == correctNumbers[i]) {
+                        number.eighthNumber = "right";
+                    } else {
+                        number.eighthNumber = "wrong";
+                    }
+                };
+        }
+    }
+}
+
+function succerrorAndCreateMiniIcon(countId, numberQuestion, number) {
+    for (let i = 0; i < countId; i++) {
+        if (i === 0) {
+            succerror(
+                document.getElementById("firstNumber" + numberQuestion),
+                number.firstNumber === "wrong"
+            );
+
+            createMiniIcon(
+                number.firstNumber,
+                document.getElementById("firstNumber" + numberQuestion)
+            );
+        }
+
+        if (i === 1) {
+            succerror(
+                document.getElementById("secondNumber" + numberQuestion),
+                number.secondNumber === "wrong"
+            );
+
+            createMiniIcon(
+                number.secondNumber,
+                document.getElementById("secondNumber" + numberQuestion)
+            );
+        }
+
+        if (i === 2) {
+            succerror(
+                document.getElementById("thirdNumber" + numberQuestion),
+                number.thirdNumber === "wrong"
+            );
+
+            createMiniIcon(
+                number.thirdNumber,
+                document.getElementById("thirdNumber" + numberQuestion)
+            );
+        }
+
+        if (i === 3) {
+            succerror(
+                document.getElementById("fourthNumber" + numberQuestion),
+                number.fourthNumber === "wrong"
+            );
+
+            createMiniIcon(
+                number.fourthNumber,
+                document.getElementById("fourthNumber" + numberQuestion)
+            );
+        }
+
+        if (i === 4) {
+            succerror(
+                document.getElementById("fifthNumber" + numberQuestion),
+                number.fifthNumber === "wrong"
+            );
+
+            createMiniIcon(
+                number.fifthNumber,
+                document.getElementById("fifthNumber" + numberQuestion)
+            );
+        }
+
+        if (i === 5) {
+            succerror(
+                document.getElementById("sixthNumber" + numberQuestion),
+                number.sixthNumber === "wrong"
+            );
+
+            createMiniIcon(
+                number.sixthNumber,
+                document.getElementById("sixthNumber" + numberQuestion)
+            );
+        }
+
+        if (i === 6) {
+            succerror(
+                document.getElementById("seventhNumber" + numberQuestion),
+                number.seventhNumber === "wrong"
+            );
+
+            createMiniIcon(
+                number.seventhNumber,
+                document.getElementById("seventhNumber" + numberQuestion)
+            );
+        }
+
+        if (i === 7) {
+            succerror(
+                document.getElementById("eighthNumber" + numberQuestion),
+                number.eighthNumber === "wrong"
+            );
+
+            createMiniIcon(
+                number.eighthNumber,
+                document.getElementById("eighthNumber" + numberQuestion)
+            );
+        }
+    }
+}
+
+function highlightUnselectedBlocks(countId, numberQuestion, number) {
+    for (let i = 0; i < countId; i++) {
+        if (i === 0) {
+            if (number.firstNumber === "") {
+                document.getElementById(
+                    "firstNumber" + numberQuestion
+                ).style.border = "2px solid #FFB47D";
+            }
+        }
+
+        if (i === 1) {
+            if (number.secondNumber === "") {
+                document.getElementById(
+                    "secondNumber" + numberQuestion
+                ).style.border = "2px solid #FFB47D";
+            }
+        }
+
+        if (i === 2) {
+            if (number.thirdNumber === "") {
+                document.getElementById(
+                    "thirdNumber" + numberQuestion
+                ).style.border = "2px solid #FFB47D";
+            }
+        }
+
+        if (i === 3) {
+            if (number.fourthNumber === "") {
+                document.getElementById(
+                    "fourthNumber" + numberQuestion
+                ).style.border = "2px solid #FFB47D";
+            }
+        }
+
+        if (i === 4) {
+            if (number.fifthNumber === "") {
+                document.getElementById(
+                    "fifthNumber" + numberQuestion
+                ).style.border = "2px solid #FFB47D";
+            }
+        }
+
+        if (i === 5) {
+            if (number.sixthNumber === "") {
+                document.getElementById(
+                    "sixthNumber" + numberQuestion
+                ).style.border = "2px solid #FFB47D";
+            }
+        }
+
+        if (i === 6) {
+            if (number.seventhNumber === "") {
+                document.getElementById(
+                    "seventhNumber" + numberQuestion
+                ).style.border = "2px solid #FFB47D";
+            }
+        }
+
+        if (i === 7) {
+            if (number.eighthNumber === "") {
+                document.getElementById(
+                    "eighthNumber" + numberQuestion
+                ).style.border = "2px solid #FFB47D";
+            }
+        }
+    }
+}
+
+function highlightingUnfillededBlocks(countId, numberQuestion) {
+    let firstEmpty = document.getElementById("firstEmpty" + numberQuestion);
+    let secondEmpty = document.getElementById("secondEmpty" + numberQuestion);
+    let thirdEmpty = document.getElementById("thirdEmpty" + numberQuestion);
+    let fourthEmpty = document.getElementById("fourthEmpty" + numberQuestion);
+    let fifthEmpty = document.getElementById("fifthEmpty" + numberQuestion);
+    let sixthEmpty = document.getElementById("sixthEmpty" + numberQuestion);
+    let seventhEmpty = document.getElementById("seventhEmpty" + numberQuestion);
+    let eighthEmpty = document.getElementById("eighthEmpty" + numberQuestion);
+
+    for (let i = 0; i < countId; i++) {
+        if (i === 0) {
+            if (firstEmpty.textContent === "") {
+                firstEmpty.style.border = "2px solid #FFB47D";
+            }
+        }
+
+        if (i === 1) {
+            if (secondEmpty.textContent === "") {
+                secondEmpty.style.border = "2px solid #FFB47D";
+            }
+        }
+
+        if (i === 2) {
+            if (thirdEmpty.textContent === "") {
+                thirdEmpty.style.border = "2px solid #FFB47D";
+            }
+        }
+
+        if (i === 3) {
+            if (fourthEmpty.textContent === "") {
+                fourthEmpty.style.border = "2px solid #FFB47D";
+            }
+        }
+
+        if (i === 4) {
+            if (fifthEmpty.textContent === "") {
+                fifthEmpty.style.border = "2px solid #FFB47D";
+            }
+        }
+
+        if (i === 5) {
+            if (sixthEmpty.textContent === "") {
+                sixthEmpty.style.border = "2px solid #FFB47D";
+            }
+        }
+
+        if (i === 6) {
+            if (seventhEmpty.textContent === "") {
+                seventhEmpty.style.border = "2px solid #FFB47D";
+            }
+        }
+
+        if (i === 7) {
+            if (eighthEmpty.textContent === "") {
+                eighthEmpty.style.border = "2px solid #FFB47D";
+            }
+        }
+    }
+}
+
 // -------------------------------------------------------------- ROTATE RULER FOR 14 QUESTION -----------------------------------------------
 
 let ruler17question = document.getElementsByClassName("ruler17")[0];
@@ -1890,7 +2400,7 @@ function question10() {
 // 11 QUESTION
 
 let selectedButton11 = {
-    firstBtn11: "right",
+    firstBtn11: "",
     secondBtn11: "",
     thirdBtn11: "",
     fourthBtn11: "",
@@ -1973,10 +2483,10 @@ function question11() {
         // выносим общий статус к номеру вопроса
 
         if (
-            selectedButton11.firstBtn11 === "right" &&
-            selectedButton11.thirdBtn11 === "right" &&
-            selectedButton11.fifthBtn11 === "right" &&
-            selectedButton11.seventhBtn11 === "right"
+            selectedButton11.secondBtn11 === "right" &&
+            selectedButton11.fourthBtn11 === "right" &&
+            selectedButton11.sixthBtn11 === "right" &&
+            selectedButton11.eighthBtn11 === "right"
         ) {
             addImage(
                 "success",
@@ -1998,8 +2508,10 @@ function question11() {
         document
             .getElementById("firstBtn11")
             .classList.remove("selectedCircle");
+        document.getElementsByClassName("content11")[0].style.padding = "10px";
+
         document.getElementsByClassName("content11")[0].style.border =
-            "1px solid #FFB47D";
+            "2px solid #FFB47D";
     }
 }
 
