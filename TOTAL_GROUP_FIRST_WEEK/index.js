@@ -3274,11 +3274,20 @@ let numbers20 = {
     secondNumber: "",
 };
 
-gettingDataFromFields(2, ["12:10", "08:55"], 20, numbers20);
+gettingDataFromFields(2, ["09 : 30", "12 : 30"], 20, numbers20);
 
 function question20() {
     if (numbers20.firstNumber != "" && numbers20.secondNumber != "") {
-        succerrorAndCreateMiniIcon(2, 20, numbers20);
+        // succerrorAndCreateMiniIcon(2, 20, numbers20);
+        succerror(
+            document.getElementById("firstNumber20"),
+            numbers20.firstNumber === "wrong"
+        );
+
+        succerror(
+            document.getElementById("secondNumber20"),
+            numbers20.secondNumber === "wrong"
+        );
 
         // выносим общий статус к номеру вопроса
 

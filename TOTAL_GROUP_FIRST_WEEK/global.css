@@ -188,7 +188,8 @@ body {
 .contentCorrectAnswer16,
 .contentCorrectAnswer17,
 .contentCorrectAnswer18,
-.contentCorrectAnswer19 {
+.contentCorrectAnswer19,
+.contentCorrectAnswer20 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -231,6 +232,10 @@ body {
 .contentCorrectAnswer14,
 .contentCorrectAnswer19 {
     top: 120px;
+}
+
+.contentCorrectAnswer20 {
+    top: 110px;
 }
 
 .contentCorrectAnswer18 {
