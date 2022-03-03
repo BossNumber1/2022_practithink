@@ -47,113 +47,63 @@ function addMiniIcon(elem, status) {
     let widthAdjacentElement = elem.getBoundingClientRect().width;
 
     // получаем отступы элемента, для того же
+    let leftIndent = window
+        .getComputedStyle(elem, null)
+        .getPropertyValue("margin-left");
 
     let rightIndent = window
         .getComputedStyle(elem, null)
         .getPropertyValue("margin-right");
 
-    objDiv.className = "statusMiniIcon";
-
+    // устанавливаем её нашему блоку
     objDiv.style.width = widthAdjacentElement;
-    objDiv.style.position = "absolute";
 
     if (elem.parentElement.parentElement.className === "content2") {
-        objDiv.style.marginTop = "-50px";
-        objDiv.style.marginLeft =
-            elem.offsetLeft + widthAdjacentElement / 2 - 7 + "px";
-    } else if (elem.parentElement.parentElement.className === "content6") {
-        objDiv.style.marginTop = "-50px";
-        objDiv.style.marginLeft =
-            elem.offsetLeft + widthAdjacentElement / 2 - 7 + "px";
+        objDiv.style.marginLeft = "85px";
+        objDiv.style.position = "absolute";
+
+        let parent = elem.parentElement;
+
+        parent.style.width = "150px";
+        parent.style.display = "flex";
+        parent.style.alignItems = "center";
+        parent.style.justifyContent = "space-between";
+
+        parent.style.marginRight = "15px";
+
+        document.getElementsByClassName("content2")[0].style.width = "268px";
+    } else if (elem.parentElement.parentElement.className === "content8") {
+        if (elem.parentElement.className === "rightExpression8") {
+            objDiv.style.marginLeft = "80px";
+        } else {
+            objDiv.style.marginLeft = "55px";
+        }
+
+        objDiv.style.position = "absolute";
+
+        let parent = elem.parentElement;
+
+        parent.style.width = "150px";
+        parent.style.alignItems = "center";
+        parent.style.justifyContent = "space-between";
+
+        parent.style.marginRight = "15px";
+
+        document.getElementsByClassName("content8")[0].style.width = "458px";
     } else {
-        objDiv.style.marginTop = "-63px";
-        objDiv.style.marginLeft =
-            elem.offsetLeft + widthAdjacentElement / 2 - 7 + "px";
-    }
-
-    if (
-        elem.parentElement.parentElement.parentElement.className === "content5"
-    ) {
-        objDiv.style.marginTop = "-25px";
-        objDiv.style.marginLeft =
-            elem.offsetLeft + widthAdjacentElement / 2 - 7 + "px";
-    }
-
-    if (elem.parentElement.parentElement.className === "content10") {
-        objDiv.style.marginTop = "-25px";
-    }
-
-    if (
-        elem.parentElement.parentElement.parentElement.className === "content13"
-    ) {
-        objDiv.style.marginTop = "-25px";
-    }
-
-    if (elem.parentElement.parentElement.className === "fourthRow11") {
-        objDiv.style.marginTop = "-20px";
-        objDiv.style.marginLeft =
-            elem.offsetLeft + widthAdjacentElement / 2 - 7 + "px";
-    } else if (
-        elem.parentElement.parentElement.parentElement.className === "content11"
-    ) {
-        objDiv.style.marginTop = "-25px";
-        objDiv.style.marginLeft =
-            elem.offsetLeft + widthAdjacentElement / 2 - 23 + "px";
-    }
-
-    if (elem.parentElement.parentElement.className === "fourthRow12") {
-        objDiv.style.marginTop = "-20px";
-        objDiv.style.marginLeft =
-            elem.offsetLeft + widthAdjacentElement / 2 - 7 + "px";
-    }
-
-    if (elem.parentElement.parentElement.className === "content14") {
-        objDiv.style.marginTop = "-55px";
-    }
-
-    if (
-        elem.parentElement.parentElement.parentElement.className === "content9"
-    ) {
-        objDiv.style.marginTop = "-25px";
-    }
-
-    if (elem.parentElement.parentElement.className === "content16") {
-        objDiv.style.marginTop = "-50px";
-    }
-
-    if (
-        elem.parentElement.parentElement.parentElement.className === "content18"
-    ) {
-        objDiv.style.marginTop = "-17px";
-    }
-
-    if (elem.parentElement.parentElement.className === "content19") {
-        objDiv.style.marginTop = "-43px";
-    }
-
-    if (
-        elem.parentElement.parentElement.parentElement.className === "content20"
-    ) {
-        objDiv.style.marginTop = "-55px";
-    }
-
-    if (
-        elem.parentElement.parentElement.parentElement.className === "content8"
-    ) {
-        objDiv.style.marginTop = "-23px";
-        objDiv.style.marginLeft =
-            elem.offsetLeft + widthAdjacentElement / 2 - 27 + "px";
-    }
-
-    if (
-        elem.parentElement.parentElement.parentElement.parentElement
-            .className === "content22"
-    ) {
-        objDiv.style.marginTop = "-23px";
+        objDiv.style.marginLeft = leftIndent;
     }
 
     objDiv.style.marginRight = rightIndent;
-    objDiv.style.paddingBottom = "10px";
+
+    if (
+        elem.parentElement.parentElement.parentElement.className === "content10"
+    ) {
+        objDiv.style.paddingBottom = "5px";
+    } else {
+        objDiv.style.paddingBottom = "10px";
+    }
+
     objDiv.style.display = "flex";
     objDiv.style.justifyContent = "center";
     objDiv.style.alignItems = "center";
@@ -168,8 +118,17 @@ function addMiniIcon(elem, status) {
 
     objDiv.appendChild(obj);
 
+    if (elem.parentElement.parentElement.className === "content2") {
+        objDiv.style.marginTop = "-45px";
+    } else if (elem.parentElement.parentElement.className === "content8") {
+        objDiv.style.marginTop = "-55px";
+    } else {
+        objDiv.style.marginTop = "-23px";
+    }
+
     // устанавливаем её в нужное место
-    elem.parentElement.insertBefore(objDiv, elem);
+    let elementParent = elem.parentElement;
+    elementParent.insertBefore(objDiv, elem);
 }
 
 // делаем появление мини-иконок над областью проверки
@@ -1148,150 +1107,6 @@ function addCorrectAnswerQuestion24() {
 }
 
 // ---------------------------------------------------------- CHECK IMPLEMENTATION --------------------------------------------------------
-
-// -------------------------------------------------------------common function---------------------------------------------------
-
-function succerror(elem, checkElement) {
-    if (checkElement) {
-        elem.style.backgroundColor = "#ED7777";
-        elem.style.color = "white";
-        elem.style.border = "1px solid #ED7777";
-    } else {
-        elem.style.backgroundColor = "#48B736";
-        elem.style.color = "white";
-        elem.style.border = "1px solid #48B736";
-    }
-}
-
-// добавляем иконку статуса после номера вопроса
-
-function addImage(status, ancestor, appClass, position) {
-    let object = document.createElement("img");
-    object.style.marginLeft = "10px";
-
-    if (status === "success") {
-        object.src = "./pictures/successIcon.svg";
-        document.getElementsByClassName(appClass)[0].style.border =
-            "1px solid #9DD765";
-        document.getElementsByClassName(
-            "lineUnderHeading" + position
-        )[0].style.borderBottom = "1px solid #9DD765";
-    } else {
-        object.src = "./pictures/failureIcon.svg";
-        document.getElementsByClassName(appClass)[0].style.border =
-            "1px solid #FFB47D";
-        document.getElementsByClassName(
-            "lineUnderHeading" + position
-        )[0].style.borderBottom = "1px solid #FFB47D";
-    }
-
-    ancestor[0].children[0].appendChild(object);
-}
-
-// добавляем крестик или галочку над областью результата
-
-function addMiniIcon(elem, status) {
-    // создаём мини-иконку
-    let objDiv = document.createElement("div");
-
-    // получаем ширину элемента, чтобы выровнять по горизонтали
-    let widthAdjacentElement = elem.getBoundingClientRect().width;
-
-    // получаем отступы элемента, для того же
-    let leftIndent = window
-        .getComputedStyle(elem, null)
-        .getPropertyValue("margin-left");
-
-    let rightIndent = window
-        .getComputedStyle(elem, null)
-        .getPropertyValue("margin-right");
-
-    // устанавливаем её нашему блоку
-    objDiv.style.width = widthAdjacentElement;
-
-    if (elem.parentElement.parentElement.className === "content2") {
-        objDiv.style.marginLeft = "85px";
-        objDiv.style.position = "absolute";
-
-        let parent = elem.parentElement;
-
-        parent.style.width = "150px";
-        parent.style.display = "flex";
-        parent.style.alignItems = "center";
-        parent.style.justifyContent = "space-between";
-
-        parent.style.marginRight = "15px";
-
-        document.getElementsByClassName("content2")[0].style.width = "268px";
-    } else if (elem.parentElement.parentElement.className === "content8") {
-        if (elem.parentElement.className === "rightExpression8") {
-            objDiv.style.marginLeft = "80px";
-        } else {
-            objDiv.style.marginLeft = "55px";
-        }
-
-        objDiv.style.position = "absolute";
-
-        let parent = elem.parentElement;
-
-        parent.style.width = "150px";
-        parent.style.alignItems = "center";
-        parent.style.justifyContent = "space-between";
-
-        parent.style.marginRight = "15px";
-
-        document.getElementsByClassName("content8")[0].style.width = "458px";
-    } else {
-        objDiv.style.marginLeft = leftIndent;
-    }
-
-    objDiv.style.marginRight = rightIndent;
-
-    if (
-        elem.parentElement.parentElement.parentElement.className === "content10"
-    ) {
-        objDiv.style.paddingBottom = "5px";
-    } else {
-        objDiv.style.paddingBottom = "10px";
-    }
-
-    objDiv.style.display = "flex";
-    objDiv.style.justifyContent = "center";
-    objDiv.style.alignItems = "center";
-
-    let obj = document.createElement("img");
-
-    if (status === "success") {
-        obj.src = "./pictures/successMiniIcon.svg";
-    } else {
-        obj.src = "./pictures/failureMiniIcon.svg";
-    }
-
-    objDiv.appendChild(obj);
-
-    if (elem.parentElement.parentElement.className === "content2") {
-        objDiv.style.marginTop = "-45px";
-    } else if (elem.parentElement.parentElement.className === "content8") {
-        objDiv.style.marginTop = "-55px";
-    } else {
-        objDiv.style.marginTop = "-23px";
-    }
-
-    // устанавливаем её в нужное место
-    let elementParent = elem.parentElement;
-    elementParent.insertBefore(objDiv, elem);
-}
-
-// делаем появление мини-иконок над областью проверки
-
-function createMiniIcon(property, element) {
-    if (property === "right") {
-        addMiniIcon(element, "success");
-    } else {
-        addMiniIcon(element, "failure");
-    }
-}
-// ----------------------------------------------------------------------------------------------------------------------------
 
 // 1 QUESTION
 
