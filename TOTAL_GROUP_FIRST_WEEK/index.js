@@ -904,7 +904,7 @@ function addCorrectAnswerQuestion1() {
 // 2 QUESTION
 
 function addCorrectAnswerQuestion2() {
-    document.getElementsByClassName("app2")[0].style.height = "400px";
+    document.getElementsByClassName("app2")[0].style.height = "500px";
     addCorrectAnswer("correctAnswer2", "2que", "app2", "contentCorrectAnswer");
 }
 
@@ -1409,7 +1409,7 @@ let numbers2 = {
 };
 
 document.getElementById("firstNumber2").onchange = function (e) {
-    if (e.target.value == 45) {
+    if (e.target.value == 18) {
         numbers2.firstNumber = "right";
     } else {
         numbers2.firstNumber = "wrong";

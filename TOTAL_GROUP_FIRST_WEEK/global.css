@@ -103,12 +103,15 @@ body {
 }
 
 .correctAnswer1,
-.correctAnswer2,
 .correctAnswer8,
 .correctAnswer10,
 .correctAnswer14,
 .correctAnswer15 {
     top: 160px;
+}
+
+.correctAnswer2 {
+    top: 240px;
 }
 
 .correctAnswer4,
