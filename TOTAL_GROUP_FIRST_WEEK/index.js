@@ -2410,14 +2410,18 @@ let selectedButton11 = {
     eighthBtn11: "",
 };
 
+let theFirstButtonWasClicked = 0;
+
 document.getElementById("firstBtn11").onclick = function () {
     document.getElementById("firstBtn11").classList.toggle("selectedCircle");
 
-    // if (selectedButton11.firstBtn11 === "") {
-    selectedButton11.firstBtn11 = "wrong";
-    // } else {
-    //     selectedButton11.firstBtn11 = "wrong";
-    // }
+    theFirstButtonWasClicked++;
+
+    if (selectedButton11.firstBtn11 === "") {
+        selectedButton11.firstBtn11 = "wrong";
+    } else {
+        selectedButton11.firstBtn11 = "wrong";
+    }
 };
 
 document.getElementById("secondBtn11").onclick = function () {
@@ -2477,33 +2481,34 @@ function question11() {
 
     if (isTheArrayEmpty > 0) {
         namesSelectedButtons.map((el, index) => {
-            if (index > 0) {
-                if (selectedButtons[index] === "wrong") {
-                    document.getElementById(el).style.border =
-                        "2px solid #ED7777";
-                } else {
-                    document.getElementById(el).style.border =
-                        "2px solid #48B736";
-                }
+            if (theFirstButtonWasClicked > 0 && index === 0) {
+                document.getElementById("firstBtn11").style.border = "none";
             } else {
-                if (selectedButtons[index] === "wrong") {
-                    document.getElementById(el).style.border =
-                        "2px solid #ED7777";
-                } else {
-                    document.getElementById(el).style.border =
-                        "2px solid #48B736";
-                }
+                document.getElementById("firstBtn11").style.border =
+                    "2px solid #ED7777";
+            }
+
+            if (selectedButtons[index] === "wrong") {
+                document.getElementById(el).style.border = "2px solid #ED7777";
+            } else {
+                document.getElementById(el).style.border = "2px solid #48B736";
             }
         });
 
         // выносим общий статус к номеру вопроса
 
         if (
+            theFirstButtonWasClicked > 0 &&
             selectedButton11.secondBtn11 === "right" &&
             selectedButton11.fourthBtn11 === "right" &&
             selectedButton11.sixthBtn11 === "right" &&
-            selectedButton11.eighthBtn11 === "right"
+            selectedButton11.eighthBtn11 === "right" &&
+            selectedButton11.firstBtn11 !== "right" &&
+            selectedButton11.thirdBtn11 !== "right" &&
+            selectedButton11.fifthBtn11 !== "right" &&
+            selectedButton11.seventhBtn11 !== "right"
         ) {
+            document.getElementById("firstBtn11").style.border = "none";
             addImage(
                 "success",
                 document.getElementsByClassName("question11"),
