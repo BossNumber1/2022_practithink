@@ -124,10 +124,13 @@ body {
 .correctAnswer4,
 .correctAnswer6,
 .correctAnswer9,
-.correctAnswer11,
 .correctAnswer12,
 .correctAnswer13 {
     top: 180px;
+}
+
+.correctAnswer11 {
+    top: 200px;
 }
 
 .correctAnswer7,
@@ -173,15 +176,16 @@ body {
 
 .contentCorrectAnswer,
 .contentCorrectAnswer3,
-.contentCorrectAnswer9,
-.contentCorrectAnswer10,
 .contentCorrectAnswer6,
 .contentCorrectAnswer7,
-.contentCorrectAnswer16,
+.contentCorrectAnswer9,
+.contentCorrectAnswer10,
+.contentCorrectAnswer11,
 .contentCorrectAnswer12,
 .contentCorrectAnswer13,
 .contentCorrectAnswer14,
 .contentCorrectAnswer15,
+.contentCorrectAnswer16,
 .contentCorrectAnswer17,
 .contentCorrectAnswer18,
 .contentCorrectAnswer19 {
@@ -209,6 +213,10 @@ body {
 .contentCorrectAnswer12,
 .contentCorrectAnswer13 {
     top: 80px;
+}
+
+.contentCorrectAnswer11 {
+    top: 50px;
 }
 
 .contentCorrectAnswer16 {
