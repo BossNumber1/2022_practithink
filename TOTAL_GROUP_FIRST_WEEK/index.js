@@ -17,6 +17,7 @@ function succerror(elem, checkElement) {
 function addImage(status, ancestor, appClass, position) {
     let object = document.createElement("img");
     object.style.marginLeft = "10px";
+    object.classList.add("statusIcon");
 
     if (status === "success") {
         object.src = "./pictures/successIcon.svg";
@@ -42,6 +43,7 @@ function addImage(status, ancestor, appClass, position) {
 function addMiniIcon(elem, status) {
     // создаём мини-иконку
     let objDiv = document.createElement("div");
+    objDiv.classList.add("miniIcon");
 
     // получаем ширину элемента, чтобы выровнять по горизонтали
     let widthAdjacentElement = elem.getBoundingClientRect().width;
@@ -3595,11 +3597,24 @@ document.getElementById("submit").onclick = function () {
 };
 
 document.getElementById("clear").onclick = function () {
+    debugger;
+
     let allInputs = document.querySelectorAll("input");
+    let allStatusIcons = document.getElementsByClassName("statusIcon");
+    let allMiniIcons = document.getElementsByClassName("miniIcon");
 
     for (let i = 0; i < allInputs.length; i++) {
         allInputs[i].style.border = "1px solid";
-        // allInputs[i].value = "";
+    }
+
+    for (let i = 0; i < allStatusIcons.length; i++) {
+        allStatusIcons[i].remove();
+    }
+
+    for (let i = 0; i < allMiniIcons.length; i) {
+        if (allMiniIcons.length) {
+            allMiniIcons[i].remove();
+        }
     }
 
     document.getElementById("firstBtn6").style.border = "1px solid";
@@ -3652,5 +3667,59 @@ document.getElementById("clear").onclick = function () {
     document.getElementById("secondBtn24").style.border = "1px solid";
     document.getElementById("thirdBtn24").style.border = "1px solid";
 
-    // window.location.reload();
+    // 1 QUESTION
+
+    function check1question() {
+        let leftNumber1 = document.getElementById("leftNumber");
+        let centerNumber1 = document.getElementById("centerNumber");
+        let rightNumber1 = document.getElementById("rightNumber");
+
+        leftNumber1.value = "";
+        centerNumber1.value = "";
+        rightNumber1.value = "";
+
+        document.getElementsByClassName("correctAnswer1")[0].remove();
+        document.getElementsByClassName("app1")[0].style.height = "532px";
+        document.getElementsByClassName("app1")[0].style.border =
+            "0.5px solid #a8a8a8";
+        document.getElementsByClassName(
+            "lineUnderHeading1"
+        )[0].style.borderBottom = "0.5px solid #a8a8a8";
+
+        leftNumber1.style.backgroundColor = "white";
+        leftNumber1.style.color = "black";
+        leftNumber1.style.border = "1px solid";
+
+        centerNumber1.style.backgroundColor = "white";
+        centerNumber1.style.color = "black";
+        centerNumber1.style.border = "1px solid";
+
+        rightNumber1.style.backgroundColor = "white";
+        rightNumber1.style.color = "black";
+        rightNumber1.style.border = "1px solid";
+    }
+
+    document.getElementsByClassName("correctAnswer1")[0] && check1question();
+
+    // 2 QUESTION
+
+    function check2question() {
+        let firstNumber2 = document.getElementById("firstNumber2");
+
+        firstNumber2.value = "";
+
+        document.getElementsByClassName("correctAnswer2")[0].remove();
+        document.getElementsByClassName("app2")[0].style.height = "307px";
+        document.getElementsByClassName("app2")[0].style.border =
+            "0.5px solid #a8a8a8";
+        document.getElementsByClassName(
+            "lineUnderHeading2"
+        )[0].style.borderBottom = "0.5px solid #a8a8a8";
+
+        firstNumber2.style.backgroundColor = "white";
+        firstNumber2.style.color = "black";
+        firstNumber2.style.border = "1px solid";
+    }
+
+    document.getElementsByClassName("correctAnswer2")[0] && check2question();
 };
