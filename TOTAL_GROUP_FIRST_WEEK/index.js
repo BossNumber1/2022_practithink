@@ -4063,6 +4063,36 @@ document.getElementById("clear").onclick = function () {
 
     document.getElementsByClassName("correctAnswer16")[0] && check16question();
 
+    // 17 QUESTION
+
+    function check17question() {
+        let firstBtn17 = document.getElementById("firstBtn17");
+        let secondBtn17 = document.getElementById("secondBtn17");
+        let thirdBtn17 = document.getElementById("thirdBtn17");
+
+        document.getElementsByClassName("correctAnswer17")[0].remove();
+        document.getElementsByClassName("app17")[0].style.height = "489px";
+        document.getElementsByClassName("app17")[0].style.border =
+            "0.5px solid #a8a8a8";
+        document.getElementsByClassName(
+            "lineUnderHeading17"
+        )[0].style.borderBottom = "0.5px solid #a8a8a8";
+
+        firstBtn17.style.backgroundColor = "white";
+        firstBtn17.style.color = "black";
+        firstBtn17.style.border = "1px solid";
+
+        secondBtn17.style.backgroundColor = "white";
+        secondBtn17.style.color = "black";
+        secondBtn17.style.border = "1px solid";
+
+        thirdBtn17.style.backgroundColor = "white";
+        thirdBtn17.style.color = "black";
+        thirdBtn17.style.border = "1px solid";
+    }
+
+    document.getElementsByClassName("correctAnswer17")[0] && check17question();
+
     // 20 QUESTION
 
     function check20question() {
