@@ -4093,6 +4093,30 @@ document.getElementById("clear").onclick = function () {
 
     document.getElementsByClassName("correctAnswer17")[0] && check17question();
 
+    // 19 QUESTION
+
+    function check19question() {
+        let firstFigure19 = document.getElementById("firstFigure19");
+        let secondFigure19 = document.getElementById("secondFigure19");
+        let thirdFigure19 = document.getElementById("thirdFigure19");
+        let fourthFigure19 = document.getElementById("fourthFigure19");
+
+        document.getElementsByClassName("correctAnswer19")[0].remove();
+        document.getElementsByClassName("app19")[0].style.height = "457px";
+        document.getElementsByClassName("app19")[0].style.border =
+            "0.5px solid #a8a8a8";
+        document.getElementsByClassName(
+            "lineUnderHeading19"
+        )[0].style.borderBottom = "0.5px solid #a8a8a8";
+
+        firstFigure19.style.boxShadow = "none";
+        secondFigure19.style.boxShadow = "none";
+        thirdFigure19.style.boxShadow = "none";
+        fourthFigure19.style.boxShadow = "none";
+    }
+
+    document.getElementsByClassName("correctAnswer19")[0] && check19question();
+
     // 20 QUESTION
 
     function check20question() {
