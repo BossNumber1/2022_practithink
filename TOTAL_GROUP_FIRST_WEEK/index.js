@@ -3900,8 +3900,8 @@ document.getElementById("clear").onclick = function () {
     // 15 QUESTION
 
     function check15question() {
-        let firstNumber15 = document.getElementById("firstNumber13");
-        let secondNumber15 = document.getElementById("secondNumber13");
+        let firstNumber15 = document.getElementById("firstNumber15");
+        let secondNumber15 = document.getElementById("secondNumber15");
 
         firstNumber15.value = "";
         secondNumber15.value = "";
@@ -3924,6 +3924,27 @@ document.getElementById("clear").onclick = function () {
     }
 
     document.getElementsByClassName("correctAnswer15")[0] && check15question();
+
+    // 16 QUESTION
+
+    function check16question() {
+        let firstNumber16 = document.getElementById("firstNumber16");
+        firstNumber16.value = "";
+
+        document.getElementsByClassName("correctAnswer16")[0].remove();
+        document.getElementsByClassName("app16")[0].style.height = "283px";
+        document.getElementsByClassName("app16")[0].style.border =
+            "0.5px solid #a8a8a8";
+        document.getElementsByClassName(
+            "lineUnderHeading16"
+        )[0].style.borderBottom = "0.5px solid #a8a8a8";
+
+        firstNumber16.style.backgroundColor = "white";
+        firstNumber16.style.color = "black";
+        firstNumber16.style.border = "1px solid";
+    }
+
+    document.getElementsByClassName("correctAnswer16")[0] && check16question();
 
     // common
 
