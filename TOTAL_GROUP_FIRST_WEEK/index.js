@@ -4203,6 +4203,36 @@ document.getElementById("clear").onclick = function () {
 
     document.getElementsByClassName("correctAnswer23")[0] && check23question();
 
+    // 24 QUESTION
+
+    function check24question() {
+        let firstBtn24 = document.getElementById("firstBtn24");
+        let secondBtn24 = document.getElementById("secondBtn24");
+        let thirdBtn24 = document.getElementById("thirdBtn24");
+
+        document.getElementsByClassName("correctAnswer24")[0].remove();
+        document.getElementsByClassName("app24")[0].style.height = "510px";
+        document.getElementsByClassName("app24")[0].style.border =
+            "0.5px solid #a8a8a8";
+        document.getElementsByClassName(
+            "lineUnderHeading24"
+        )[0].style.borderBottom = "0.5px solid #a8a8a8";
+
+        firstBtn24.style.backgroundColor = "white";
+        firstBtn24.style.color = "black";
+        firstBtn24.style.border = "1px solid";
+
+        secondBtn24.style.backgroundColor = "white";
+        secondBtn24.style.color = "black";
+        secondBtn24.style.border = "1px solid";
+
+        thirdBtn24.style.backgroundColor = "white";
+        thirdBtn24.style.color = "black";
+        thirdBtn24.style.border = "1px solid";
+    }
+
+    document.getElementsByClassName("correctAnswer24")[0] && check24question();
+
     // common
 
     // function check1question() {
