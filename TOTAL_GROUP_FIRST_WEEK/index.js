@@ -4179,6 +4179,30 @@ document.getElementById("clear").onclick = function () {
 
     document.getElementsByClassName("correctAnswer21")[0] && check21question();
 
+    // 23 QUESTION
+
+    function check23question() {
+        let firstFigure23 = document.getElementById("firstFigure23");
+        let secondFigure23 = document.getElementById("secondFigure23");
+        let thirdFigure23 = document.getElementById("thirdFigure23");
+        let fourthFigure23 = document.getElementById("fourthFigure23");
+
+        document.getElementsByClassName("correctAnswer23")[0].remove();
+        document.getElementsByClassName("app23")[0].style.height = "457px";
+        document.getElementsByClassName("app23")[0].style.border =
+            "0.5px solid #a8a8a8";
+        document.getElementsByClassName(
+            "lineUnderHeading23"
+        )[0].style.borderBottom = "0.5px solid #a8a8a8";
+
+        firstFigure23.style.boxShadow = "none";
+        secondFigure23.style.boxShadow = "none";
+        thirdFigure23.style.boxShadow = "none";
+        fourthFigure23.style.boxShadow = "none";
+    }
+
+    document.getElementsByClassName("correctAnswer23")[0] && check23question();
+
     // common
 
     // function check1question() {
