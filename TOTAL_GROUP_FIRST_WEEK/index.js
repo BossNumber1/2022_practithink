@@ -3897,6 +3897,34 @@ document.getElementById("clear").onclick = function () {
 
     document.getElementsByClassName("correctAnswer13")[0] && check13question();
 
+    // 15 QUESTION
+
+    function check15question() {
+        let firstNumber15 = document.getElementById("firstNumber13");
+        let secondNumber15 = document.getElementById("secondNumber13");
+
+        firstNumber15.value = "";
+        secondNumber15.value = "";
+
+        document.getElementsByClassName("correctAnswer15")[0].remove();
+        document.getElementsByClassName("app15")[0].style.height = "283px";
+        document.getElementsByClassName("app15")[0].style.border =
+            "0.5px solid #a8a8a8";
+        document.getElementsByClassName(
+            "lineUnderHeading15"
+        )[0].style.borderBottom = "0.5px solid #a8a8a8";
+
+        firstNumber15.style.backgroundColor = "white";
+        firstNumber15.style.color = "black";
+        firstNumber15.style.border = "1px solid";
+
+        secondNumber15.style.backgroundColor = "white";
+        secondNumber15.style.color = "black";
+        secondNumber15.style.border = "1px solid";
+    }
+
+    document.getElementsByClassName("correctAnswer15")[0] && check15question();
+
     // common
 
     // function check1question() {
