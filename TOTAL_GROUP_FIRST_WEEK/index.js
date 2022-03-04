@@ -3788,4 +3788,84 @@ document.getElementById("clear").onclick = function () {
     }
 
     document.getElementsByClassName("correctAnswer4")[0] && check4question();
+
+    // 5 QUESTION
+
+    function check5question() {
+        let firstNumber5 = document.getElementById("firstNumber5");
+        let secondNumber5 = document.getElementById("secondNumber5");
+        let thirdNumber5 = document.getElementById("thirdNumber5");
+
+        firstNumber5.value = "";
+        secondNumber5.value = "";
+        thirdNumber5.value = "";
+
+        document.getElementsByClassName("correctAnswer5")[0].remove();
+        document.getElementsByClassName("app5")[0].style.height = "443px";
+        document.getElementsByClassName("app5")[0].style.border =
+            "0.5px solid #a8a8a8";
+        document.getElementsByClassName(
+            "lineUnderHeading5"
+        )[0].style.borderBottom = "0.5px solid #a8a8a8";
+
+        firstNumber5.style.backgroundColor = "white";
+        firstNumber5.style.color = "black";
+        firstNumber5.style.border = "1px solid";
+
+        secondNumber5.style.backgroundColor = "white";
+        secondNumber5.style.color = "black";
+        secondNumber5.style.border = "1px solid";
+
+        thirdNumber5.style.backgroundColor = "white";
+        thirdNumber5.style.color = "black";
+        thirdNumber5.style.border = "1px solid";
+    }
+
+    document.getElementsByClassName("correctAnswer5")[0] && check5question();
+
+    // common
+
+    // function check1question() {
+    //     let leftNumber1 = document.getElementById("leftNumber");
+    //     let centerNumber1 = document.getElementById("centerNumber");
+    //     let rightNumber1 = document.getElementById("rightNumber");
+
+    //     leftNumber1.value = "";
+    //     centerNumber1.value = "";
+    //     rightNumber1.value = "";
+
+    //     document.getElementsByClassName("correctAnswer1")[0].remove();
+    //     document.getElementsByClassName("app1")[0].style.height = "532px";
+    //     document.getElementsByClassName("app1")[0].style.border =
+    //         "0.5px solid #a8a8a8";
+    //     document.getElementsByClassName(
+    //         "lineUnderHeading1"
+    //     )[0].style.borderBottom = "0.5px solid #a8a8a8";
+
+    //     leftNumber1.style.backgroundColor = "white";
+    //     leftNumber1.style.color = "black";
+    //     leftNumber1.style.border = "1px solid";
+
+    //     centerNumber1.style.backgroundColor = "white";
+    //     centerNumber1.style.color = "black";
+    //     centerNumber1.style.border = "1px solid";
+
+    //     rightNumber1.style.backgroundColor = "white";
+    //     rightNumber1.style.color = "black";
+    //     rightNumber1.style.border = "1px solid";
+    // }
+
+    // function commonClear(numberInput, numberClass, countInputs) {
+    //     for (let i = 0; i < countInputs; i++) {
+    //         if (numberClass === "ll") {
+    //             numberInput.style.backgroundColor = "white";
+    //             numberInput.style.color = "black";
+    //             numberInput.style.border = "1px solid";
+    //         }
+    //     }
+    // }
+
+    // leftNumber1, centerNumber1, rightNumber1;
+
+    // commonClear([leftNumber1, centerNumber1, rightNumber1], 1, 3);
 };
