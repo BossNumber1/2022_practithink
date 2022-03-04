@@ -3865,6 +3865,46 @@ document.getElementById("clear").onclick = function () {
 
     document.getElementsByClassName("correctAnswer6")[0] && check6question();
 
+    // 7 QUESTION
+
+    function check7question() {
+        let firstBtn7 = document.getElementById("firstBtn7");
+        let secondBtn7 = document.getElementById("secondBtn7");
+        let thirdBtn7 = document.getElementById("thirdBtn7");
+        let fourthBtn7 = document.getElementById("fourthBtn7");
+        let fifthBtn7 = document.getElementById("fifthBtn7");
+
+        document.getElementsByClassName("correctAnswer7")[0].remove();
+        document.getElementsByClassName("app7")[0].style.height = "331px";
+        document.getElementsByClassName("app7")[0].style.border =
+            "0.5px solid #a8a8a8";
+        document.getElementsByClassName(
+            "lineUnderHeading7"
+        )[0].style.borderBottom = "0.5px solid #a8a8a8";
+
+        firstBtn7.style.backgroundColor = "white";
+        firstBtn7.style.color = "black";
+        firstBtn7.style.border = "1px solid";
+
+        secondBtn7.style.backgroundColor = "white";
+        secondBtn7.style.color = "black";
+        secondBtn7.style.border = "1px solid";
+
+        thirdBtn7.style.backgroundColor = "white";
+        thirdBtn7.style.color = "black";
+        thirdBtn7.style.border = "1px solid";
+
+        fourthBtn7.style.backgroundColor = "white";
+        fourthBtn7.style.color = "black";
+        fourthBtn7.style.border = "1px solid";
+
+        fifthBtn7.style.backgroundColor = "white";
+        fifthBtn7.style.color = "black";
+        fifthBtn7.style.border = "1px solid";
+    }
+
+    document.getElementsByClassName("correctAnswer7")[0] && check7question();
+
     // 10 QUESTION
 
     function check10question() {
