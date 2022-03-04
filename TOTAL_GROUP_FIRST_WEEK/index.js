@@ -3748,4 +3748,44 @@ document.getElementById("clear").onclick = function () {
     }
 
     document.getElementsByClassName("correctAnswer3")[0] && check3question();
+
+    // 4 QUESTION
+
+    function check4question() {
+        let firstNumber4 = document.getElementById("firstNumber4");
+        let secondNumber4 = document.getElementById("secondNumber4");
+        let thirdNumber4 = document.getElementById("thirdNumber4");
+        let fourthNumber4 = document.getElementById("fourthNumber4");
+
+        firstNumber4.value = "";
+        secondNumber4.value = "";
+        thirdNumber4.value = "";
+        fourthNumber4.value = "";
+
+        document.getElementsByClassName("correctAnswer4")[0].remove();
+        document.getElementsByClassName("app4")[0].style.height = "403px";
+        document.getElementsByClassName("app4")[0].style.border =
+            "0.5px solid #a8a8a8";
+        document.getElementsByClassName(
+            "lineUnderHeading4"
+        )[0].style.borderBottom = "0.5px solid #a8a8a8";
+
+        firstNumber4.style.backgroundColor = "white";
+        firstNumber4.style.color = "black";
+        firstNumber4.style.border = "1px solid";
+
+        secondNumber4.style.backgroundColor = "white";
+        secondNumber4.style.color = "black";
+        secondNumber4.style.border = "1px solid";
+
+        thirdNumber4.style.backgroundColor = "white";
+        thirdNumber4.style.color = "black";
+        thirdNumber4.style.border = "1px solid";
+
+        fourthNumber4.style.backgroundColor = "white";
+        fourthNumber4.style.color = "black";
+        fourthNumber4.style.border = "1px solid";
+    }
+
+    document.getElementsByClassName("correctAnswer4")[0] && check4question();
 };
