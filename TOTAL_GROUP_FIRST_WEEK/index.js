@@ -3871,7 +3871,7 @@ document.getElementById("clear").onclick = function () {
         fourthNumber13.value = "";
 
         document.getElementsByClassName("correctAnswer13")[0].remove();
-        document.getElementsByClassName("app13")[0].style.height = "283px";
+        document.getElementsByClassName("app13")[0].style.height = "343px";
         document.getElementsByClassName("app13")[0].style.border =
             "0.5px solid #a8a8a8";
         document.getElementsByClassName(
@@ -3907,7 +3907,7 @@ document.getElementById("clear").onclick = function () {
         secondNumber15.value = "";
 
         document.getElementsByClassName("correctAnswer15")[0].remove();
-        document.getElementsByClassName("app15")[0].style.height = "283px";
+        document.getElementsByClassName("app15")[0].style.height = "299px";
         document.getElementsByClassName("app15")[0].style.border =
             "0.5px solid #a8a8a8";
         document.getElementsByClassName(
@@ -3932,7 +3932,7 @@ document.getElementById("clear").onclick = function () {
         firstNumber16.value = "";
 
         document.getElementsByClassName("correctAnswer16")[0].remove();
-        document.getElementsByClassName("app16")[0].style.height = "283px";
+        document.getElementsByClassName("app16")[0].style.height = "317px";
         document.getElementsByClassName("app16")[0].style.border =
             "0.5px solid #a8a8a8";
         document.getElementsByClassName(
@@ -3946,6 +3946,34 @@ document.getElementById("clear").onclick = function () {
 
     document.getElementsByClassName("correctAnswer16")[0] && check16question();
 
+    // 20 QUESTION
+
+    function check20question() {
+        let firstNumber20 = document.getElementById("firstNumber20");
+        let secondNumber20 = document.getElementById("secondNumber20");
+
+        firstNumber20.value = "";
+        secondNumber20.value = "";
+
+        document.getElementsByClassName("correctAnswer20")[0].remove();
+        document.getElementsByClassName("app20")[0].style.height = "416px";
+        document.getElementsByClassName("app20")[0].style.border =
+            "0.5px solid #a8a8a8";
+        document.getElementsByClassName(
+            "lineUnderHeading20"
+        )[0].style.borderBottom = "0.5px solid #a8a8a8";
+
+        firstNumber20.style.backgroundColor = "white";
+        firstNumber20.style.color = "black";
+        firstNumber20.style.border = "1px solid";
+
+        secondNumber20.style.backgroundColor = "white";
+        secondNumber20.style.color = "black";
+        secondNumber20.style.border = "1px solid";
+    }
+
+    document.getElementsByClassName("correctAnswer20")[0] && check20question();
+
     // 21 QUESTION
 
     function check21question() {
@@ -3958,7 +3986,7 @@ document.getElementById("clear").onclick = function () {
         thirdInput21.value = "";
 
         document.getElementsByClassName("correctAnswer21")[0].remove();
-        document.getElementsByClassName("app21")[0].style.height = "283px";
+        document.getElementsByClassName("app21")[0].style.height = "732px";
         document.getElementsByClassName("app21")[0].style.border =
             "0.5px solid #a8a8a8";
         document.getElementsByClassName(
