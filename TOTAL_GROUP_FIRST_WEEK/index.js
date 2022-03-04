@@ -1302,15 +1302,15 @@ function question3() {
 
         // расставляем мини-иконки
 
-        createMiniIcon(
-            numbers3.leftNumber,
-            document.getElementById("leftNumber3")
-        );
+        // createMiniIcon(
+        //     numbers3.leftNumber,
+        //     document.getElementById("leftNumber3")
+        // );
 
-        createMiniIcon(
-            numbers3.rightNumber,
-            document.getElementById("rightNumber3")
-        );
+        // createMiniIcon(
+        //     numbers3.rightNumber,
+        //     document.getElementById("rightNumber3")
+        // );
 
         // выносим общий статус к номеру вопроса
 
@@ -3597,8 +3597,6 @@ document.getElementById("submit").onclick = function () {
 };
 
 document.getElementById("clear").onclick = function () {
-    debugger;
-
     let allInputs = document.querySelectorAll("input");
     let allStatusIcons = document.getElementsByClassName("statusIcon");
     let allMiniIcons = document.getElementsByClassName("miniIcon");
@@ -3722,4 +3720,32 @@ document.getElementById("clear").onclick = function () {
     }
 
     document.getElementsByClassName("correctAnswer2")[0] && check2question();
+
+    // 3 QUESTION
+
+    function check3question() {
+        let leftNumber3 = document.getElementById("leftNumber3");
+        let rightNumber3 = document.getElementById("rightNumber3");
+
+        leftNumber3.value = "";
+        rightNumber3.value = "";
+
+        document.getElementsByClassName("correctAnswer3")[0].remove();
+        document.getElementsByClassName("app3")[0].style.height = "348px";
+        document.getElementsByClassName("app3")[0].style.border =
+            "0.5px solid #a8a8a8";
+        document.getElementsByClassName(
+            "lineUnderHeading3"
+        )[0].style.borderBottom = "0.5px solid #a8a8a8";
+
+        leftNumber3.style.backgroundColor = "white";
+        leftNumber3.style.color = "black";
+        leftNumber3.style.border = "1px solid";
+
+        rightNumber3.style.backgroundColor = "white";
+        rightNumber3.style.color = "black";
+        rightNumber3.style.border = "1px solid";
+    }
+
+    document.getElementsByClassName("correctAnswer3")[0] && check3question();
 };
