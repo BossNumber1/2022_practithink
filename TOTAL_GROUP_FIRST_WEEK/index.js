@@ -4093,6 +4093,38 @@ document.getElementById("clear").onclick = function () {
 
     document.getElementsByClassName("correctAnswer17")[0] && check17question();
 
+    // 18 QUESTION
+
+    function check18question() {
+        let emptyPlace0 = document.getElementById("emptyPlace180").children[0];
+        let emptyPlace1 = document.getElementById("emptyPlace181").children[0];
+        let emptyPlace2 = document.getElementById("emptyPlace182").children[0];
+        let leftTree0 = document.getElementById("leftTree180").children[0];
+        let centerTree0 = document.getElementById("centerTree180").children[0];
+        let rightTree0 = document.getElementById("rightTree180").children[0];
+
+        emptyPlace0.src = "./pictures/18que/emptyPlace.svg";
+        emptyPlace1.src = "./pictures/18que/emptyPlace.svg";
+        emptyPlace2.src = "./pictures/18que/emptyPlace.svg";
+        leftTree0.src = "./pictures/18que/leftTree.svg";
+        centerTree0.src = "./pictures/18que/centerTree.svg";
+        rightTree0.src = "./pictures/18que/rightTree.svg";
+
+        emptyPlace0.style.border = "none";
+        emptyPlace1.style.border = "none";
+        emptyPlace2.style.border = "none";
+
+        document.getElementsByClassName("correctAnswer18")[0].remove();
+        document.getElementsByClassName("app18")[0].style.height = "492px";
+        document.getElementsByClassName("app18")[0].style.border =
+            "0.5px solid #a8a8a8";
+        document.getElementsByClassName(
+            "lineUnderHeading18"
+        )[0].style.borderBottom = "0.5px solid #a8a8a8";
+    }
+
+    document.getElementsByClassName("correctAnswer18")[0] && check18question();
+
     // 19 QUESTION
 
     function check19question() {
