@@ -3830,6 +3830,41 @@ document.getElementById("clear").onclick = function () {
 
     document.getElementsByClassName("correctAnswer5")[0] && check5question();
 
+    // 6 QUESTION
+
+    function check6question() {
+        let firstBtn6 = document.getElementById("firstBtn6");
+        let secondBtn6 = document.getElementById("secondBtn6");
+        let thirdBtn6 = document.getElementById("thirdBtn6");
+        let fourthBtn6 = document.getElementById("fourthBtn6");
+
+        document.getElementsByClassName("correctAnswer6")[0].remove();
+        document.getElementsByClassName("app6")[0].style.height = "447px";
+        document.getElementsByClassName("app6")[0].style.border =
+            "0.5px solid #a8a8a8";
+        document.getElementsByClassName(
+            "lineUnderHeading6"
+        )[0].style.borderBottom = "0.5px solid #a8a8a8";
+
+        firstBtn6.style.backgroundColor = "white";
+        firstBtn6.style.color = "black";
+        firstBtn6.style.border = "1px solid";
+
+        secondBtn6.style.backgroundColor = "white";
+        secondBtn6.style.color = "black";
+        secondBtn6.style.border = "1px solid";
+
+        thirdBtn6.style.backgroundColor = "white";
+        thirdBtn6.style.color = "black";
+        thirdBtn6.style.border = "1px solid";
+
+        fourthBtn6.style.backgroundColor = "white";
+        fourthBtn6.style.color = "black";
+        fourthBtn6.style.border = "1px solid";
+    }
+
+    document.getElementsByClassName("correctAnswer6")[0] && check6question();
+
     // 10 QUESTION
 
     function check10question() {
