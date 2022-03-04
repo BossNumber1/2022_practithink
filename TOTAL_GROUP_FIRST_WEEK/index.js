@@ -3905,6 +3905,41 @@ document.getElementById("clear").onclick = function () {
 
     document.getElementsByClassName("correctAnswer7")[0] && check7question();
 
+    // 8 QUESTION
+
+    function check8question() {
+        let firstBtn8 = document.getElementById("firstBtn8");
+        let secondBtn8 = document.getElementById("secondBtn8");
+        let thirdBtn8 = document.getElementById("thirdBtn8");
+        let fourthBtn8 = document.getElementById("fourthBtn8");
+
+        document.getElementsByClassName("correctAnswer8")[0].remove();
+        document.getElementsByClassName("app8")[0].style.height = "424px";
+        document.getElementsByClassName("app8")[0].style.border =
+            "0.5px solid #a8a8a8";
+        document.getElementsByClassName(
+            "lineUnderHeading8"
+        )[0].style.borderBottom = "0.5px solid #a8a8a8";
+
+        firstBtn8.style.backgroundColor = "white";
+        firstBtn8.style.color = "black";
+        firstBtn8.style.border = "1px solid";
+
+        secondBtn8.style.backgroundColor = "white";
+        secondBtn8.style.color = "black";
+        secondBtn8.style.border = "1px solid";
+
+        thirdBtn8.style.backgroundColor = "white";
+        thirdBtn8.style.color = "black";
+        thirdBtn8.style.border = "1px solid";
+
+        fourthBtn8.style.backgroundColor = "white";
+        fourthBtn8.style.color = "black";
+        fourthBtn8.style.border = "1px solid";
+    }
+
+    document.getElementsByClassName("correctAnswer8")[0] && check8question();
+
     // 10 QUESTION
 
     function check10question() {
