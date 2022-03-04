@@ -2799,7 +2799,7 @@ document.getElementById("firstBtn17").onclick = function () {
     clickedElement.style.border = "1px solid #BBEDF4";
 
     selectedButton17 = "right";
-    selectedNameButton17 = "firstBtn14";
+    selectedNameButton17 = "firstBtn17";
 
     document.getElementById("secondBtn17").style.backgroundColor = "white";
     document.getElementById("secondBtn17").style.color = "black";
@@ -2818,7 +2818,7 @@ document.getElementById("secondBtn17").onclick = function () {
     clickedElement.style.border = "1px solid #BBEDF4";
 
     selectedButton17 = "wrong";
-    selectedNameButton17 = "secondBtn14";
+    selectedNameButton17 = "secondBtn17";
 
     document.getElementById("thirdBtn17").style.backgroundColor = "white";
     document.getElementById("thirdBtn17").style.color = "black";
@@ -2837,7 +2837,7 @@ document.getElementById("thirdBtn17").onclick = function () {
     clickedElement.style.border = "1px solid #BBEDF4";
 
     selectedButton17 = "wrong";
-    selectedNameButton17 = "thirdBtn14";
+    selectedNameButton17 = "thirdBtn17";
 
     document.getElementById("secondBtn17").style.backgroundColor = "white";
     document.getElementById("secondBtn17").style.color = "black";
@@ -3626,10 +3626,17 @@ document.getElementById("clear").onclick = function () {
     document.getElementById("fourthBtn7").style.border = "1px solid";
     document.getElementById("fifthBtn7").style.border = "1px solid";
 
+    document.getElementById("firstBtn8").style.border = "1px solid";
+    document.getElementById("secondBtn8").style.border = "1px solid";
+    document.getElementById("thirdBtn8").style.border = "1px solid";
+    document.getElementById("fourthBtn8").style.border = "1px solid";
+
     document.getElementsByClassName("true")[0].style.border =
         "1px solid #d0d0d0";
     document.getElementsByClassName("false")[0].style.border =
         "1px solid #d0d0d0";
+
+    document.getElementsByClassName("content11")[0].style.border = "none";
 
     document.getElementById("wagonEmpty0").style.border = "none";
     document.getElementById("wagonEmpty1").style.border = "none";
