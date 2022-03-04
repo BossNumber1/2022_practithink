@@ -3974,6 +3974,53 @@ document.getElementById("clear").onclick = function () {
 
     document.getElementsByClassName("correctAnswer10")[0] && check10question();
 
+    // 12 QUESTION
+
+    function check12question() {
+        let wagonEmpty120 =
+            document.getElementById("wagonEmpty120").children[0];
+        let wagonEmpty121 =
+            document.getElementById("wagonEmpty121").children[0];
+        let wagonEmpty122 =
+            document.getElementById("wagonEmpty122").children[0];
+        let wagonEmpty123 =
+            document.getElementById("wagonEmpty123").children[0];
+
+        let firstWagon120 =
+            document.getElementById("firstWagon120").children[0];
+        let secondWagon120 =
+            document.getElementById("secondWagon120").children[0];
+        let thirdWagon120 =
+            document.getElementById("thirdWagon120").children[0];
+        let fourthWagon120 =
+            document.getElementById("fourthWagon120").children[0];
+
+        wagonEmpty120.src = "./pictures/12que/wagonEmpty.svg";
+        wagonEmpty121.src = "./pictures/12que/wagonEmpty.svg";
+        wagonEmpty122.src = "./pictures/12que/wagonEmpty.svg";
+        wagonEmpty123.src = "./pictures/12que/wagonEmpty.svg";
+
+        firstWagon120.src = "./pictures/12que/firstWagon.svg";
+        secondWagon120.src = "./pictures/12que/secondWagon.svg";
+        thirdWagon120.src = "./pictures/12que/thirdWagon.svg";
+        fourthWagon120.src = "./pictures/12que/fourthWagon.svg";
+
+        wagonEmpty120.style.border = "none";
+        wagonEmpty121.style.border = "none";
+        wagonEmpty122.style.border = "none";
+        wagonEmpty123.style.border = "none";
+
+        document.getElementsByClassName("correctAnswer12")[0].remove();
+        document.getElementsByClassName("app12")[0].style.height = "427px";
+        document.getElementsByClassName("app12")[0].style.border =
+            "0.5px solid #a8a8a8";
+        document.getElementsByClassName(
+            "lineUnderHeading12"
+        )[0].style.borderBottom = "0.5px solid #a8a8a8";
+    }
+
+    document.getElementsByClassName("correctAnswer12")[0] && check12question();
+
     // 13 QUESTION
 
     function check13question() {
