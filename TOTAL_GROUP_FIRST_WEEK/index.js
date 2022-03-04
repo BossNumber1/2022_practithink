@@ -3857,6 +3857,46 @@ document.getElementById("clear").onclick = function () {
 
     document.getElementsByClassName("correctAnswer10")[0] && check10question();
 
+    // 13 QUESTION
+
+    function check13question() {
+        let firstNumber13 = document.getElementById("firstNumber13");
+        let secondNumber13 = document.getElementById("secondNumber13");
+        let thirdNumber13 = document.getElementById("thirdNumber13");
+        let fourthNumber13 = document.getElementById("fourthNumber13");
+
+        firstNumber13.value = "";
+        secondNumber13.value = "";
+        thirdNumber13.value = "";
+        fourthNumber13.value = "";
+
+        document.getElementsByClassName("correctAnswer13")[0].remove();
+        document.getElementsByClassName("app13")[0].style.height = "283px";
+        document.getElementsByClassName("app13")[0].style.border =
+            "0.5px solid #a8a8a8";
+        document.getElementsByClassName(
+            "lineUnderHeading13"
+        )[0].style.borderBottom = "0.5px solid #a8a8a8";
+
+        firstNumber13.style.backgroundColor = "white";
+        firstNumber13.style.color = "black";
+        firstNumber13.style.border = "1px solid";
+
+        secondNumber13.style.backgroundColor = "white";
+        secondNumber13.style.color = "black";
+        secondNumber13.style.border = "1px solid";
+
+        thirdNumber13.style.backgroundColor = "white";
+        thirdNumber13.style.color = "black";
+        thirdNumber13.style.border = "1px solid";
+
+        fourthNumber13.style.backgroundColor = "white";
+        fourthNumber13.style.color = "black";
+        fourthNumber13.style.border = "1px solid";
+    }
+
+    document.getElementsByClassName("correctAnswer13")[0] && check13question();
+
     // common
 
     // function check1question() {
