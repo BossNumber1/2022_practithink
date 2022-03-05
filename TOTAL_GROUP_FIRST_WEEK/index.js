@@ -4098,6 +4098,47 @@ document.getElementById("clear").onclick = function () {
 
     document.getElementsByClassName("correctAnswer10")[0] && check10question();
 
+    // 11 QUESTION
+
+    function check11question() {
+        let firstBtn11 = document.getElementById("firstBtn11");
+        let secondBtn11 = document.getElementById("secondBtn11");
+        let thirdBtn11 = document.getElementById("thirdBtn11");
+        let fourthBtn11 = document.getElementById("fourthBtn11");
+        let fifthBtn11 = document.getElementById("fifthBtn11");
+        let sixthBtn11 = document.getElementById("sixthBtn11");
+        let seventhBtn11 = document.getElementById("seventhBtn11");
+        let eighthBtn11 = document.getElementById("eighthBtn11");
+
+        firstBtn11.classList.add("selectedCircle");
+        secondBtn11.classList.remove("selectedCircle");
+        thirdBtn11.classList.remove("selectedCircle");
+        fourthBtn11.classList.remove("selectedCircle");
+        fifthBtn11.classList.remove("selectedCircle");
+        sixthBtn11.classList.remove("selectedCircle");
+        seventhBtn11.classList.remove("selectedCircle");
+        eighthBtn11.classList.remove("selectedCircle");
+
+        firstBtn11.style.border = "3px solid #369cb7";
+        secondBtn11.style = "";
+        thirdBtn11.style = "";
+        fourthBtn11.style = "";
+        fifthBtn11.style = "";
+        sixthBtn11.style = "";
+        seventhBtn11.style = "";
+        eighthBtn11.style = "";
+
+        document.getElementsByClassName("correctAnswer11")[0].remove();
+        document.getElementsByClassName("app11")[0].style.height = "307px";
+        document.getElementsByClassName("app11")[0].style.border =
+            "0.5px solid #a8a8a8";
+        document.getElementsByClassName(
+            "lineUnderHeading11"
+        )[0].style.borderBottom = "0.5px solid #a8a8a8";
+    }
+
+    document.getElementsByClassName("correctAnswer11")[0] && check11question();
+
     // 12 QUESTION
 
     function check12question() {
