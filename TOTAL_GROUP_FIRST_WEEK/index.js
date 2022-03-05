@@ -3940,6 +3940,130 @@ document.getElementById("clear").onclick = function () {
 
     document.getElementsByClassName("correctAnswer8")[0] && check8question();
 
+    // 9 QUESTION
+
+    function check9question() {
+        let firstBtn09 = document.getElementById("firstBtn09").children[0];
+        let secondBtn09 = document.getElementById("secondBtn09").children[0];
+        let thirdBtn09 = document.getElementById("thirdBtn09").children[0];
+        let fourthBtn09 = document.getElementById("fourthBtn09").children[0];
+        let fifthBtn09 = document.getElementById("fifthBtn09").children[0];
+        let sixthBtn09 = document.getElementById("sixthBtn09").children[0];
+        let seventhBtn09 = document.getElementById("seventhBtn09").children[0];
+
+        firstBtn09.src = "./pictures/9que/wagonEmpty.svg";
+        secondBtn09.src = "./pictures/9que/wagonEmpty.svg";
+        thirdBtn09.src = "./pictures/9que/wagonEmpty.svg";
+        fourthBtn09.src = "./pictures/9que/wagonEmpty.svg";
+        fifthBtn09.src = "./pictures/9que/wagonEmpty.svg";
+        sixthBtn09.src = "./pictures/9que/wagonEmpty.svg";
+        seventhBtn09.src = "./pictures/9que/wagonEmpty.svg";
+
+        firstBtn09.classList.add("expression90");
+        firstBtn09.id = "firstBtn9";
+        firstBtn09.alt = "firstBtn9";
+        firstBtn09.setAttribute("draggable", "true");
+        firstBtn09.setAttribute("data-position", "0");
+        firstBtn09.setAttribute("data-text", "6 = 6");
+        firstBtn09.setAttribute("data-class", "expression90");
+        firstBtn09.setAttribute("draggable", "true");
+        firstBtn09.textContent = "6 = 6";
+
+        firstBtn09.style.backgroundColor = "#369cb7";
+        secondBtn09.style.backgroundColor = "#369cb7";
+        thirdBtn09.style.backgroundColor = "#369cb7";
+        fourthBtn09.style.backgroundColor = "#369cb7";
+        fifthBtn09.style.backgroundColor = "#369cb7";
+        sixthBtn09.style.backgroundColor = "#369cb7";
+        seventhBtn09.style.backgroundColor = "#369cb7";
+
+        firstBtn09.style.opacity = "1";
+        secondBtn09.style.opacity = "1";
+        thirdBtn09.style.opacity = "1";
+        fourthBtn09.style.opacity = "1";
+        fifthBtn09.style.opacity = "1";
+        sixthBtn09.style.opacity = "1";
+        seventhBtn09.style.opacity = "1";
+
+        secondBtn09.classList.add("expression90");
+        secondBtn09.id = "secondBtn9";
+        secondBtn09.alt = "secondBtn9";
+        secondBtn09.setAttribute("draggable", "true");
+        secondBtn09.setAttribute("data-position", "1");
+        secondBtn09.setAttribute("data-text", "7 = 8 - 1");
+        secondBtn09.setAttribute("data-class", "expression90");
+        secondBtn09.setAttribute("draggable", "true");
+        secondBtn09.textContent = "7 = 8 - 1";
+
+        thirdBtn09.classList.add("expression91");
+        thirdBtn09.id = "thirdBtn9";
+        thirdBtn09.alt = "thirdBtn9";
+        thirdBtn09.setAttribute("draggable", "true");
+        thirdBtn09.setAttribute("data-position", "2");
+        thirdBtn09.setAttribute("data-text", "5 + 2 = 1 + 6");
+        thirdBtn09.setAttribute("data-class", "expression91");
+        thirdBtn09.setAttribute("draggable", "true");
+        thirdBtn09.textContent = "5 + 2 = 1 + 6";
+
+        fourthBtn09.classList.add("expression91");
+        fourthBtn09.id = "fourthBtn9";
+        fourthBtn09.alt = "fourthBtn9";
+        fourthBtn09.setAttribute("draggable", "true");
+        fourthBtn09.setAttribute("data-position", "3");
+        fourthBtn09.setAttribute("data-text", "4 + 1 = 5 + 2");
+        fourthBtn09.setAttribute("data-class", "expression91");
+        fourthBtn09.setAttribute("draggable", "true");
+        fourthBtn09.textContent = "4 + 1 = 5 + 2";
+
+        fifthBtn09.classList.add("expression91");
+        fifthBtn09.id = "fifthBtn9";
+        fifthBtn09.alt = "fifthBtn9";
+        fifthBtn09.setAttribute("draggable", "true");
+        fifthBtn09.setAttribute("data-position", "4");
+        fifthBtn09.setAttribute("data-text", "8 + 6 = 12");
+        fifthBtn09.setAttribute("data-class", "expression91");
+        fifthBtn09.setAttribute("draggable", "true");
+        fifthBtn09.textContent = "8 + 6 = 12";
+
+        sixthBtn09.classList.add("expression91");
+        sixthBtn09.id = "sixthBtn9";
+        sixthBtn09.alt = "sixthBtn9";
+        sixthBtn09.setAttribute("draggable", "true");
+        sixthBtn09.setAttribute("data-position", "5");
+        sixthBtn09.setAttribute("data-text", "14 - 2 - 3 = 9");
+        sixthBtn09.setAttribute("data-class", "expression91");
+        sixthBtn09.setAttribute("draggable", "true");
+        sixthBtn09.textContent = "14 - 2 - 3 = 9";
+
+        seventhBtn09.classList.add("expression91");
+        seventhBtn09.id = "seventhBtn9";
+        seventhBtn09.alt = "seventhBtn9";
+        seventhBtn09.setAttribute("draggable", "true");
+        seventhBtn09.setAttribute("data-position", "6");
+        seventhBtn09.setAttribute("data-text", "8 + 6 = 17 - 3");
+        seventhBtn09.setAttribute("data-class", "expression91");
+        seventhBtn09.setAttribute("draggable", "true");
+        seventhBtn09.textContent = "8 + 6 = 17 - 3";
+
+        document.getElementsByClassName("correctAnswer9")[0].remove();
+        document.getElementsByClassName("app9")[0].style.height = "684px";
+        document.getElementsByClassName("app9")[0].style.border =
+            "0.5px solid #a8a8a8";
+        document.getElementsByClassName(
+            "lineUnderHeading9"
+        )[0].style.borderBottom = "0.5px solid #a8a8a8";
+
+        document.getElementsByClassName(
+            "placeOfDroppingFigures9"
+        )[0].innerHTML = "";
+
+        document.getElementsByClassName(
+            "placeOfDroppingFigures9"
+        )[1].innerHTML = "";
+    }
+
+    document.getElementsByClassName("correctAnswer9")[0] && check9question();
+
     // 10 QUESTION
 
     function check10question() {
