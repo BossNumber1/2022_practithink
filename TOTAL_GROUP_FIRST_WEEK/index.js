@@ -4185,6 +4185,60 @@ document.getElementById("clear").onclick = function () {
 
     document.getElementsByClassName("correctAnswer13")[0] && check13question();
 
+    // 14 QUESTION
+
+    function check14question() {
+        let firstNumber14 = document.getElementById("firstNumber14");
+        let secondNumber14 = document.getElementById("secondNumber14");
+        let inputContent14 =
+            document.getElementsByClassName("inputs14")[0].children[1]
+                .children[0];
+
+        let firstBtn14 =
+            document.getElementsByClassName("btns14")[0].children[0]
+                .children[0];
+        let secondBtn14 =
+            document.getElementsByClassName("btns14")[0].children[1]
+                .children[0];
+        let thirdBtn14 =
+            document.getElementsByClassName("btns14")[0].children[2]
+                .children[0];
+
+        firstBtn14.textContent = "<";
+        secondBtn14.textContent = "=";
+        thirdBtn14.textContent = ">";
+
+        firstBtn14.style.backgroundColor = "#369cb7";
+        secondBtn14.style.backgroundColor = "#369cb7";
+        thirdBtn14.style.backgroundColor = "#369cb7";
+
+        firstNumber14.value = "";
+        secondNumber14.value = "";
+
+        document.getElementsByClassName("correctAnswer14")[0].remove();
+        document.getElementsByClassName("app14")[0].style.height = "580px";
+        document.getElementsByClassName("app14")[0].style.border =
+            "0.5px solid #a8a8a8";
+        document.getElementsByClassName(
+            "lineUnderHeading14"
+        )[0].style.borderBottom = "0.5px solid #a8a8a8";
+
+        firstNumber14.style.backgroundColor = "white";
+        firstNumber14.style.color = "black";
+        firstNumber14.style.border = "1px solid";
+
+        secondNumber14.style.backgroundColor = "white";
+        secondNumber14.style.color = "black";
+        secondNumber14.style.border = "1px solid";
+
+        inputContent14.innerHTML = "";
+
+        inputContent14.style.backgroundColor = "#f4f4f4";
+        inputContent14.style.border = "1px solid #d0d0d0";
+    }
+
+    document.getElementsByClassName("correctAnswer14")[0] && check14question();
+
     // 15 QUESTION
 
     function check15question() {
