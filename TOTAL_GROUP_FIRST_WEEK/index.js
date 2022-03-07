@@ -4477,6 +4477,46 @@ document.getElementById("clear").onclick = function () {
 
     document.getElementsByClassName("correctAnswer21")[0] && check21question();
 
+    // 22 QUESTION
+
+    function check22question() {
+        let firstFigure22 =
+            document.getElementById("firstFigure22").children[0];
+        let secondFigure22 =
+            document.getElementById("secondFigure22").children[0];
+        let thirdFigure22 =
+            document.getElementById("thirdFigure22").children[0];
+        let fourthFigure22 =
+            document.getElementById("fourthFigure22").children[0];
+        let fifthFigure22 =
+            document.getElementById("fifthFigure22").children[0];
+        let sixthFigure22 =
+            document.getElementById("sixthFigure22").children[0];
+        let seventhFigure22 =
+            document.getElementById("seventhFigure22").children[0];
+        let eighthFigure22 =
+            document.getElementById("eighthFigure22").children[0];
+
+        document.getElementsByClassName("correctAnswer22")[0].remove();
+        document.getElementsByClassName("app22")[0].style.height = "680px";
+        document.getElementsByClassName("app22")[0].style.border =
+            "0.5px solid #a8a8a8";
+        document.getElementsByClassName(
+            "lineUnderHeading22"
+        )[0].style.borderBottom = "0.5px solid #a8a8a8";
+
+        firstFigure22.src = "./pictures/22que/blueSquare.svg";
+        secondFigure22.src = "./pictures/22que/darkPinkRectangle.svg";
+        thirdFigure22.src = "./pictures/22que/blueCircle.svg";
+        fourthFigure22.src = "./pictures/22que/greenSquare.svg";
+        fifthFigure22.src = "./pictures/22que/yellowQuadrangle.svg";
+        sixthFigure22.src = "./pictures/22que/bluePentagon.svg";
+        seventhFigure22.src = "./pictures/22que/greenRectangle.svg";
+        eighthFigure22.src = "./pictures/22que/blueTriangle.svg";
+    }
+
+    document.getElementsByClassName("correctAnswer22")[0] && check22question();
+
     // 23 QUESTION
 
     function check23question() {
